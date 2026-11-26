@@ -3,3 +3,4 @@ research/test_addresses.json
 .DS_Store
 __pycache__/
 *.pyc
+design-options/

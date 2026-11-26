@@ -171,13 +171,13 @@ details.existing[open] summary { margin-bottom: 10px; }
 }
 
 /* ---------- plan drawing (over the aerial photo) ---------- */
-.plan text { font-family: var(--font-display); paint-order: stroke; stroke-linejoin: round; }
+.plan text { font-family: var(--font-display); stroke: none; font-weight: 600; }
 .p-contour { fill: none; stroke: rgba(255,255,255,.28); stroke-width: .55; }
 .p-contour.ix { stroke: rgba(255,255,255,.55); stroke-width: .9; }
-.p-clab { font-size: 7px; fill: rgba(255,255,255,.85); stroke: rgba(0,0,0,.55); stroke-width: 2px; }
+.p-clab { fill: rgba(255,255,255,.85); }
 .p-nbr { fill: none; stroke: rgba(255,255,255,.65); stroke-width: 1.2; stroke-dasharray: 6 4; }
-.p-nlab { font-size: 11px; fill: #fff; stroke: rgba(0,0,0,.65); stroke-width: 3px; font-weight: 600; letter-spacing: .03em; }
-.p-street { font-size: 13px; fill: #fff; stroke: rgba(0,0,0,.7); stroke-width: 3px; font-weight: 700; letter-spacing: .18em; }
+.p-nlab { fill: #fff; font-weight: 600; letter-spacing: .03em; }
+.p-street { fill: #fff; font-weight: 600; letter-spacing: .18em; }
 .p-s1525 { fill: url(#hatch1525); stroke: #f2b134; stroke-width: .8; }
 .p-s25 { fill: url(#hatch25); stroke: #ff6a3d; stroke-width: 1; }
 .p-buf { fill: rgba(80,180,255,.20); stroke: #59b8ff; stroke-width: 1.3; stroke-dasharray: 7 4; }
@@ -185,33 +185,31 @@ details.existing[open] summary { margin-bottom: 10px; }
 .p-nhd { fill: none; stroke: #9fd4ff; stroke-width: 1.4; stroke-dasharray: 3 3; }
 .p-pond { fill: rgba(80,180,255,.45); stroke: #59b8ff; }
 .p-tree { fill: none; stroke: #d8f07a; stroke-width: 1.1; stroke-dasharray: 2 3; }
-.p-env { fill: none; stroke: #ff4f8b; stroke-width: 2; stroke-dasharray: 10 5; }
+.p-env { fill: none; stroke: #ff4f8b; stroke-width: 1.4; stroke-dasharray: 10 5; }
 .p-clear { fill: rgba(64, 214, 128, .30); stroke: none; }
-.p-parcel { fill: none; stroke: #fff; stroke-width: 3.2; }
-.p-parcel-halo { fill: none; stroke: rgba(0,0,0,.55); stroke-width: 6; }
+.p-parcel { fill: none; stroke: #fff; stroke-width: 1.5; }
 .p-house { fill: rgba(255,255,255,.22); stroke: #fff; stroke-width: 1.6; }
 .p-bldg { fill: rgba(255,255,255,.12); stroke: rgba(255,255,255,.6); stroke-width: .8; }
 .p-drive { fill: rgba(255,255,255,.10); stroke: rgba(255,255,255,.55); stroke-width: .8; }
 .p-wall { fill: none; stroke: rgba(230,220,200,.7); stroke-width: 1; stroke-dasharray: 1 2; }
-.p-ll { font-size: 12px; fill: #fff; stroke: rgba(0,0,0,.75); stroke-width: 3.2px; font-weight: 700; letter-spacing: .08em; }
+.p-ll { fill: #fff; font-weight: 600; letter-spacing: .08em; }
 .p-ll.front { fill: #ffd1e1; }
-.p-hlab { font-size: 11px; fill: #fff; stroke: rgba(0,0,0,.7); stroke-width: 3px; font-weight: 600; }
+.p-hlab { fill: #fff; font-weight: 600; }
 .p-scale { fill: #fff; stroke: rgba(0,0,0,.7); stroke-width: 1; }
-.p-scaletxt { font-size: 10px; fill: #fff; stroke: rgba(0,0,0,.7); stroke-width: 3px; font-weight: 600; }
+.p-scaletxt { fill: #fff; font-weight: 600; }
 .p-proj { stroke-width: 2.2; cursor: grab; touch-action: none; }
 .p-proj.ok { fill: rgba(64, 214, 128, .55); stroke: #eafff2; }
 .p-proj.permit { fill: rgba(242, 177, 52, .62); stroke: #fff4dc; }
 .p-proj.bad { fill: rgba(255, 85, 70, .62); stroke: #ffe3df; }
-.p-plab { font-size: 11px; fill: #fff; stroke: rgba(0,0,0,.8); stroke-width: 3px; font-weight: 700; pointer-events: none; }
+.p-plab { fill: #fff; font-weight: 600; pointer-events: none; }
 .p-dim { stroke: #fff; stroke-width: 1; stroke-dasharray: 3 2; pointer-events: none; }
-.p-dimtxt { font-size: 10px; fill: #fff; stroke: rgba(0,0,0,.8); stroke-width: 3px; font-weight: 600; pointer-events: none; }
+.p-dimtxt { fill: #fff; font-weight: 600; pointer-events: none; }
 /* paper mode (aerial off) */
 .noaerial .p-contour { stroke: color-mix(in srgb, var(--plan-ink) 22%, transparent); }
 .noaerial .p-contour.ix { stroke: color-mix(in srgb, var(--plan-ink) 45%, transparent); }
-.noaerial .p-clab, .noaerial .p-nlab, .noaerial .p-street, .noaerial .p-hlab, .noaerial .p-scaletxt, .noaerial .p-dimtxt, .noaerial .p-plab, .noaerial .p-ll { fill: var(--plan-ink); stroke: var(--plan-bg); }
+.noaerial .p-clab, .noaerial .p-nlab, .noaerial .p-street, .noaerial .p-hlab, .noaerial .p-scaletxt, .noaerial .p-dimtxt, .noaerial .p-plab, .noaerial .p-ll { fill: var(--plan-ink); }
 .noaerial .p-ll.front { fill: var(--accent); }
 .noaerial .p-parcel { stroke: var(--plan-ink); }
-.noaerial .p-parcel-halo { stroke: transparent; }
 .noaerial .p-house { fill: color-mix(in srgb, var(--plan-ink) 18%, transparent); stroke: var(--plan-ink); }
 .noaerial .p-bldg, .noaerial .p-drive { fill: color-mix(in srgb, var(--plan-ink) 8%, transparent); stroke: color-mix(in srgb, var(--plan-ink) 45%, transparent); }
 .noaerial .p-nbr { stroke: color-mix(in srgb, var(--plan-ink) 45%, transparent); }
@@ -248,3 +246,4 @@ details.existing[open] summary { margin-bottom: 10px; }
 .plan > g path, .plan > g polygon, .plan > g line, .plan > g rect { vector-effect: non-scaling-stroke; }
 .plan .p-contour { stroke-width: .7; }
 .plan .p-contour.ix { stroke-width: 1.1; }
+

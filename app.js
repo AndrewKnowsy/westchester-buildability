@@ -34,6 +34,7 @@ const DEFAULT_ADDRESS = '400 Jay St, Katonah, NY, 10536';  // John Jay Homestead
 const DEFAULT_BUFFER = 100;     // used only where we have no local rule
 const DEC_ADJACENT = 100;       // NYS DEC freshwater wetland adjacent area
 const KENSICO_MUNS = new Set(['NOC', 'HAR', 'MTP']);
+const TEXT_SCALE = 0.8;         // plan labels about 10 px on screen; plain white, no outline
 const LINKS = {
   irsp: 'https://www.nyc.gov/assets/dep/downloads/pdf/watershed-protection/regulations/applicants-guide-to-irsp.pdf',
   dos: 'https://dos.ny.gov/notice-adoption',
@@ -460,14 +461,15 @@ function el(tag, attrs, parent) { const e = document.createElementNS(NS, tag); f
 // ---------------------------------------------------------------------------
 function drawPlan() {
   const S = SITE, W = S.W, H = S.H;
-  svg = $('#plan'); svg.innerHTML = '';
+  svg = $('#plan'); svg.innerHTML = ''; svg._z = null;
   layers = {};
   const defs = el('defs', {}, svg);
   // Size text and hatching to the screen, not to the lot, so a small lot reads like a big one
   // (~12 px labels at "fit"). Line widths are screen pixels via vector-effect in the CSS.
   const px = $('#planbox').clientWidth || 900;
   const k = Math.max(0.15, Math.min(4, W / px * 1.1));
-  S.k = k;
+  const kt = k * TEXT_SCALE;   // text size factor
+  S.k = k; S.kt = kt;
   const hatch = (id, size, rot, fill, stroke, sw, horizontal) => {
     const s = size * k, p = el('pattern', { id, width: s, height: s, patternUnits: 'userSpaceOnUse', patternTransform: rot ? `rotate(${rot})` : '' }, defs);
     el('rect', { width: s, height: s, fill }, p);
@@ -489,7 +491,7 @@ function drawPlan() {
       const p = ln[Math.floor(ln.length / 2)];
       if (p[0] < 20 * k || p[1] < 20 * k || p[0] > W - 20 * k || p[1] > H - 20 * k || placed.some(q => Math.hypot(q[0] - p[0], q[1] - p[1]) < 90 * k)) continue;
       placed.push(p);
-      el('text', { x: p[0], y: p[1], class: 'p-clab', 'text-anchor': 'middle', 'dominant-baseline': 'middle', 'font-size': 7 * k }, layers.contours).textContent = Math.round(c.elev);
+      el('text', { x: p[0], y: p[1], class: 'p-clab', 'text-anchor': 'middle', 'dominant-baseline': 'middle', 'font-size': 7 * kt }, layers.contours).textContent = Math.round(c.elev);
     }
   }
   g('context');
@@ -502,7 +504,7 @@ function drawPlan() {
     labelled.add(n.address);
     const [x, y] = n.label;
     if (x < 30 * k || y < 16 * k || x > W - 30 * k || y > H - 10 * k || inRing(n.label, S.ring)) continue;
-    el('text', { x, y, class: 'p-nlab', 'text-anchor': 'middle', 'font-size': 11 * k }, layers.context).textContent = n.address;
+    el('text', { x, y, class: 'p-nlab', 'text-anchor': 'middle', 'font-size': 11 * kt }, layers.context).textContent = n.address;
   }
   const named = {};
   for (const s of S.streets) { const nm = (s.p.NAME || '').trim(); if (!nm) continue; const ls = S.toLines(s.g); for (const l of ls) if (!named[nm] || l.length > named[nm].length) named[nm] = l; }
@@ -511,7 +513,7 @@ function drawPlan() {
     const i = Math.floor(ln.length * .5), a = ln[Math.max(0, i - 2)], b = ln[Math.min(ln.length - 1, i + 2)], p = ln[i];
     if (p[0] < 0 || p[1] < 0 || p[0] > W || p[1] > H) continue;
     let ang = Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI; if (ang > 90) ang -= 180; if (ang < -90) ang += 180;
-    el('text', { x: p[0], y: p[1], class: 'p-street', 'text-anchor': 'middle', 'dominant-baseline': 'middle', 'font-size': 12 * k, transform: `rotate(${ang.toFixed(1)} ${p[0]} ${p[1]})` }, layers.context).textContent = nm;
+    el('text', { x: p[0], y: p[1], class: 'p-street', 'text-anchor': 'middle', 'dominant-baseline': 'middle', 'font-size': 12 * kt, transform: `rotate(${ang.toFixed(1)} ${p[0]} ${p[1]})` }, layers.context).textContent = nm;
   }
   g('slopes');
   el('path', { d: polysPath(S.s1525), class: 'p-s1525', 'fill-rule': 'evenodd' }, layers.slopes);
@@ -530,28 +532,45 @@ function drawPlan() {
 
   const base = el('g', {}, svg);
   el('path', { d: polysPath(S.drivePolys), class: 'p-drive', 'fill-rule': 'evenodd' }, base);
-  el('path', { d: ringPath(S.ring), class: 'p-parcel-halo' }, base);
   el('path', { d: ringPath(S.ring), class: 'p-parcel' }, base);
   if (S.house && S.house.ring.length) {
     el('path', { d: ringPath(S.house.ring), class: 'p-house' }, base);
     const hc = centroid(S.house.ring);
-    el('text', { x: hc[0], y: hc[1] + 4, class: 'p-hlab', 'text-anchor': 'middle', 'font-size': 11 * k }, base).textContent = 'HOUSE';
+    el('text', { x: hc[0], y: hc[1] + 4, class: 'p-hlab', 'text-anchor': 'middle', 'font-size': 11 * kt }, base).textContent = 'HOUSE';
   }
   // lot line labels (click to change type)
   const pc = centroid(S.ring);
   const NAMES = { front: 'FRONT', side: 'SIDE', rear: 'REAR' };
-  for (const ll of S.lotlines) {
-    let best = null, bestLen = 0;
-    for (const ln of ll.lines) for (let i = 0; i < ln.length - 1; i++) { const Ls = Math.hypot(ln[i + 1][0] - ln[i][0], ln[i + 1][1] - ln[i][1]); if (Ls > bestLen) { bestLen = Ls; best = [ln[i], ln[i + 1]]; } }
-    if (!best || ll.length < 12) continue;
-    const m = [(best[0][0] + best[1][0]) / 2, (best[0][1] + best[1][1]) / 2];
+  const RANK = { front: 0, rear: 1, side: 2 };
+  const fs = 11 * kt, charW = fs * 0.56, placedLL = [];
+  // fronts first, then rear, then the longest sides; each label shortens to fit its line or is skipped
+  for (const ll of S.lotlines.slice().sort((a, b) => (RANK[a.kind] - RANK[b.kind]) || (b.length - a.length))) {
+    // measure along the whole lot line (curved frontages are many short segments), centre the label on it
+    const ln = ll.lines.slice().sort((a, b) => b.length - a.length)[0] || [];
+    const cum = [0];
+    for (let i = 1; i < ln.length; i++) cum.push(cum[i - 1] + Math.hypot(ln[i][0] - ln[i - 1][0], ln[i][1] - ln[i - 1][1]));
+    const bestLen = cum[cum.length - 1] || 0;
+    if (ln.length < 2 || !bestLen) continue;
+    const at = d => { let i = 1; while (i < cum.length - 1 && cum[i] < d) i++; const t = (d - cum[i - 1]) / ((cum[i] - cum[i - 1]) || 1); return [ln[i - 1][0] + t * (ln[i][0] - ln[i - 1][0]), ln[i - 1][1] + t * (ln[i][1] - ln[i - 1][1])]; };
+    const span = Math.min(bestLen / 4, 40);
+    const best = [at(bestLen / 2 - span), at(bestLen / 2 + span)];
+    const sb = ENV.sbFor(ll), n = sb != null ? sb : '?';
+    const variants = [`${NAMES[ll.kind]} · ${n} FT`, `${NAMES[ll.kind]} ${n}′`, `${NAMES[ll.kind][0]} ${n}′`];
+    const label = variants.find(v => v.length * charW <= bestLen * 0.85);
+    if (!label) continue;
+    const m = at(bestLen / 2);
     const vx = pc[0] - m[0], vy = pc[1] - m[1], vl = Math.hypot(vx, vy) || 1;
-    const off = 16 * k;
+    const off = fs * 1.1;
     let ang = Math.atan2(best[1][1] - best[0][1], best[1][0] - best[0][0]) * 180 / Math.PI; if (ang > 90) ang -= 180; if (ang < -90) ang += 180;
     const x = m[0] + vx / vl * off, y = m[1] + vy / vl * off;
-    const sb = ENV.sbFor(ll);
-    const t = el('text', { x, y, class: 'p-ll ' + ll.kind, 'text-anchor': 'middle', 'dominant-baseline': 'middle', 'font-size': 11 * k, transform: `rotate(${ang.toFixed(1)} ${x} ${y})`, tabindex: 0, role: 'button', 'aria-label': `${NAMES[ll.kind]} lot line along ${ll.abut}; click to change` }, base);
-    t.textContent = `${NAMES[ll.kind]}${sb != null ? ' · ' + sb + ' FT' : ' · ? FT'}`;
+    const ux = Math.cos(ang * Math.PI / 180), uy = Math.sin(ang * Math.PI / 180), half = label.length * charW / 2;
+    const seg = [[x - ux * half, y - uy * half], [x + ux * half, y + uy * half]];
+    if (placedLL.some(q => segSeg(seg[0], seg[1], q[0], q[1]) < fs * 1.2)) continue;
+    placedLL.push(seg);
+    const t = el('text', { x, y, class: 'p-ll ' + ll.kind, 'text-anchor': 'middle', 'dominant-baseline': 'middle', 'font-size': fs, transform: `rotate(${ang.toFixed(1)} ${x} ${y})`, tabindex: 0, role: 'button', 'aria-label': `${NAMES[ll.kind]} lot line along ${ll.abut}, ${n} ft setback; click to change`,
+      // anchor data so zooming can keep the label beside its line
+      'data-mx': m[0], 'data-my': m[1], 'data-vx': vx / vl, 'data-vy': vy / vl, 'data-off': off, 'data-ang': ang.toFixed(1), 'data-len': bestLen, 'data-cw': charW, 'data-variants': variants.join('|') }, base);
+    t.textContent = label;
     const cycle = e => { e.stopPropagation(); e.preventDefault(); cycleLotLine(ll.id); };
     t.addEventListener('pointerdown', e => e.stopPropagation());
     t.addEventListener('click', cycle);
@@ -560,7 +579,7 @@ function drawPlan() {
   const sbar = Math.pow(10, Math.floor(Math.log10(W / 6))) * (W / 6 / Math.pow(10, Math.floor(Math.log10(W / 6))) >= 5 ? 5 : W / 6 / Math.pow(10, Math.floor(Math.log10(W / 6))) >= 2 ? 2 : 1);
   const sb = el('g', { transform: `translate(${18 * k} ${H - 22 * k})` }, svg);
   for (let i = 0; i < 4; i++) el('rect', { x: i * sbar / 4, y: 0, width: sbar / 4, height: 5 * k, class: 'p-scale', 'fill-opacity': i % 2 ? .25 : 1 }, sb);
-  [0, sbar / 2, sbar].forEach(v => el('text', { x: v, y: -4 * k, class: 'p-scaletxt', 'text-anchor': 'middle', 'font-size': 10 * k }, sb).textContent = v === sbar ? `${sbar} ft` : v);
+  [0, sbar / 2, sbar].forEach(v => el('text', { x: v, y: -4 * k, class: 'p-scaletxt', 'text-anchor': 'middle', 'font-size': 10 * kt }, sb).textContent = v === sbar ? `${sbar} ft` : v);
   const na = el('g', { transform: `translate(${W - 70 * k} ${34 * k}) scale(${k})` }, svg);
   el('path', { d: 'M0 -16 L7 8 L0 3 L-7 8 Z', class: 'p-scale' }, na);
   el('text', { x: 0, y: 22, class: 'p-scaletxt', 'text-anchor': 'middle' }, na).textContent = 'N';
@@ -586,6 +605,25 @@ function setView(v) {
   v.w = Math.max(minW, Math.min(W, v.w)); v.h = v.w * H / W;
   v.x = Math.max(0, Math.min(W - v.w, v.x)); v.y = Math.max(0, Math.min(H - v.h, v.y));
   view = v; svg.setAttribute('viewBox', `${v.x} ${v.y} ${v.w} ${v.h}`);
+  const z = W / v.w;
+  if (svg._z !== z) { svg._z = z; scaleText(svg); }
+}
+// Keep labels the same size on screen at any zoom (the photo and lines zoom; text doesn't)
+function scaleText(root) {
+  if (!root || !SITE || !view) return;
+  const z = SITE.W / view.w;
+  for (const t of root.querySelectorAll('text')) {
+    if (t.dataset.fs === undefined) t.dataset.fs = t.getAttribute('font-size') || '';
+    if (!t.dataset.fs) continue;
+    t.setAttribute('font-size', (+t.dataset.fs / z).toFixed(3));
+    if (t.dataset.mx !== undefined) {
+      const off = +t.dataset.off / z, x = +t.dataset.mx + +t.dataset.vx * off, y = +t.dataset.my + +t.dataset.vy * off;
+      t.setAttribute('x', x); t.setAttribute('y', y); t.setAttribute('transform', `rotate(${t.dataset.ang} ${x} ${y})`);
+      // zoomed in there's room for the longer wording
+      const fit = (t.dataset.variants || '').split('|').find(v => v && v.length * +t.dataset.cw / z <= +t.dataset.len * 0.85);
+      if (fit) t.textContent = fit;
+    }
+  }
 }
 function zoom(f, cx, cy) {
   if (!SITE) return;
@@ -749,7 +787,7 @@ const provTag = p => `<span class="prov ${p}">${({ code: 'code', county: 'county
 // ---------------------------------------------------------------------------
 function renderProject(Rz) {
   projG.innerHTML = '';
-  const p = state.proj, k = SITE.k || 1;
+  const p = state.proj, k = SITE.kt || SITE.k || 1;
   const poly = el('polygon', { points: Rz.rect.map(q => q.join(',')).join(' '), class: 'p-proj ' + Rz.worst, tabindex: 0, 'aria-label': 'Test project, drag to move' }, projG);
   poly.addEventListener('pointerdown', startDrag);
   el('text', { x: p.cx, y: p.cy + 4, class: 'p-plab', 'text-anchor': 'middle', 'font-size': 11 * k }, projG).textContent = `${p.w}×${p.d}`;
@@ -766,6 +804,7 @@ function renderProject(Rz) {
     el('line', { x1: best.q[0], y1: best.q[1], x2: best.f[0], y2: best.f[1], class: 'p-dim' }, projG);
     el('text', { x: (best.q[0] + best.f[0]) / 2, y: (best.q[1] + best.f[1]) / 2 - 3, class: 'p-dimtxt', 'text-anchor': 'middle', 'font-size': 10 * k }, projG).textContent = `${Math.round(best.d)}′`;
   }
+  scaleText(projG);
 }
 const STATUS = { ok: 'Meets', permit: 'Permit', bad: 'Fails', info: 'Note' };
 function renderPanel(Rz) {
@@ -1027,7 +1066,7 @@ function nudgeIntoClear() {
   const p = state.proj, S = SITE;
   // try the constraint-free area first, then the whole setback envelope
   // accessory setbacks first; if the lot can't meet them, place it anyway and let the checks say so
-  for (const useAcc of [true, false]) for (const target of [ENV.clear, ENV.envelope]) if (target.length && placeIn(target, useAcc)) return;
+  for (const useAcc of [true, false]) for (const target of [ENV.clear, ENV.envelope, [[S.ring]]]) if (target.length && placeIn(target, useAcc)) return;
   const ip = S.pg.getInteriorPoint(), c = S.xy(ip.getX(), ip.getY()); p.cx = c[0]; p.cy = c[1];
 }
 function placeIn(target, useAcc) {
