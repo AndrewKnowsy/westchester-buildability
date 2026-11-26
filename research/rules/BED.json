@@ -1,0 +1,327 @@
+{
+ "mun": "BED",
+ "name": "Town of Bedford",
+ "code_url": "https://ecode360.com/6237215",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "No floor-area (FAR/GFA) limit for one-family homes in the Table of Dimensional Requirements; max_floor_area left null",
+  "Lot width is set as a minimum 'effective square' side (250/200/150/100/75 ft) rather than a frontage or width; recorded in notes, min_lot_width_ft left null",
+  "DH side yards are set by the Planning Board within 10-50 ft each / 20-100 ft total (table note 1); 10/20 recorded as the floor",
+  "EL and DH have no height in feet in the table (stories only); VA has no minimum lot area (3,500 sf per unit)",
+  "MF district appears in the table but not in the county layer, so it is not included; nonresidential districts not checked for one-family use (Schedule of Use Regulations PDF not retrieved)",
+  "Attachment is Supp 57 (Apr 2020); \u00a7 125-27 accessory rules were amended 9-16-2025 and are taken from the current HTML text"
+ ],
+ "general": {
+  "wetland_buffer_ft": 100,
+  "watercourse_buffer_ft": 100,
+  "wetlands": {
+   "summary": "Ch. 122: wetlands/watercourses carry a 100 ft regulated buffer; most activities in a wetland or buffer need a Wetlands Control Commission permit (small sheds/decks/play sets over 50 ft from the wetland are exempt). \u00a7 125-14: max 25% of minimum lot area (50% in R-4A) may be wetland or under water.",
+   "url": "https://ecode360.com/6236985"
+  },
+  "steep_slopes": {
+   "summary": "Ch. 102: Planning Board steep slope permit for any disturbance (clearing, grading, structures, driveways) on slopes of 25%+ (min 100 sf and 10 ft horizontal); ridgeline permit within 100 ft of mapped prominent ridgelines/hilltops.",
+   "threshold_pct": 25,
+   "url": "https://ecode360.com/6235882"
+  },
+  "trees": {
+   "summary": "Ch. 112: permit to remove any tree 18 in.+ dbh, landmark/special trees, DEC-protected native plants, trees over 8 in. within 150 ft of a designated scenic road's centerline, and trees in historic districts or conservation-development common land.",
+   "url": "https://ecode360.com/6236609"
+  },
+  "stormwater": {
+   "summary": "Ch. 103: stormwater management/SWPPP applies to land development activity disturbing 1 acre or more (or part of a larger common plan).",
+   "url": "https://ecode360.com/6347161"
+  },
+  "adu": {
+   "summary": "\u00a7 125-79: accessory apartment by Planning Board special permit in all residence districts, only inside an existing single-family house (5+ years old), 400-800 sf and max 25% of the house, owner-occupied, one per lot. \u00a7 125-79.1: cottages in existing accessory buildings in R-2A/R-4A.",
+   "url": "https://ecode360.com/6237892"
+  },
+  "accessory_structures": "Accessory buildings and structures (incl. pools, tennis courts, garages, sheds, generators/AC units) over 100 sf or 10 ft high need the principal yards and max 20 ft height; up to 100 sf and 10 ft may be at 1/3 of the side/rear yards but must meet the front yard (\u00a7 125-27).",
+  "pools": "Swimming pools are accessory structures under \u00a7 125-27: principal-building yards apply.",
+  "notes": "Max exposed building elevation 40 ft in all residential districts. Aquifer Protection Zone (\u00a7 125-29.4) overlays parts of town."
+ },
+ "districts": {
+  "4A": {
+   "name": "R-4A Residence (4 acres)",
+   "min_lot_sf": 174240,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 75,
+   "side_ft": 50,
+   "side_total_ft": 100,
+   "rear_ft": 50,
+   "corner_side_ft": 75,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 3,
+    "note": "All buildings and structures; tennis/paddle courts count at 50% (\u00a7 125-27E)"
+   },
+   "max_impervious_coverage": {
+    "pct": 8,
+    "note": "Impervious surface: buildings plus porches, stairs, walkways, driveways, parking and other surfaces that do not absorb stormwater"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 75,
+    "side_ft": 50,
+    "rear_ft": 50,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings/structures over 100 sf or 10 ft tall need the principal front/side/rear yards, max 20 ft high, ground floor max 0.5% of lot area (over 2,500 sf or 20 ft needs special permit); ones up to 100 sf and 10 ft may sit at 1/3 of the side and rear yards (\u00a7 125-27C-D)"
+   },
+   "source": "\u00a7 125-50 Table of Dimensional Requirements - Residential (125 Attachment 5); \u00a7\u00a7 125-13, 125-18, 125-27",
+   "source_url": "https://ecode360.com/attachment/319682/BE0790-125e%20Table%20of%20Dim%20Req%20Res.pdf",
+   "notes": "Lot must also contain an effective square 250 ft on a side (\u00a7 125-12B). 25 ft minimum frontage for new lots (\u00a7 125-13B). Corner lots: street side yard equals the front yard (\u00a7 125-18). Max exposed building elevation 40 ft (table note 2). Minimum dwelling cubage 14,000 cu ft."
+  },
+  "2A": {
+   "name": "R-2A Residence (2 acres)",
+   "min_lot_sf": 87120,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 50,
+   "side_ft": 40,
+   "side_total_ft": 80,
+   "rear_ft": 50,
+   "corner_side_ft": 50,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 6,
+    "note": "All buildings and structures; tennis/paddle courts count at 50% (\u00a7 125-27E)"
+   },
+   "max_impervious_coverage": {
+    "pct": 14,
+    "note": "Impervious surface: buildings plus porches, stairs, walkways, driveways, parking and other surfaces that do not absorb stormwater"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 50,
+    "side_ft": 40,
+    "rear_ft": 50,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings/structures over 100 sf or 10 ft tall need the principal front/side/rear yards, max 20 ft high, ground floor max 0.5% of lot area (over 2,500 sf or 20 ft needs special permit); ones up to 100 sf and 10 ft may sit at 1/3 of the side and rear yards (\u00a7 125-27C-D)"
+   },
+   "source": "\u00a7 125-50 Table of Dimensional Requirements - Residential (125 Attachment 5); \u00a7\u00a7 125-13, 125-18, 125-27",
+   "source_url": "https://ecode360.com/attachment/319682/BE0790-125e%20Table%20of%20Dim%20Req%20Res.pdf",
+   "notes": "Lot must also contain an effective square 200 ft on a side (\u00a7 125-12B). 25 ft minimum frontage for new lots (\u00a7 125-13B). Corner lots: street side yard equals the front yard (\u00a7 125-18). Max exposed building elevation 40 ft (table note 2). Minimum dwelling cubage 14,000 cu ft."
+  },
+  "1A": {
+   "name": "R-1A Residence (1 acre)",
+   "min_lot_sf": 40000,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 30,
+   "side_total_ft": 60,
+   "rear_ft": 50,
+   "corner_side_ft": 35,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 10,
+    "note": "All buildings and structures; tennis/paddle courts count at 50% (\u00a7 125-27E)"
+   },
+   "max_impervious_coverage": {
+    "pct": 20,
+    "note": "Impervious surface: buildings plus porches, stairs, walkways, driveways, parking and other surfaces that do not absorb stormwater"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 35,
+    "side_ft": 30,
+    "rear_ft": 50,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings/structures over 100 sf or 10 ft tall need the principal front/side/rear yards, max 20 ft high, ground floor max 0.5% of lot area (over 2,500 sf or 20 ft needs special permit); ones up to 100 sf and 10 ft may sit at 1/3 of the side and rear yards (\u00a7 125-27C-D)"
+   },
+   "source": "\u00a7 125-50 Table of Dimensional Requirements - Residential (125 Attachment 5); \u00a7\u00a7 125-13, 125-18, 125-27",
+   "source_url": "https://ecode360.com/attachment/319682/BE0790-125e%20Table%20of%20Dim%20Req%20Res.pdf",
+   "notes": "Lot must also contain an effective square 150 ft on a side (\u00a7 125-12B). 25 ft minimum frontage for new lots (\u00a7 125-13B). Corner lots: street side yard equals the front yard (\u00a7 125-18). Max exposed building elevation 40 ft (table note 2). Minimum dwelling cubage 14,000 cu ft."
+  },
+  "1/2A": {
+   "name": "R-1/2A Residence (1/2 acre)",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 20,
+   "side_total_ft": 45,
+   "rear_ft": 50,
+   "corner_side_ft": 35,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 15,
+    "note": "All buildings and structures; tennis/paddle courts count at 50% (\u00a7 125-27E)"
+   },
+   "max_impervious_coverage": {
+    "pct": 30,
+    "note": "Impervious surface: buildings plus porches, stairs, walkways, driveways, parking and other surfaces that do not absorb stormwater"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 35,
+    "side_ft": 20,
+    "rear_ft": 50,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings/structures over 100 sf or 10 ft tall need the principal front/side/rear yards, max 20 ft high, ground floor max 0.5% of lot area (over 2,500 sf or 20 ft needs special permit); ones up to 100 sf and 10 ft may sit at 1/3 of the side and rear yards (\u00a7 125-27C-D)"
+   },
+   "source": "\u00a7 125-50 Table of Dimensional Requirements - Residential (125 Attachment 5); \u00a7\u00a7 125-13, 125-18, 125-27",
+   "source_url": "https://ecode360.com/attachment/319682/BE0790-125e%20Table%20of%20Dim%20Req%20Res.pdf",
+   "notes": "Lot must also contain an effective square 100 ft on a side (\u00a7 125-12B). 25 ft minimum frontage for new lots (\u00a7 125-13B). Corner lots: street side yard equals the front yard (\u00a7 125-18). Max exposed building elevation 40 ft (table note 2). Minimum dwelling cubage 14,000 cu ft."
+  },
+  "1/4A": {
+   "name": "R-1/4A Residence (1/4 acre)",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 15,
+   "side_total_ft": 35,
+   "rear_ft": 40,
+   "corner_side_ft": 35,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20,
+    "note": "All buildings and structures; tennis/paddle courts count at 50% (\u00a7 125-27E)"
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Impervious surface: buildings plus porches, stairs, walkways, driveways, parking and other surfaces that do not absorb stormwater"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 35,
+    "side_ft": 15,
+    "rear_ft": 40,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings/structures over 100 sf or 10 ft tall need the principal front/side/rear yards, max 20 ft high, ground floor max 0.5% of lot area (over 2,500 sf or 20 ft needs special permit); ones up to 100 sf and 10 ft may sit at 1/3 of the side and rear yards (\u00a7 125-27C-D)"
+   },
+   "source": "\u00a7 125-50 Table of Dimensional Requirements - Residential (125 Attachment 5); \u00a7\u00a7 125-13, 125-18, 125-27",
+   "source_url": "https://ecode360.com/attachment/319682/BE0790-125e%20Table%20of%20Dim%20Req%20Res.pdf",
+   "notes": "Lot must also contain an effective square 75 ft on a side (\u00a7 125-12B). 25 ft minimum frontage for new lots (\u00a7 125-13B). Corner lots: street side yard equals the front yard (\u00a7 125-18). Max exposed building elevation 40 ft (table note 2). Minimum dwelling cubage 11,000 cu ft."
+  },
+  "TF": {
+   "name": "TF Two-Family Residence",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 15,
+   "side_total_ft": 35,
+   "rear_ft": 40,
+   "corner_side_ft": 35,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20,
+    "note": "All buildings and structures; tennis/paddle courts count at 50% (\u00a7 125-27E)"
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Impervious surface: buildings plus porches, stairs, walkways, driveways, parking and other surfaces that do not absorb stormwater"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 35,
+    "side_ft": 15,
+    "rear_ft": 40,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings/structures over 100 sf or 10 ft tall need the principal front/side/rear yards, max 20 ft high, ground floor max 0.5% of lot area (over 2,500 sf or 20 ft needs special permit); ones up to 100 sf and 10 ft may sit at 1/3 of the side and rear yards (\u00a7 125-27C-D)"
+   },
+   "source": "\u00a7 125-50 Table of Dimensional Requirements - Residential (125 Attachment 5); \u00a7\u00a7 125-13, 125-18, 125-27",
+   "source_url": "https://ecode360.com/attachment/319682/BE0790-125e%20Table%20of%20Dim%20Req%20Res.pdf",
+   "notes": "Lot must also contain an effective square 75 ft on a side (\u00a7 125-12B). 25 ft minimum frontage for new lots (\u00a7 125-13B). Corner lots: street side yard equals the front yard (\u00a7 125-18). Max exposed building elevation 40 ft (table note 2). Minimum dwelling cubage 9,000 cu ft. Two-family: 5,000 sf lot area per unit, cubage 12,600 (or 6,300 per unit); max building length 125 ft."
+  },
+  "VA": {
+   "name": "VA Residence Village Apartment",
+   "min_lot_sf": null,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 50,
+   "side_ft": 50,
+   "side_total_ft": 100,
+   "rear_ft": 50,
+   "corner_side_ft": 50,
+   "max_height_ft": 35,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Impervious surface"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 50,
+    "side_ft": 50,
+    "rear_ft": 50,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings/structures over 100 sf or 10 ft tall need the principal front/side/rear yards, max 20 ft high, ground floor max 0.5% of lot area (over 2,500 sf or 20 ft needs special permit); ones up to 100 sf and 10 ft may sit at 1/3 of the side and rear yards (\u00a7 125-27C-D)"
+   },
+   "source": "\u00a7 125-50 Table of Dimensional Requirements - Residential (125 Attachment 5); \u00a7\u00a7 125-13, 125-18, 125-27",
+   "source_url": "https://ecode360.com/attachment/319682/BE0790-125e%20Table%20of%20Dim%20Req%20Res.pdf",
+   "notes": "No minimum lot area; 3,500 sf of lot area per unit. Max building length 150 ft."
+  },
+  "EL": {
+   "name": "EL Housing for the Elderly",
+   "min_lot_sf": 217800,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 50,
+   "side_ft": 50,
+   "side_total_ft": 100,
+   "rear_ft": 50,
+   "corner_side_ft": 50,
+   "max_height_ft": null,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Impervious surface"
+   },
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "\u00a7 125-50 Table of Dimensional Requirements - Residential (125 Attachment 5); \u00a7\u00a7 125-13, 125-18, 125-27; \u00a7 125-29.3",
+   "source_url": "https://ecode360.com/attachment/319682/BE0790-125e%20Table%20of%20Dim%20Req%20Res.pdf",
+   "notes": "5 acres; 6,000 sf lot area per unit; effective square 250 ft; building separation at least the taller building's height; max building length 200 ft; 20% middle-income units."
+  },
+  "DH": {
+   "name": "DH Diversified Housing",
+   "min_lot_sf": 217800,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 10,
+   "side_total_ft": 20,
+   "rear_ft": 20,
+   "corner_side_ft": 20,
+   "max_height_ft": null,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 15
+   },
+   "max_impervious_coverage": {
+    "pct": 35,
+    "note": "Impervious surface"
+   },
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "\u00a7 125-50 Table of Dimensional Requirements - Residential (125 Attachment 5); \u00a7\u00a7 125-13, 125-18, 125-27; \u00a7 125-29.2",
+   "source_url": "https://ecode360.com/attachment/319682/BE0790-125e%20Table%20of%20Dim%20Req%20Res.pdf",
+   "notes": "5 acres; lot area per unit 3,500-8,500 sf by bedroom count; side yards set by Planning Board, 10-50 ft each and 20-100 ft total (note 1); max building length 200 ft; 20% middle-income units."
+  }
+ }
+}

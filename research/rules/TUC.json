@@ -1,0 +1,189 @@
+{
+ "mun": "TUC",
+ "name": "Village of Tuckahoe",
+ "code_url": "https://ecode360.com/15686071",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "Each district has two sets of rules: lots existing on or before July 1, 1999 (recorded as the main values, since most lots predate it) and lots created later (stored in post_1999_lots).",
+  "Attachment 2 schedule (dated 2014, 'for convenience') conflicts with the district text: A-5 coverage 35% vs 40% and FAR 0.45 vs 0.5; Residence B coverage 35% vs 40%; Apartment 3 FAR 0.8 vs 1.0. Text values used.",
+  "Text for post-1999 rear yards (\u00a7 4-1.4.3, 4-2.4.3, 4-3.4.3) is misworded as a 'front yard'; the schedule's 40/35/35 ft rear yards used.",
+  "No impervious-coverage limit and no distinct corner street-side yard (front yard on every street; A-10/A-5 corner lots need 25 ft side yards).",
+  "No local wetlands or steep-slope law found in the Village Code."
+ ],
+ "general": {
+  "wetland_buffer_ft": null,
+  "watercourse_buffer_ft": null,
+  "wetlands": {
+   "summary": "No Village wetlands law found; NYS DEC 100 ft adjacent area applies to state wetlands.",
+   "url": "https://ecode360.com/TU1441"
+  },
+  "steep_slopes": {
+   "summary": "No steep-slope law; ZBA may allow garages 10 ft from the street where slope within 25 ft of the street is 12-20%, 5 ft where over 20%.",
+   "threshold_pct": null,
+   "url": "https://ecode360.com/15686169"
+  },
+  "trees": {
+   "summary": "Ch. 21A: trees 10 in.+ DBH on private property - up to 2 per 24 months with 2 weeks' notice to the Building Dept; more needs a permit; under 10 in. free.",
+   "url": "https://ecode360.com/15685617"
+  },
+  "stormwater": {
+   "summary": "Ch. 7B and App. A Art. XII: SWPPP required for land development disturbing 1 acre or more (or part of a larger plan).",
+   "url": "https://ecode360.com/15686740"
+  },
+  "adu": {
+   "summary": "No accessory-apartment provision; boarders/lodgers allowance repealed in 2009 (L.L. 8-2009).",
+   "url": "https://ecode360.com/15686169"
+  },
+  "accessory_structures": "Sheds, garden/pool houses, playhouses, greenhouses: 5 1/2 ft from side and rear lines, 10 ft from the house; over 72 sf or 7 1/2 ft high needs a ZBA variance; not nearer the street than the house (\u00a7 4-1.1.4(c), 4-1.4.5).",
+  "pools": "Not nearer the street than the house; from house/side-rear lines/max coverage: A-10 12/6 ft/5%, A-5 10/5 ft/6%, Res B 10/6 ft/6%, Apt 3 18/10 ft/5%; 4 ft fence (\u00a7 5-1.1).",
+  "notes": "New or rebuilt one- and two-family houses need minor site plan review by the Building Department (\u00a7 7-1.2). Fences max 6 ft rear, 5 ft side, 4 ft front (\u00a7 5-1.3)."
+ },
+ "districts": {
+  "RES A-10": {
+   "name": "Residence A-10 District",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 80,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 15,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25,
+    "note": "All principal and accessory buildings"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.4
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5.5,
+    "rear_ft": 5.5,
+    "max_height_ft": 7.5,
+    "notes": "Garden/pool houses, playhouses, sheds, greenhouses: 5 1/2 ft from side and rear lines, 10 ft from the house; anything over 72 sf or 7 1/2 ft high needs a ZBA variance (\u00a7 4-1.1.4(c)); accessory buildings no nearer the street than the house (\u00a7 4-1.4.5)"
+   },
+   "post_1999_lots": {
+    "min_lot_sf": 12000,
+    "min_lot_width_ft": 95,
+    "front_ft": 35,
+    "side_ft": 20,
+    "rear_ft": 40
+   },
+   "source": "App. A Zoning \u00a7 4-1.2 to 4-1.6; Attachment 2 Schedule of Area and Bulk Requirements",
+   "source_url": "https://ecode360.com/15686169",
+   "notes": "Values are for lots existing on or before July 1, 1999; lots created later: 12,000 sf, 95 ft wide, front 35, side 20, rear 40 (post_1999_lots). Street line at least 80% of lot width. Front yard along each street line; corner lots need both side yards 25 ft. Height for 1-2 family houses: from average finished grade along the street wall to flat roof or midpoint of a pitched roof. Pools: 12 ft from house, 6 ft from side/rear lines, max 5% of lot, not nearer the street than the house (\u00a7 5-1.1)."
+  },
+  "RES A-5": {
+   "name": "Residence A-5 District",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 9,
+   "side_total_ft": null,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40,
+    "note": "All principal and accessory buildings (\u00a7 4-2.5; Attachment 2 shows 35%)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.5,
+    "note": "\u00a7 4-2.6; Attachment 2 shows 0.45"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5.5,
+    "rear_ft": 5.5,
+    "max_height_ft": 7.5,
+    "notes": "Garden/pool houses, playhouses, sheds, greenhouses: 5 1/2 ft from side and rear lines, 10 ft from the house; anything over 72 sf or 7 1/2 ft high needs a ZBA variance (\u00a7 4-1.1.4(c)); accessory buildings no nearer the street than the house (\u00a7 4-1.4.5)"
+   },
+   "post_1999_lots": {
+    "min_lot_sf": 10000,
+    "min_lot_width_ft": 80,
+    "front_ft": 35,
+    "side_ft": 20,
+    "rear_ft": 35
+   },
+   "source": "App. A Zoning \u00a7 4-2.2 to 4-2.6; Attachment 2 Schedule of Area and Bulk Requirements",
+   "source_url": "https://ecode360.com/15686210",
+   "notes": "Values are for lots existing on or before July 1, 1999; lots created later: 10,000 sf, 80 ft wide, front 35, side 20, rear 35. Street line at least 80% of lot width. Front yard along each street line; corner lots need both side yards 25 ft. Pools: 10 ft from house, 5 ft from side/rear lines, max 6% of lot, not nearer the street than the house (\u00a7 5-1.1)."
+  },
+  "RES B": {
+   "name": "Residence B District (one- and two-family)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 9,
+   "side_total_ft": null,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40,
+    "note": "All principal and accessory buildings (\u00a7 4-3.5; Attachment 2 shows 35%)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.5
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5.5,
+    "rear_ft": 5.5,
+    "max_height_ft": 7.5,
+    "notes": "Garden/pool houses, playhouses, sheds, greenhouses: 5 1/2 ft from side and rear lines, 10 ft from the house; anything over 72 sf or 7 1/2 ft high needs a ZBA variance (\u00a7 4-1.1.4(c)); accessory buildings no nearer the street than the house (\u00a7 4-1.4.5)"
+   },
+   "post_1999_lots": {
+    "min_lot_sf": 10000,
+    "min_lot_width_ft": 80,
+    "front_ft": 35,
+    "side_ft": 15,
+    "rear_ft": 35
+   },
+   "source": "App. A Zoning \u00a7 4-3.2 to 4-3.6; Attachment 2 Schedule of Area and Bulk Requirements",
+   "source_url": "https://ecode360.com/15686224",
+   "notes": "One-family values for lots existing on or before July 1, 1999 (two-family: 7,500 sf, 80 ft wide); lots created later: 10,000 sf, 80 ft wide, front 35, side 15, rear 35. 5 ft landscaped buffer (no paving) along side and rear lot lines. Garage space for up to 3 vehicles. Pools: 10 ft from house, 6 ft from side/rear lines, max 6% of lot, not nearer the street than the house (\u00a7 5-1.1)."
+  },
+  "AP 3": {
+   "name": "Apartment 3 District",
+   "min_lot_sf": 12000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 100,
+   "front_ft": 20,
+   "side_ft": 12,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 42,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 35,
+    "note": "Principal buildings; accessory buildings another 10% (ZBA may allow +10% for garages); senior housing 40%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 1.0,
+    "note": "\u00a7 4-4.7; Attachment 2 shows 0.8"
+   },
+   "accessory": null,
+   "source": "App. A Zoning \u00a7 4-4.2 to 4-4.7; Attachment 2 Schedule of Area and Bulk Requirements",
+   "source_url": "https://ecode360.com/15686243",
+   "notes": "Any Residence B use (incl. one-family) plus apartments (7+ units), townhouses, senior housing. 950 sf of lot per dwelling unit; average depth 100 ft. Side yard = 1/2 the facing wall height, min 12 ft (townhouses 15 ft); senior housing rear 15 ft. Buildings max 160 ft long (220 ft senior/townhouse). Pools: 18 ft from house, 10 ft from side/rear lines, max 5% of lot, not nearer the street than the house (\u00a7 5-1.1)."
+  }
+ }
+}

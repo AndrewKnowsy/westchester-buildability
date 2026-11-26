@@ -1,0 +1,930 @@
+{
+ "mun": "OST",
+ "name": "Town of Ossining",
+ "code_url": "https://ecode360.com/8410570",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "County code R-80 is not a district in the Town code (§ 200-3 lists R-40, R-30, R-20, R-20A, R-15, R-10, R-7.5, R-5); entry left null - check the Town zoning map for the parcel's actual district",
+  "Building coverage definition not found in § 200-53; recorded as plain % of lot",
+  "MF entry uses the § 200-22 multiple-dwelling column; one-family houses in MF are permitted as regulated in R-40 (§ 200-16A(1)), so use the R-40 values for a house there",
+  "Pool-specific setbacks not found in Ch. 200 (pools count as impervious surface)",
+  "Height measured to the mean between eave and ridge for pitched roofs (§ 200-53)"
+ ],
+ "general": {
+  "wetland_buffer_ft": 100,
+  "watercourse_buffer_ft": 50,
+  "wetlands": {
+   "summary": "Ch. 105: permit for regulated activities in wetlands, water bodies, watercourses and their buffers: 100 ft from water bodies and non-watercourse wetlands, 50 ft from watercourses; minor activities (e.g. short driveway crossings) by Building Inspector permit.",
+   "url": "https://ecode360.com/8408695"
+  },
+  "steep_slopes": {
+   "summary": "Ch. 167: regulates slopes of 15%+ with a 10 ft minimum dimension: 15-25% over 13,068 sf, 25-35% over 8,712 sf, 35%+ over 4,356 sf; steepest qualifying class sets the approval authority.",
+   "threshold_pct": 15,
+   "url": "https://ecode360.com/8409355"
+  },
+  "trees": {
+   "summary": "Ch. 183: permit to remove trees of 6 in.+ DBH, ornamental trees of 3 in.+, any tree of 3 in.+ in the perimeter buffer zone (10 ft in R-40/R-30, 5 ft in R-20/R-20A/R-15 and other listed districts), significant trees, or clear-cut more than 10 trees (6 in.+) per lot in 12 months.",
+   "url": "https://ecode360.com/8410336"
+  },
+  "stormwater": {
+   "summary": "Ch. 168: Stormwater Management Officer review and SWPPP for land development activity disturbing 1 acre or more (or part of a larger common plan).",
+   "url": "https://ecode360.com/8409555"
+  },
+  "adu": {
+   "summary": "§ 200-31.2: accessory apartment by ZBA special permit on single-family lots: 300-800 sf habitable and max 33% of the house's habitable floor area, owner-occupied, only in space with a CO for 2+ years.",
+   "url": "https://ecode360.com/33743097"
+  },
+  "accessory_structures": "Accessory buildings may sit in required side/rear yards if max 15 ft high and 10 ft from any lot line, together max 30% of the required yard; not nearer the street than the house (§ 200-25A).",
+  "pools": "No pool-specific setback found; pools count toward impervious surface (§ 200-53).",
+  "notes": "Indian Brook-Croton Gorge Watershed Overlay (Ch. 117) adds rules in mapped areas. A new one- or two-family house need not be set back farther than the average of existing dwellings within 200 ft on each side (§ 200-25D(3))."
+ },
+ "districts": {
+  "R-40": {
+   "name": "One-Family Residence R-40",
+   "min_lot_sf": 40000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": 150,
+   "front_ft": 40,
+   "side_ft": 20,
+   "side_total_ft": 42,
+   "rear_ft": 38,
+   "corner_side_ft": 40,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 18
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4000,
+      "pct": 55
+     },
+     {
+      "min": 4000,
+      "max": 6000,
+      "base": 2200,
+      "pct_over": 35,
+      "over": 4000
+     },
+     {
+      "min": 6000,
+      "max": 12000,
+      "base": 2900,
+      "pct_over": 27,
+      "over": 6000
+     },
+     {
+      "min": 12000,
+      "max": 16000,
+      "base": 4520,
+      "pct_over": 26,
+      "over": 12000
+     },
+     {
+      "min": 16000,
+      "max": 20000,
+      "base": 5560,
+      "pct_over": 25,
+      "over": 16000
+     },
+     {
+      "min": 20000,
+      "max": 30000,
+      "base": 6560,
+      "pct_over": 24,
+      "over": 20000
+     },
+     {
+      "min": 30000,
+      "max": 40000,
+      "base": 8960,
+      "pct_over": 23,
+      "over": 30000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 11260,
+      "pct_over": 22,
+      "over": 40000
+     }
+    ],
+    "note": "Impervious surfaces: buildings plus asphalt, concrete, masonry, wood, gravel or paver areas incl. pools, courts, patios, terraces, driveways (§ 200-53); applies to any residentially used or zoned lot; > 100 sf new impervious needs a Building Inspector permit (§ 200-21B)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": null,
+      "base": 5000,
+      "pct_over": 5.2521,
+      "over": 43560
+     }
+    ],
+    "note": "Max floor area of a one-family residence = 5,000 + (lot area - 43,560) x 0.052521, for all lot sizes (smaller lots get less than 5,000 sf); floor area excludes cellar/basement areas used only for storage or building operation (§ 200-21C, § 200-53)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings in required side/rear yards: max 15 ft high, 10 ft from any lot line, together max 30% of the required rear or side yard; elsewhere principal-building height rules; not nearer the street than the house (garages may come to 10 ft / 5 ft from the street line on 10-20% / 20%+ slopes with Planning Board approval) (§ 200-25A)"
+   },
+   "source": "§ 200-21 and Schedule of Bulk Regulations for One-Family Residences (200 Attachment 2, Mar 2021)",
+   "source_url": "https://ecode360.com/attachment/333017/OS0797-200b%20Bulk%20Regulations.pdf",
+   "notes": "Min livable floor area 850 sf. Corner lots need front yards on both streets (§ 200-25B(2)). Lot depth may be 25% less at any point if the average meets the minimum. On streets with < 50 ft right-of-way, the front yard is measured from the street center line plus 25 ft (§ 200-25D(4)). Min 50 ft street frontage (§ 200-25.1)."
+  },
+  "R-30": {
+   "name": "One-Family Residence R-30",
+   "min_lot_sf": 30000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 125,
+   "min_lot_depth_ft": 150,
+   "front_ft": 35,
+   "side_ft": 18,
+   "side_total_ft": 38,
+   "rear_ft": 36,
+   "corner_side_ft": 35,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4000,
+      "pct": 55
+     },
+     {
+      "min": 4000,
+      "max": 6000,
+      "base": 2200,
+      "pct_over": 35,
+      "over": 4000
+     },
+     {
+      "min": 6000,
+      "max": 12000,
+      "base": 2900,
+      "pct_over": 27,
+      "over": 6000
+     },
+     {
+      "min": 12000,
+      "max": 16000,
+      "base": 4520,
+      "pct_over": 26,
+      "over": 12000
+     },
+     {
+      "min": 16000,
+      "max": 20000,
+      "base": 5560,
+      "pct_over": 25,
+      "over": 16000
+     },
+     {
+      "min": 20000,
+      "max": 30000,
+      "base": 6560,
+      "pct_over": 24,
+      "over": 20000
+     },
+     {
+      "min": 30000,
+      "max": 40000,
+      "base": 8960,
+      "pct_over": 23,
+      "over": 30000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 11260,
+      "pct_over": 22,
+      "over": 40000
+     }
+    ],
+    "note": "Impervious surfaces: buildings plus asphalt, concrete, masonry, wood, gravel or paver areas incl. pools, courts, patios, terraces, driveways (§ 200-53); applies to any residentially used or zoned lot; > 100 sf new impervious needs a Building Inspector permit (§ 200-21B)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": null,
+      "base": 5000,
+      "pct_over": 5.2521,
+      "over": 43560
+     }
+    ],
+    "note": "Max floor area of a one-family residence = 5,000 + (lot area - 43,560) x 0.052521, for all lot sizes (smaller lots get less than 5,000 sf); floor area excludes cellar/basement areas used only for storage or building operation (§ 200-21C, § 200-53)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings in required side/rear yards: max 15 ft high, 10 ft from any lot line, together max 30% of the required rear or side yard; elsewhere principal-building height rules; not nearer the street than the house (garages may come to 10 ft / 5 ft from the street line on 10-20% / 20%+ slopes with Planning Board approval) (§ 200-25A)"
+   },
+   "source": "§ 200-21 and Schedule of Bulk Regulations for One-Family Residences (200 Attachment 2, Mar 2021)",
+   "source_url": "https://ecode360.com/attachment/333017/OS0797-200b%20Bulk%20Regulations.pdf",
+   "notes": "Min livable floor area 850 sf. Corner lots need front yards on both streets (§ 200-25B(2)). Lot depth may be 25% less at any point if the average meets the minimum. On streets with < 50 ft right-of-way, the front yard is measured from the street center line plus 25 ft (§ 200-25D(4)). Min 50 ft street frontage (§ 200-25.1)."
+  },
+  "R-20": {
+   "name": "One-Family Residence R-20",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": 130,
+   "front_ft": 30,
+   "side_ft": 16,
+   "side_total_ft": 34,
+   "rear_ft": 34,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 22
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4000,
+      "pct": 55
+     },
+     {
+      "min": 4000,
+      "max": 6000,
+      "base": 2200,
+      "pct_over": 35,
+      "over": 4000
+     },
+     {
+      "min": 6000,
+      "max": 12000,
+      "base": 2900,
+      "pct_over": 27,
+      "over": 6000
+     },
+     {
+      "min": 12000,
+      "max": 16000,
+      "base": 4520,
+      "pct_over": 26,
+      "over": 12000
+     },
+     {
+      "min": 16000,
+      "max": 20000,
+      "base": 5560,
+      "pct_over": 25,
+      "over": 16000
+     },
+     {
+      "min": 20000,
+      "max": 30000,
+      "base": 6560,
+      "pct_over": 24,
+      "over": 20000
+     },
+     {
+      "min": 30000,
+      "max": 40000,
+      "base": 8960,
+      "pct_over": 23,
+      "over": 30000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 11260,
+      "pct_over": 22,
+      "over": 40000
+     }
+    ],
+    "note": "Impervious surfaces: buildings plus asphalt, concrete, masonry, wood, gravel or paver areas incl. pools, courts, patios, terraces, driveways (§ 200-53); applies to any residentially used or zoned lot; > 100 sf new impervious needs a Building Inspector permit (§ 200-21B)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": null,
+      "base": 5000,
+      "pct_over": 5.2521,
+      "over": 43560
+     }
+    ],
+    "note": "Max floor area of a one-family residence = 5,000 + (lot area - 43,560) x 0.052521, for all lot sizes (smaller lots get less than 5,000 sf); floor area excludes cellar/basement areas used only for storage or building operation (§ 200-21C, § 200-53)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings in required side/rear yards: max 15 ft high, 10 ft from any lot line, together max 30% of the required rear or side yard; elsewhere principal-building height rules; not nearer the street than the house (garages may come to 10 ft / 5 ft from the street line on 10-20% / 20%+ slopes with Planning Board approval) (§ 200-25A)"
+   },
+   "source": "§ 200-21 and Schedule of Bulk Regulations for One-Family Residences (200 Attachment 2, Mar 2021)",
+   "source_url": "https://ecode360.com/attachment/333017/OS0797-200b%20Bulk%20Regulations.pdf",
+   "notes": "Min livable floor area 850 sf. Corner lots need front yards on both streets (§ 200-25B(2)). Lot depth may be 25% less at any point if the average meets the minimum. On streets with < 50 ft right-of-way, the front yard is measured from the street center line plus 25 ft (§ 200-25D(4)). Min 50 ft street frontage (§ 200-25.1)."
+  },
+  "R-20A": {
+   "name": "One-Family Residence R-20A",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 90,
+   "min_lot_depth_ft": 130,
+   "front_ft": 30,
+   "side_ft": 16,
+   "side_total_ft": 34,
+   "rear_ft": 34,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 22
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4000,
+      "pct": 55
+     },
+     {
+      "min": 4000,
+      "max": 6000,
+      "base": 2200,
+      "pct_over": 35,
+      "over": 4000
+     },
+     {
+      "min": 6000,
+      "max": 12000,
+      "base": 2900,
+      "pct_over": 27,
+      "over": 6000
+     },
+     {
+      "min": 12000,
+      "max": 16000,
+      "base": 4520,
+      "pct_over": 26,
+      "over": 12000
+     },
+     {
+      "min": 16000,
+      "max": 20000,
+      "base": 5560,
+      "pct_over": 25,
+      "over": 16000
+     },
+     {
+      "min": 20000,
+      "max": 30000,
+      "base": 6560,
+      "pct_over": 24,
+      "over": 20000
+     },
+     {
+      "min": 30000,
+      "max": 40000,
+      "base": 8960,
+      "pct_over": 23,
+      "over": 30000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 11260,
+      "pct_over": 22,
+      "over": 40000
+     }
+    ],
+    "note": "Impervious surfaces: buildings plus asphalt, concrete, masonry, wood, gravel or paver areas incl. pools, courts, patios, terraces, driveways (§ 200-53); applies to any residentially used or zoned lot; > 100 sf new impervious needs a Building Inspector permit (§ 200-21B)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": null,
+      "base": 5000,
+      "pct_over": 5.2521,
+      "over": 43560
+     }
+    ],
+    "note": "Max floor area of a one-family residence = 5,000 + (lot area - 43,560) x 0.052521, for all lot sizes (smaller lots get less than 5,000 sf); floor area excludes cellar/basement areas used only for storage or building operation (§ 200-21C, § 200-53)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings in required side/rear yards: max 15 ft high, 10 ft from any lot line, together max 30% of the required rear or side yard; elsewhere principal-building height rules; not nearer the street than the house (garages may come to 10 ft / 5 ft from the street line on 10-20% / 20%+ slopes with Planning Board approval) (§ 200-25A)"
+   },
+   "source": "§ 200-21 and Schedule of Bulk Regulations for One-Family Residences (200 Attachment 2, Mar 2021)",
+   "source_url": "https://ecode360.com/attachment/333017/OS0797-200b%20Bulk%20Regulations.pdf",
+   "notes": "Min livable floor area 850 sf. Corner lots need front yards on both streets (§ 200-25B(2)). Lot depth may be 25% less at any point if the average meets the minimum. On streets with < 50 ft right-of-way, the front yard is measured from the street center line plus 25 ft (§ 200-25D(4)). Min 50 ft street frontage (§ 200-25.1)."
+  },
+  "R-15": {
+   "name": "One-Family Residence R-15",
+   "min_lot_sf": 15000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 90,
+   "min_lot_depth_ft": 120,
+   "front_ft": 30,
+   "side_ft": 14,
+   "side_total_ft": 30,
+   "rear_ft": 32,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4000,
+      "pct": 55
+     },
+     {
+      "min": 4000,
+      "max": 6000,
+      "base": 2200,
+      "pct_over": 35,
+      "over": 4000
+     },
+     {
+      "min": 6000,
+      "max": 12000,
+      "base": 2900,
+      "pct_over": 27,
+      "over": 6000
+     },
+     {
+      "min": 12000,
+      "max": 16000,
+      "base": 4520,
+      "pct_over": 26,
+      "over": 12000
+     },
+     {
+      "min": 16000,
+      "max": 20000,
+      "base": 5560,
+      "pct_over": 25,
+      "over": 16000
+     },
+     {
+      "min": 20000,
+      "max": 30000,
+      "base": 6560,
+      "pct_over": 24,
+      "over": 20000
+     },
+     {
+      "min": 30000,
+      "max": 40000,
+      "base": 8960,
+      "pct_over": 23,
+      "over": 30000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 11260,
+      "pct_over": 22,
+      "over": 40000
+     }
+    ],
+    "note": "Impervious surfaces: buildings plus asphalt, concrete, masonry, wood, gravel or paver areas incl. pools, courts, patios, terraces, driveways (§ 200-53); applies to any residentially used or zoned lot; > 100 sf new impervious needs a Building Inspector permit (§ 200-21B)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": null,
+      "base": 5000,
+      "pct_over": 5.2521,
+      "over": 43560
+     }
+    ],
+    "note": "Max floor area of a one-family residence = 5,000 + (lot area - 43,560) x 0.052521, for all lot sizes (smaller lots get less than 5,000 sf); floor area excludes cellar/basement areas used only for storage or building operation (§ 200-21C, § 200-53)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings in required side/rear yards: max 15 ft high, 10 ft from any lot line, together max 30% of the required rear or side yard; elsewhere principal-building height rules; not nearer the street than the house (garages may come to 10 ft / 5 ft from the street line on 10-20% / 20%+ slopes with Planning Board approval) (§ 200-25A)"
+   },
+   "source": "§ 200-21 and Schedule of Bulk Regulations for One-Family Residences (200 Attachment 2, Mar 2021)",
+   "source_url": "https://ecode360.com/attachment/333017/OS0797-200b%20Bulk%20Regulations.pdf",
+   "notes": "Min livable floor area 850 sf. Corner lots need front yards on both streets (§ 200-25B(2)). Lot depth may be 25% less at any point if the average meets the minimum. On streets with < 50 ft right-of-way, the front yard is measured from the street center line plus 25 ft (§ 200-25D(4)). Min 50 ft street frontage (§ 200-25.1)."
+  },
+  "R-10": {
+   "name": "One-Family Residence R-10",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": 100,
+   "front_ft": 25,
+   "side_ft": 12,
+   "side_total_ft": 26,
+   "rear_ft": 30,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 27
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4000,
+      "pct": 55
+     },
+     {
+      "min": 4000,
+      "max": 6000,
+      "base": 2200,
+      "pct_over": 35,
+      "over": 4000
+     },
+     {
+      "min": 6000,
+      "max": 12000,
+      "base": 2900,
+      "pct_over": 27,
+      "over": 6000
+     },
+     {
+      "min": 12000,
+      "max": 16000,
+      "base": 4520,
+      "pct_over": 26,
+      "over": 12000
+     },
+     {
+      "min": 16000,
+      "max": 20000,
+      "base": 5560,
+      "pct_over": 25,
+      "over": 16000
+     },
+     {
+      "min": 20000,
+      "max": 30000,
+      "base": 6560,
+      "pct_over": 24,
+      "over": 20000
+     },
+     {
+      "min": 30000,
+      "max": 40000,
+      "base": 8960,
+      "pct_over": 23,
+      "over": 30000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 11260,
+      "pct_over": 22,
+      "over": 40000
+     }
+    ],
+    "note": "Impervious surfaces: buildings plus asphalt, concrete, masonry, wood, gravel or paver areas incl. pools, courts, patios, terraces, driveways (§ 200-53); applies to any residentially used or zoned lot; > 100 sf new impervious needs a Building Inspector permit (§ 200-21B)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": null,
+      "base": 5000,
+      "pct_over": 5.2521,
+      "over": 43560
+     }
+    ],
+    "note": "Max floor area of a one-family residence = 5,000 + (lot area - 43,560) x 0.052521, for all lot sizes (smaller lots get less than 5,000 sf); floor area excludes cellar/basement areas used only for storage or building operation (§ 200-21C, § 200-53)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings in required side/rear yards: max 15 ft high, 10 ft from any lot line, together max 30% of the required rear or side yard; elsewhere principal-building height rules; not nearer the street than the house (garages may come to 10 ft / 5 ft from the street line on 10-20% / 20%+ slopes with Planning Board approval) (§ 200-25A)"
+   },
+   "source": "§ 200-21 and Schedule of Bulk Regulations for One-Family Residences (200 Attachment 2, Mar 2021)",
+   "source_url": "https://ecode360.com/attachment/333017/OS0797-200b%20Bulk%20Regulations.pdf",
+   "notes": "Min livable floor area 850 sf. Corner lots need front yards on both streets (§ 200-25B(2)). Lot depth may be 25% less at any point if the average meets the minimum. On streets with < 50 ft right-of-way, the front yard is measured from the street center line plus 25 ft (§ 200-25D(4)). Min 50 ft street frontage (§ 200-25.1)."
+  },
+  "R-7.5": {
+   "name": "One-Family Residence R-7.5",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 60,
+   "min_lot_depth_ft": 100,
+   "front_ft": 25,
+   "side_ft": 10,
+   "side_total_ft": 22,
+   "rear_ft": 28,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4000,
+      "pct": 55
+     },
+     {
+      "min": 4000,
+      "max": 6000,
+      "base": 2200,
+      "pct_over": 35,
+      "over": 4000
+     },
+     {
+      "min": 6000,
+      "max": 12000,
+      "base": 2900,
+      "pct_over": 27,
+      "over": 6000
+     },
+     {
+      "min": 12000,
+      "max": 16000,
+      "base": 4520,
+      "pct_over": 26,
+      "over": 12000
+     },
+     {
+      "min": 16000,
+      "max": 20000,
+      "base": 5560,
+      "pct_over": 25,
+      "over": 16000
+     },
+     {
+      "min": 20000,
+      "max": 30000,
+      "base": 6560,
+      "pct_over": 24,
+      "over": 20000
+     },
+     {
+      "min": 30000,
+      "max": 40000,
+      "base": 8960,
+      "pct_over": 23,
+      "over": 30000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 11260,
+      "pct_over": 22,
+      "over": 40000
+     }
+    ],
+    "note": "Impervious surfaces: buildings plus asphalt, concrete, masonry, wood, gravel or paver areas incl. pools, courts, patios, terraces, driveways (§ 200-53); applies to any residentially used or zoned lot; > 100 sf new impervious needs a Building Inspector permit (§ 200-21B)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": null,
+      "base": 5000,
+      "pct_over": 5.2521,
+      "over": 43560
+     }
+    ],
+    "note": "Max floor area of a one-family residence = 5,000 + (lot area - 43,560) x 0.052521, for all lot sizes (smaller lots get less than 5,000 sf); floor area excludes cellar/basement areas used only for storage or building operation (§ 200-21C, § 200-53)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings in required side/rear yards: max 15 ft high, 10 ft from any lot line, together max 30% of the required rear or side yard; elsewhere principal-building height rules; not nearer the street than the house (garages may come to 10 ft / 5 ft from the street line on 10-20% / 20%+ slopes with Planning Board approval) (§ 200-25A)"
+   },
+   "source": "§ 200-21 and Schedule of Bulk Regulations for One-Family Residences (200 Attachment 2, Mar 2021)",
+   "source_url": "https://ecode360.com/attachment/333017/OS0797-200b%20Bulk%20Regulations.pdf",
+   "notes": "Min livable floor area 750 sf. Corner lots need front yards on both streets (§ 200-25B(2)). Lot depth may be 25% less at any point if the average meets the minimum. On streets with < 50 ft right-of-way, the front yard is measured from the street center line plus 25 ft (§ 200-25D(4)). Min 50 ft street frontage (§ 200-25.1)."
+  },
+  "R-5": {
+   "name": "One-Family Residence R-5",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 80,
+   "front_ft": 25,
+   "side_ft": 8,
+   "side_total_ft": 18,
+   "rear_ft": 26,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4000,
+      "pct": 55
+     },
+     {
+      "min": 4000,
+      "max": 6000,
+      "base": 2200,
+      "pct_over": 35,
+      "over": 4000
+     },
+     {
+      "min": 6000,
+      "max": 12000,
+      "base": 2900,
+      "pct_over": 27,
+      "over": 6000
+     },
+     {
+      "min": 12000,
+      "max": 16000,
+      "base": 4520,
+      "pct_over": 26,
+      "over": 12000
+     },
+     {
+      "min": 16000,
+      "max": 20000,
+      "base": 5560,
+      "pct_over": 25,
+      "over": 16000
+     },
+     {
+      "min": 20000,
+      "max": 30000,
+      "base": 6560,
+      "pct_over": 24,
+      "over": 20000
+     },
+     {
+      "min": 30000,
+      "max": 40000,
+      "base": 8960,
+      "pct_over": 23,
+      "over": 30000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 11260,
+      "pct_over": 22,
+      "over": 40000
+     }
+    ],
+    "note": "Impervious surfaces: buildings plus asphalt, concrete, masonry, wood, gravel or paver areas incl. pools, courts, patios, terraces, driveways (§ 200-53); applies to any residentially used or zoned lot; > 100 sf new impervious needs a Building Inspector permit (§ 200-21B)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": null,
+      "base": 5000,
+      "pct_over": 5.2521,
+      "over": 43560
+     }
+    ],
+    "note": "Max floor area of a one-family residence = 5,000 + (lot area - 43,560) x 0.052521, for all lot sizes (smaller lots get less than 5,000 sf); floor area excludes cellar/basement areas used only for storage or building operation (§ 200-21C, § 200-53)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings in required side/rear yards: max 15 ft high, 10 ft from any lot line, together max 30% of the required rear or side yard; elsewhere principal-building height rules; not nearer the street than the house (garages may come to 10 ft / 5 ft from the street line on 10-20% / 20%+ slopes with Planning Board approval) (§ 200-25A)"
+   },
+   "source": "§ 200-21 and Schedule of Bulk Regulations for One-Family Residences (200 Attachment 2, Mar 2021)",
+   "source_url": "https://ecode360.com/attachment/333017/OS0797-200b%20Bulk%20Regulations.pdf",
+   "notes": "Min livable floor area 750 sf. Corner lots need front yards on both streets (§ 200-25B(2)). Lot depth may be 25% less at any point if the average meets the minimum. On streets with < 50 ft right-of-way, the front yard is measured from the street center line plus 25 ft (§ 200-25D(4)). Min 50 ft street frontage (§ 200-25.1)."
+  },
+  "MF": {
+   "name": "Multifamily District",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": 150,
+   "front_ft": 50,
+   "side_ft": 50,
+   "side_total_ft": 100,
+   "rear_ft": 40,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4000,
+      "pct": 55
+     },
+     {
+      "min": 4000,
+      "max": 6000,
+      "base": 2200,
+      "pct_over": 35,
+      "over": 4000
+     },
+     {
+      "min": 6000,
+      "max": 12000,
+      "base": 2900,
+      "pct_over": 27,
+      "over": 6000
+     },
+     {
+      "min": 12000,
+      "max": 16000,
+      "base": 4520,
+      "pct_over": 26,
+      "over": 12000
+     },
+     {
+      "min": 16000,
+      "max": 20000,
+      "base": 5560,
+      "pct_over": 25,
+      "over": 16000
+     },
+     {
+      "min": 20000,
+      "max": 30000,
+      "base": 6560,
+      "pct_over": 24,
+      "over": 20000
+     },
+     {
+      "min": 30000,
+      "max": 40000,
+      "base": 8960,
+      "pct_over": 23,
+      "over": 30000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 11260,
+      "pct_over": 22,
+      "over": 40000
+     }
+    ],
+    "note": "Impervious surfaces: buildings plus asphalt, concrete, masonry, wood, gravel or paver areas incl. pools, courts, patios, terraces, driveways (§ 200-53); applies to any residentially used or zoned lot; > 100 sf new impervious needs a Building Inspector permit (§ 200-21B)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings in required side/rear yards: max 15 ft high, 10 ft from any lot line, together max 30% of the required rear or side yard; elsewhere principal-building height rules; not nearer the street than the house (garages may come to 10 ft / 5 ft from the street line on 10-20% / 20%+ slopes with Planning Board approval) (§ 200-25A)"
+   },
+   "source": "§ 200-22",
+   "source_url": "https://ecode360.com/8410974",
+   "notes": "One-family houses permitted as regulated in R-40 (§ 200-16A(1)); values shown are for multiple dwellings: 4,000 sf per unit plus 1,500 sf per bedroom. Row/attached dwellings: lot width 20, depth 100, front 25, side 50/100 (between buildings and side lot lines only), rear 40. Min livable floor area 450-1,200 sf by unit size. Impervious table (§ 200-21B) applies to residentially zoned lots."
+  },
+  "R-80": {
+   "name": "Not a Town of Ossining district (county label)",
+   "min_lot_sf": null,
+   "front_ft": null,
+   "side_ft": null,
+   "rear_ft": null,
+   "max_height_ft": null,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "§ 200-3 Classes of districts (no R-80 listed)",
+   "source_url": "https://ecode360.com/8410584",
+   "notes": "The Town code has no R-80 district; verify the parcel's district on the Town zoning map."
+  }
+ }
+}

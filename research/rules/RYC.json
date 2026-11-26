@@ -1,0 +1,567 @@
+{
+ "mun": "RYC",
+ "name": "City of Rye",
+ "code_url": "https://ecode360.com/6977013",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "No principal-building or total lot coverage limit in the residence schedule (only FAR and accessory rear-yard coverage); max_building_coverage left null",
+  "Min frontage and lot depth not set in Table A",
+  "Corner side yard is a formula (1/5 of lot width, capped at the front yard), so corner_side_ft is null",
+  "RFWP side/rear setbacks depend on the site's former zoning (60 ft ex-R-1 / 50 ft ex-R-2 for one-family); left null",
+  "R-3 to R-6 minimum lot is 1/2 acre in flood-hazard areas; FAR oversize bands computed from the non-flood minimum",
+  "No accessory apartment / ADU provision found in Ch. 197",
+  "RS: county lists a 1/3-acre minimum, which is the Table A row for other permitted uses; a single-family house needs 1/2 acre",
+  "RA-5 and RA-6 (senior apartments) not covered: not one-family districts",
+  "Accessory structure height limit not stated as feet (table heading says one-story accessory structures; Column 3 allows one- or two-story garages)"
+ ],
+ "general": {
+  "wetland_buffer_ft": 100,
+  "watercourse_buffer_ft": 100,
+  "wetlands": {
+   "summary": "Ch. 195: 100 ft wetland/watercourse buffer; structures, grading, fill, vegetation removal and other regulated activities in a wetland, watercourse or buffer need a Planning Commission permit.",
+   "url": "https://ecode360.com/6976602"
+  },
+  "steep_slopes": {
+   "summary": "Ch. 166A: steep slope = contiguous area over 500 sf at 25%+ grade (min 10 ft horizontal); disturbing it needs Planning Commission steep slope work approval and a Building Inspector permit.",
+   "threshold_pct": 25,
+   "url": "https://ecode360.com/38364138"
+  },
+  "trees": {
+   "summary": "Ch. 187 (2023): Building Inspector permit to remove any protected tree (8 in.+ DBH) or significant tree (30 in.+ DBH) on private property; limited removals per 12 months, appeals to the Planning Commission.",
+   "url": "https://ecode360.com/42450937"
+  },
+  "stormwater": {
+   "summary": "Ch. 174: land development/redevelopment disturbing 300 sf or more needs a SWPPP and City Engineer review (disturbance under 100 sf exempt).",
+   "url": "https://ecode360.com/6975277"
+  },
+  "adu": {
+   "summary": "No accessory apartment provision found in the zoning chapter; residence districts allow up to two boarders/roomers without separate cooking facilities (Table A Column 3).",
+   "url": "https://ecode360.com/6977440"
+  },
+  "accessory_structures": "One-story accessory structures may occupy a set share of the required rear yard (20-35% by district) and must keep the Table A side-line distance (5-20 ft); none within 3 ft of the rear line (§ 197-65) or in the required side yard within 75 ft of the street (§ 197-58); nothing in the front yard (§ 197-47).",
+  "pools": "Outdoor pools and equipment: not in the required front yard; 20 ft from side and rear lines in R-1, 15 ft elsewhere; screened and fenced 4 ft; 25 ft from septic (Table A Column 3(9)(b)).",
+  "notes": "FAR counts attics over 7 ft headroom at 50%, rooms over 14 ft high twice, exposed basements at 25% (§ 197-43.2). First floor of new one-family homes max 3 ft above preexisting grade (§ 197-46.1). Height measured to the mean of eaves and ridge for pitched roofs. Front setback may be reduced to the average of existing buildings within 100 ft (§ 197-48). Yards on streets under 50 ft wide are measured from a line 25 ft from the centerline."
+ },
+ "districts": {
+  "R-1": {
+   "name": "One-Family Residence (1 acre)",
+   "min_lot_sf": 43560,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 20,
+   "side_total_ft": 50,
+   "rear_ft": 60,
+   "corner_side_ft": null,
+   "max_height_ft": 32,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 65340,
+      "far": 0.15
+     },
+     {
+      "min": 65340,
+      "max": 108900,
+      "base": 9801,
+      "pct_over": 7.5,
+      "over": 65340
+     },
+     {
+      "min": 108900,
+      "max": null,
+      "base": 13068,
+      "pct_over": 3.75,
+      "over": 108900
+     }
+    ],
+    "note": "§ 197-43.1: FAR halves on the part of the lot between 150% and 250% of the district minimum lot area, quarters above 250%. Attics >7 ft headroom count 50%, rooms >14 ft high count twice, exposed basements 25% (§ 197-43.2)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 20,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 20,
+    "notes": "One-story accessory structures may cover up to 20% of the required rear yard and must be 20 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "R-2": {
+   "name": "One-Family Residence (1/2 acre)",
+   "min_lot_sf": 21780,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 115,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 15,
+   "side_total_ft": 40,
+   "rear_ft": 50,
+   "corner_side_ft": null,
+   "max_height_ft": 32,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 32670,
+      "far": 0.2
+     },
+     {
+      "min": 32670,
+      "max": 54450,
+      "base": 6534,
+      "pct_over": 10.0,
+      "over": 32670
+     },
+     {
+      "min": 54450,
+      "max": null,
+      "base": 8712,
+      "pct_over": 5.0,
+      "over": 54450
+     }
+    ],
+    "note": "§ 197-43.1: FAR halves on the part of the lot between 150% and 250% of the district minimum lot area, quarters above 250%. Attics >7 ft headroom count 50%, rooms >14 ft high count twice, exposed basements 25% (§ 197-43.2)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 15,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 20,
+    "notes": "One-story accessory structures may cover up to 20% of the required rear yard and must be 15 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "R-3": {
+   "name": "One-Family Residence (1/3 acre)",
+   "min_lot_sf": 14520,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 12,
+   "side_total_ft": 30,
+   "rear_ft": 40,
+   "corner_side_ft": null,
+   "max_height_ft": 28,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 21780,
+      "far": 0.25
+     },
+     {
+      "min": 21780,
+      "max": 36300,
+      "base": 5445,
+      "pct_over": 12.5,
+      "over": 21780
+     },
+     {
+      "min": 36300,
+      "max": null,
+      "base": 7260,
+      "pct_over": 6.25,
+      "over": 36300
+     }
+    ],
+    "note": "§ 197-43.1: FAR halves on the part of the lot between 150% and 250% of the district minimum lot area, quarters above 250%. Attics >7 ft headroom count 50%, rooms >14 ft high count twice, exposed basements 25% (§ 197-43.2)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 35,
+    "notes": "One-story accessory structures may cover up to 35% of the required rear yard and must be 10 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "In an area of special flood hazard the minimum lot is 1/2 acre (21,780 sf); value shown is for all other areas. FAR bands use the 1/3-acre minimum. Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "R-4": {
+   "name": "One-Family Residence (10,000 sf)",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 85,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 28,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 15000,
+      "far": 0.3
+     },
+     {
+      "min": 15000,
+      "max": 25000,
+      "base": 4500,
+      "pct_over": 15.0,
+      "over": 15000
+     },
+     {
+      "min": 25000,
+      "max": null,
+      "base": 6000,
+      "pct_over": 7.5,
+      "over": 25000
+     }
+    ],
+    "note": "§ 197-43.1: FAR halves on the part of the lot between 150% and 250% of the district minimum lot area, quarters above 250%. Attics >7 ft headroom count 50%, rooms >14 ft high count twice, exposed basements 25% (§ 197-43.2)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 25,
+    "notes": "One-story accessory structures may cover up to 25% of the required rear yard and must be 10 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "In an area of special flood hazard the minimum lot is 1/2 acre (21,780 sf); value shown is for all other areas. FAR bands use the 10,000 sf minimum. Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "R-5": {
+   "name": "One-Family Residence (7,000 sf)",
+   "min_lot_sf": 7000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 28,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 10500,
+      "far": 0.35
+     },
+     {
+      "min": 10500,
+      "max": 17500,
+      "base": 3675,
+      "pct_over": 17.5,
+      "over": 10500
+     },
+     {
+      "min": 17500,
+      "max": null,
+      "base": 4900,
+      "pct_over": 8.75,
+      "over": 17500
+     }
+    ],
+    "note": "§ 197-43.1: FAR halves on the part of the lot between 150% and 250% of the district minimum lot area, quarters above 250%. Attics >7 ft headroom count 50%, rooms >14 ft high count twice, exposed basements 25% (§ 197-43.2)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 30,
+    "notes": "One-story accessory structures may cover up to 30% of the required rear yard and must be 5 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "In an area of special flood hazard the minimum lot is 1/2 acre (21,780 sf); value shown is for all other areas. FAR bands use the 7,000 sf minimum. Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "R-6": {
+   "name": "One-Family Residence (6,000 sf)",
+   "min_lot_sf": 6000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 60,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 28,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 9000,
+      "far": 0.4
+     },
+     {
+      "min": 9000,
+      "max": 15000,
+      "base": 3600,
+      "pct_over": 20.0,
+      "over": 9000
+     },
+     {
+      "min": 15000,
+      "max": null,
+      "base": 4800,
+      "pct_over": 10.0,
+      "over": 15000
+     }
+    ],
+    "note": "§ 197-43.1: FAR halves on the part of the lot between 150% and 250% of the district minimum lot area, quarters above 250%. Attics >7 ft headroom count 50%, rooms >14 ft high count twice, exposed basements 25% (§ 197-43.2)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 30,
+    "notes": "One-story accessory structures may cover up to 30% of the required rear yard and must be 5 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "In an area of special flood hazard the minimum lot is 1/2 acre (21,780 sf); value shown is for all other areas. FAR bands use the 6,000 sf minimum. Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "RS": {
+   "name": "School and Church District (single-family house)",
+   "min_lot_sf": 21780,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 12,
+   "side_total_ft": 30,
+   "rear_ft": 40,
+   "corner_side_ft": null,
+   "max_height_ft": 28,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.4,
+    "note": "Gross floor area incl. accessory buildings (§ 197-41)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 25,
+    "notes": "One-story accessory structures may cover up to 25% of the required rear yard and must be 10 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "Single-family house row of Table A (1/2 acre). Other permitted uses: 1/3 acre, front 50, side 1/2 height (min 12), total 40, rear 40, 35 ft, accessory 10% / 12 ft. FAR not reduced for oversized lots (§ 197-43.1 covers R-1 to R-6 only). Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "RT": {
+   "name": "Two-Family Residence (single-family house)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 28,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.45,
+    "note": "Gross floor area incl. accessory buildings (§ 197-41)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 30,
+    "notes": "One-story accessory structures may cover up to 30% of the required rear yard and must be 5 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "Single-family house row. Two-family house: 3,000 sf per family, width 60, same yards. Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "RA-1": {
+   "name": "Garden Apartment (single-family house)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.4,
+    "note": "Gross floor area incl. accessory buildings (§ 197-41)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 30,
+    "notes": "One-story accessory structures may cover up to 30% of the required rear yard and must be 5 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "Single-family house row. Two-family: 5,000 sf/family, width 60. Apartment house: 5,000 sf/family, width 100, front 70, side 50/100, rear 50, accessory 10 ft from side and rear lines. Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "RA-2": {
+   "name": "Apartment (single-family house)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.45,
+    "note": "Gross floor area incl. accessory buildings (§ 197-41)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 30,
+    "notes": "One-story accessory structures may cover up to 30% of the required rear yard and must be 5 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "Single-family house row. Two-family: 3,500 sf/family, width 60. Apartment house: 3,500 sf/family, width 100, front 25, side 20/50, rear 40. Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "RA-3": {
+   "name": "Apartment (single-family house)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.5,
+    "note": "Gross floor area incl. accessory buildings (§ 197-41)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 35,
+    "notes": "One-story accessory structures may cover up to 35% of the required rear yard and must be 5 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "Single-family house row. Two-family: 3,000 sf/family, width 60. Apartment house: 2,500 sf/family, width 80, front 25, side 20/40, rear 40, 40 ft. Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "RA-4": {
+   "name": "Apartment (single-family house)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.5,
+    "note": "Gross floor area incl. accessory buildings (§ 197-41)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 3,
+    "max_height_ft": null,
+    "max_rear_yard_coverage_pct": 35,
+    "notes": "One-story accessory structures may cover up to 35% of the required rear yard and must be 5 ft from side lines; not within 3 ft of the rear line (§ 197-65); within 75 ft of the street (or 75% of lot depth) they may not enter the required side yard (§ 197-58). No front-yard structures (§ 197-47)."
+   },
+   "source": "§ 197-86 Table A: Residence Districts Area, Yard, Height and Miscellaneous Regulations (Attachment 1); §§ 197-43.1, 197-58, 197-65",
+   "source_url": "https://ecode360.com/attachment/340595/RY0730-197a%20Table%20A.pdf",
+   "notes": "Single-family house row. Two-family: 3,000 sf/family, width 60. Apartment house: 2,500 sf/family, width 80, front 25, side 20/40 (25 ft next to a driveway serving 6+ spaces), rear 40. Corner lots: corner side yard at least 1/5 of lot width at the building, need not exceed the front yard (Table A note (c)); owner may choose which street is the front (§ 197-52)."
+  },
+  "RFWP": {
+   "name": "Residential Floodplain and Wetland Preservation District",
+   "min_lot_sf": 435600,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 250,
+   "min_lot_depth_ft": null,
+   "front_ft": 85,
+   "side_ft": null,
+   "side_total_ft": null,
+   "rear_ft": null,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "text": "All buildings: 2,600 sf x approved dwelling units (formerly R-1) or 1,700 sf x units (formerly R-2)",
+    "note": "§ 197-13.1B(8)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "text": "Site floor area <= 2.5 x the maximum permitted building coverage",
+    "note": "§ 197-13.1B(11)"
+   },
+   "accessory": null,
+   "source": "§ 197-13.1B Standards; § 197-86 Table A (Attachment 1)",
+   "source_url": "https://ecode360.com/6977098",
+   "notes": "Rezoned 10+ acre sites (25%+ wetland/flood hazard). Buildings 85 ft from streets; from all other lines 60 ft for a one-family house on former R-1 land (70 two-family, 85 apartments) or 50 ft on former R-2 land (60, 75). No buildings in the flood hazard area; lowest floor 2 ft above base flood; max 4 units per building."
+  }
+ }
+}

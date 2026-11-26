@@ -1,0 +1,2557 @@
+{
+ "mun": "LAR",
+ "name": "Village of Larchmont",
+ "code_url": "https://ecode360.com/7083292",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "FAR and lot coverage are step functions ('per 1,000 sf or part thereof'); band edges set at x,001 sf. § 381-38's illustrative table uses the unrounded formula below 5,000 sf",
+  "Side yards increase with house size (§ 381-37D) in R-5, R-7.5, R-10, R-12.5, R-15, R-30 and W; only noted, not modeled",
+  "Schedule sets no minimum frontage or lot depth",
+  "No accessory apartment / ADU use in the Schedule of Use Regulations",
+  "No private-property tree removal permit in Ch. 263; no standalone steep slope law (retaining walls and grade changes regulated in §§ 381-41H, 381-42)",
+  "W district is not marked residential in the county list but allows one-family houses, so it is included"
+ ],
+ "general": {
+  "wetland_buffer_ft": null,
+  "watercourse_buffer_ft": 100,
+  "wetlands": {
+   "summary": "Ch. 341: controlled areas are wetlands plus adjacent land less than 2 ft above the 10-year high-water mark, and rainfall drainage systems (watercourses) plus the greater of land within 100 ft or less than 5 ft above the 10-year high-water mark; activities there need a permit.",
+   "url": "https://ecode360.com/7082737"
+  },
+  "steep_slopes": {
+   "summary": "No steep slope chapter; retaining walls (§ 381-41H) and grade changes/soil import-export (§ 381-42: max 1/2 ft x lot area in cubic yards, 25 cy as of right) are limited on one-family lots.",
+   "threshold_pct": null,
+   "url": "https://ecode360.com/7083635"
+  },
+  "trees": {
+   "summary": "Ch. 263 covers street/park trees and hazardous private trees only; tree removal tied to site plan work is penalized under § 381-68-N.",
+   "url": "https://ecode360.com/7081348"
+  },
+  "stormwater": {
+   "summary": "Ch. 335: land development activity disturbing 500 sf or more needs a stormwater pollution prevention plan and Village review.",
+   "url": "https://ecode360.com/7082240"
+  },
+  "adu": {
+   "summary": "No accessory apartment use; up to two boarders or roomers allowed in residence districts (Schedule of Use Regulations).",
+   "url": "https://ecode360.com/attachment/337859/LA0851-381a%20Schedule%20of%20Use%20Regulations.pdf"
+  },
+  "accessory_structures": "Accessory buildings 5 ft from side/rear lines, 13 ft high (10 ft flat roof), 1.5 stories, 5-8% lot coverage by district, not in front/side-front yards, 10 ft from the house; detached garages by special permit, 6 ft from side/rear lines and 30 ft from streets. Decks only behind the house, max 12 ft deep, outside required yards.",
+  "pools": "Special permit; rear yard only on lots of 5,000 sf+, meeting district side/rear setbacks (as increased by § 381-37), counted in lot coverage, 15 ft from any structure, 4 ft barrier (§ 381-55C).",
+  "notes": "One-family height: max 30 ft at any point around the building, measured from the lower of existing or proposed grade to the mean of eaves and ridge; 20 ft height at the side/rear setback line rising 2 ft (3 ft in R-7.5/R-5) per extra foot of setback (§ 381-34)."
+ },
+ "districts": {
+  "R-30": {
+   "name": "R-30 One-Family Residence",
+   "min_lot_sf": 30000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 120,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 12,
+   "side_total_ft": 30,
+   "rear_ft": 50,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 17.5,
+    "note": "Principal building only; accessory buildings may cover another 5%"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3400,
+      "pct": 55
+     },
+     {
+      "min": 3400,
+      "max": 3800,
+      "pct": 54
+     },
+     {
+      "min": 3800,
+      "max": 4200,
+      "pct": 53
+     },
+     {
+      "min": 4200,
+      "max": 4600,
+      "pct": 52
+     },
+     {
+      "min": 4600,
+      "max": 5000,
+      "pct": 51
+     },
+     {
+      "min": 5000,
+      "max": 5001,
+      "pct": 50
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "pct": 49
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "pct": 48
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "pct": 47
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "pct": 46
+     },
+     {
+      "min": 9001,
+      "max": 15001,
+      "pct": 45
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "pct": 44
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "pct": 43
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "pct": 42
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "pct": 41
+     },
+     {
+      "min": 19001,
+      "max": 30001,
+      "pct": 40
+     },
+     {
+      "min": 30001,
+      "max": 31001,
+      "pct": 39.5
+     },
+     {
+      "min": 31001,
+      "max": 32001,
+      "pct": 39.0
+     },
+     {
+      "min": 32001,
+      "max": 33001,
+      "pct": 38.5
+     },
+     {
+      "min": 33001,
+      "max": 34001,
+      "pct": 38.0
+     },
+     {
+      "min": 34001,
+      "max": 35001,
+      "pct": 37.5
+     },
+     {
+      "min": 35001,
+      "max": 36001,
+      "pct": 37.0
+     },
+     {
+      "min": 36001,
+      "max": 37001,
+      "pct": 36.5
+     },
+     {
+      "min": 37001,
+      "max": 38001,
+      "pct": 36.0
+     },
+     {
+      "min": 38001,
+      "max": 39001,
+      "pct": 35.5
+     },
+     {
+      "min": 39001,
+      "max": null,
+      "pct": 35
+     }
+    ],
+    "note": "§ 381-38 lot coverage: buildings, structures, driveways, walkways, patios, pools, courts and other paved/man-made surfaces. Bands apply the 'or part thereof' wording; the code's illustrative table gives 52.5% at 4,000 sf (linear formula) where the steps give 53%."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4001,
+      "far": 0.64
+     },
+     {
+      "min": 4001,
+      "max": 5001,
+      "far": 0.62
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "far": 0.6
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "far": 0.58
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "far": 0.56
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "far": 0.54
+     },
+     {
+      "min": 9001,
+      "max": 10001,
+      "far": 0.52
+     },
+     {
+      "min": 10001,
+      "max": 11001,
+      "far": 0.5
+     },
+     {
+      "min": 11001,
+      "max": 12001,
+      "far": 0.48
+     },
+     {
+      "min": 12001,
+      "max": 13001,
+      "far": 0.46
+     },
+     {
+      "min": 13001,
+      "max": 14001,
+      "far": 0.44
+     },
+     {
+      "min": 14001,
+      "max": 15001,
+      "far": 0.42
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "far": 0.41
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "far": 0.4
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "far": 0.39
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "far": 0.38
+     },
+     {
+      "min": 19001,
+      "max": 20001,
+      "far": 0.37
+     },
+     {
+      "min": 20001,
+      "max": 21001,
+      "far": 0.365
+     },
+     {
+      "min": 21001,
+      "max": 22001,
+      "far": 0.36
+     },
+     {
+      "min": 22001,
+      "max": 23001,
+      "far": 0.355
+     },
+     {
+      "min": 23001,
+      "max": 24001,
+      "far": 0.35
+     },
+     {
+      "min": 24001,
+      "max": 25001,
+      "far": 0.345
+     },
+     {
+      "min": 25001,
+      "max": 26001,
+      "far": 0.34
+     },
+     {
+      "min": 26001,
+      "max": 27001,
+      "far": 0.335
+     },
+     {
+      "min": 27001,
+      "max": 28001,
+      "far": 0.33
+     },
+     {
+      "min": 28001,
+      "max": 29001,
+      "far": 0.325
+     },
+     {
+      "min": 29001,
+      "max": 30001,
+      "far": 0.32
+     },
+     {
+      "min": 30001,
+      "max": null,
+      "far": 0.32
+     }
+    ],
+    "note": "§ 381-37B gross residential FAR for one-family dwellings: 0.64 up to 4,000 sf, -0.02 per 1,000 sf (or part) to 0.42 at 15,000, -0.01 per 1,000 to 0.37 at 20,000, -0.005 per 1,000 to 0.32 at 30,000+. Includes accessory buildings, basements, cellars and attics; excludes decks/patios, unenclosed porches, spaces under 5 ft headroom, and a 400/500/600 sf below-grade basement allowance (lots <=5,000 / <=7,500 / larger)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 13,
+    "max_stories": 1.5,
+    "max_coverage_pct": 5,
+    "notes": "Accessory buildings: 5 ft from side and rear lot lines, max 5% of the lot, 13 ft (10 ft flat roof), 1.5 stories; not in the front, side (except its rear portion) or side-front yard; 10 ft from the house (§ 381-40). Detached garages (special permit): 6 ft from side/rear lines and 30 ft from any street line (§ 381-55A)."
+   },
+   "source": "§ 381-13 Schedule of Dimensional Regulations (Attachment 2); §§ 381-37, 381-38, 381-40, 381-55A",
+   "source_url": "https://ecode360.com/attachment/337859/LA0851-381b%20Schedule%20of%20Dimentional%20Regulations.pdf",
+   "notes": "Both side yards grow 1/4 ft per 100 sf of gross residential floor area over 6,000 sf, up to 20 ft more per side (§ 381-37D). Front/side-front yard may be reduced to the average of the nearest four houses on the block (Schedule note 5, § 381-33A). Height also limited by a 20 ft height-setback plane at the side/rear setback lines (§ 381-34C)."
+  },
+  "R-20": {
+   "name": "R-20 One-Family Residence",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 12,
+   "side_total_ft": 30,
+   "rear_ft": 40,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20,
+    "note": "Principal building only; accessory buildings may cover another 5%"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3400,
+      "pct": 55
+     },
+     {
+      "min": 3400,
+      "max": 3800,
+      "pct": 54
+     },
+     {
+      "min": 3800,
+      "max": 4200,
+      "pct": 53
+     },
+     {
+      "min": 4200,
+      "max": 4600,
+      "pct": 52
+     },
+     {
+      "min": 4600,
+      "max": 5000,
+      "pct": 51
+     },
+     {
+      "min": 5000,
+      "max": 5001,
+      "pct": 50
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "pct": 49
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "pct": 48
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "pct": 47
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "pct": 46
+     },
+     {
+      "min": 9001,
+      "max": 15001,
+      "pct": 45
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "pct": 44
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "pct": 43
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "pct": 42
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "pct": 41
+     },
+     {
+      "min": 19001,
+      "max": 30001,
+      "pct": 40
+     },
+     {
+      "min": 30001,
+      "max": 31001,
+      "pct": 39.5
+     },
+     {
+      "min": 31001,
+      "max": 32001,
+      "pct": 39.0
+     },
+     {
+      "min": 32001,
+      "max": 33001,
+      "pct": 38.5
+     },
+     {
+      "min": 33001,
+      "max": 34001,
+      "pct": 38.0
+     },
+     {
+      "min": 34001,
+      "max": 35001,
+      "pct": 37.5
+     },
+     {
+      "min": 35001,
+      "max": 36001,
+      "pct": 37.0
+     },
+     {
+      "min": 36001,
+      "max": 37001,
+      "pct": 36.5
+     },
+     {
+      "min": 37001,
+      "max": 38001,
+      "pct": 36.0
+     },
+     {
+      "min": 38001,
+      "max": 39001,
+      "pct": 35.5
+     },
+     {
+      "min": 39001,
+      "max": null,
+      "pct": 35
+     }
+    ],
+    "note": "§ 381-38 lot coverage: buildings, structures, driveways, walkways, patios, pools, courts and other paved/man-made surfaces. Bands apply the 'or part thereof' wording; the code's illustrative table gives 52.5% at 4,000 sf (linear formula) where the steps give 53%."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4001,
+      "far": 0.64
+     },
+     {
+      "min": 4001,
+      "max": 5001,
+      "far": 0.62
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "far": 0.6
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "far": 0.58
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "far": 0.56
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "far": 0.54
+     },
+     {
+      "min": 9001,
+      "max": 10001,
+      "far": 0.52
+     },
+     {
+      "min": 10001,
+      "max": 11001,
+      "far": 0.5
+     },
+     {
+      "min": 11001,
+      "max": 12001,
+      "far": 0.48
+     },
+     {
+      "min": 12001,
+      "max": 13001,
+      "far": 0.46
+     },
+     {
+      "min": 13001,
+      "max": 14001,
+      "far": 0.44
+     },
+     {
+      "min": 14001,
+      "max": 15001,
+      "far": 0.42
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "far": 0.41
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "far": 0.4
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "far": 0.39
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "far": 0.38
+     },
+     {
+      "min": 19001,
+      "max": 20001,
+      "far": 0.37
+     },
+     {
+      "min": 20001,
+      "max": 21001,
+      "far": 0.365
+     },
+     {
+      "min": 21001,
+      "max": 22001,
+      "far": 0.36
+     },
+     {
+      "min": 22001,
+      "max": 23001,
+      "far": 0.355
+     },
+     {
+      "min": 23001,
+      "max": 24001,
+      "far": 0.35
+     },
+     {
+      "min": 24001,
+      "max": 25001,
+      "far": 0.345
+     },
+     {
+      "min": 25001,
+      "max": 26001,
+      "far": 0.34
+     },
+     {
+      "min": 26001,
+      "max": 27001,
+      "far": 0.335
+     },
+     {
+      "min": 27001,
+      "max": 28001,
+      "far": 0.33
+     },
+     {
+      "min": 28001,
+      "max": 29001,
+      "far": 0.325
+     },
+     {
+      "min": 29001,
+      "max": 30001,
+      "far": 0.32
+     },
+     {
+      "min": 30001,
+      "max": null,
+      "far": 0.32
+     }
+    ],
+    "note": "§ 381-37B gross residential FAR for one-family dwellings: 0.64 up to 4,000 sf, -0.02 per 1,000 sf (or part) to 0.42 at 15,000, -0.01 per 1,000 to 0.37 at 20,000, -0.005 per 1,000 to 0.32 at 30,000+. Includes accessory buildings, basements, cellars and attics; excludes decks/patios, unenclosed porches, spaces under 5 ft headroom, and a 400/500/600 sf below-grade basement allowance (lots <=5,000 / <=7,500 / larger)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 13,
+    "max_stories": 1.5,
+    "max_coverage_pct": 5,
+    "notes": "Accessory buildings: 5 ft from side and rear lot lines, max 5% of the lot, 13 ft (10 ft flat roof), 1.5 stories; not in the front, side (except its rear portion) or side-front yard; 10 ft from the house (§ 381-40). Detached garages (special permit): 6 ft from side/rear lines and 30 ft from any street line (§ 381-55A)."
+   },
+   "source": "§ 381-13 Schedule of Dimensional Regulations (Attachment 2); §§ 381-37, 381-38, 381-40, 381-55A",
+   "source_url": "https://ecode360.com/attachment/337859/LA0851-381b%20Schedule%20of%20Dimentional%20Regulations.pdf",
+   "notes": "Front/side-front yard may be reduced to the average of the nearest four houses on the block (Schedule note 5, § 381-33A). Height also limited by a 20 ft height-setback plane at the side/rear setback lines (§ 381-34C)."
+  },
+  "R-15": {
+   "name": "R-15 One-Family Residence",
+   "min_lot_sf": 15000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 22.5,
+    "note": "Principal building only; accessory buildings may cover another 5%"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3400,
+      "pct": 55
+     },
+     {
+      "min": 3400,
+      "max": 3800,
+      "pct": 54
+     },
+     {
+      "min": 3800,
+      "max": 4200,
+      "pct": 53
+     },
+     {
+      "min": 4200,
+      "max": 4600,
+      "pct": 52
+     },
+     {
+      "min": 4600,
+      "max": 5000,
+      "pct": 51
+     },
+     {
+      "min": 5000,
+      "max": 5001,
+      "pct": 50
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "pct": 49
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "pct": 48
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "pct": 47
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "pct": 46
+     },
+     {
+      "min": 9001,
+      "max": 15001,
+      "pct": 45
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "pct": 44
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "pct": 43
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "pct": 42
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "pct": 41
+     },
+     {
+      "min": 19001,
+      "max": 30001,
+      "pct": 40
+     },
+     {
+      "min": 30001,
+      "max": 31001,
+      "pct": 39.5
+     },
+     {
+      "min": 31001,
+      "max": 32001,
+      "pct": 39.0
+     },
+     {
+      "min": 32001,
+      "max": 33001,
+      "pct": 38.5
+     },
+     {
+      "min": 33001,
+      "max": 34001,
+      "pct": 38.0
+     },
+     {
+      "min": 34001,
+      "max": 35001,
+      "pct": 37.5
+     },
+     {
+      "min": 35001,
+      "max": 36001,
+      "pct": 37.0
+     },
+     {
+      "min": 36001,
+      "max": 37001,
+      "pct": 36.5
+     },
+     {
+      "min": 37001,
+      "max": 38001,
+      "pct": 36.0
+     },
+     {
+      "min": 38001,
+      "max": 39001,
+      "pct": 35.5
+     },
+     {
+      "min": 39001,
+      "max": null,
+      "pct": 35
+     }
+    ],
+    "note": "§ 381-38 lot coverage: buildings, structures, driveways, walkways, patios, pools, courts and other paved/man-made surfaces. Bands apply the 'or part thereof' wording; the code's illustrative table gives 52.5% at 4,000 sf (linear formula) where the steps give 53%."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4001,
+      "far": 0.64
+     },
+     {
+      "min": 4001,
+      "max": 5001,
+      "far": 0.62
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "far": 0.6
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "far": 0.58
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "far": 0.56
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "far": 0.54
+     },
+     {
+      "min": 9001,
+      "max": 10001,
+      "far": 0.52
+     },
+     {
+      "min": 10001,
+      "max": 11001,
+      "far": 0.5
+     },
+     {
+      "min": 11001,
+      "max": 12001,
+      "far": 0.48
+     },
+     {
+      "min": 12001,
+      "max": 13001,
+      "far": 0.46
+     },
+     {
+      "min": 13001,
+      "max": 14001,
+      "far": 0.44
+     },
+     {
+      "min": 14001,
+      "max": 15001,
+      "far": 0.42
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "far": 0.41
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "far": 0.4
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "far": 0.39
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "far": 0.38
+     },
+     {
+      "min": 19001,
+      "max": 20001,
+      "far": 0.37
+     },
+     {
+      "min": 20001,
+      "max": 21001,
+      "far": 0.365
+     },
+     {
+      "min": 21001,
+      "max": 22001,
+      "far": 0.36
+     },
+     {
+      "min": 22001,
+      "max": 23001,
+      "far": 0.355
+     },
+     {
+      "min": 23001,
+      "max": 24001,
+      "far": 0.35
+     },
+     {
+      "min": 24001,
+      "max": 25001,
+      "far": 0.345
+     },
+     {
+      "min": 25001,
+      "max": 26001,
+      "far": 0.34
+     },
+     {
+      "min": 26001,
+      "max": 27001,
+      "far": 0.335
+     },
+     {
+      "min": 27001,
+      "max": 28001,
+      "far": 0.33
+     },
+     {
+      "min": 28001,
+      "max": 29001,
+      "far": 0.325
+     },
+     {
+      "min": 29001,
+      "max": 30001,
+      "far": 0.32
+     },
+     {
+      "min": 30001,
+      "max": null,
+      "far": 0.32
+     }
+    ],
+    "note": "§ 381-37B gross residential FAR for one-family dwellings: 0.64 up to 4,000 sf, -0.02 per 1,000 sf (or part) to 0.42 at 15,000, -0.01 per 1,000 to 0.37 at 20,000, -0.005 per 1,000 to 0.32 at 30,000+. Includes accessory buildings, basements, cellars and attics; excludes decks/patios, unenclosed porches, spaces under 5 ft headroom, and a 400/500/600 sf below-grade basement allowance (lots <=5,000 / <=7,500 / larger)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 13,
+    "max_stories": 1.5,
+    "max_coverage_pct": 5,
+    "notes": "Accessory buildings: 5 ft from side and rear lot lines, max 5% of the lot, 13 ft (10 ft flat roof), 1.5 stories; not in the front, side (except its rear portion) or side-front yard; 10 ft from the house (§ 381-40). Detached garages (special permit): 6 ft from side/rear lines and 30 ft from any street line (§ 381-55A)."
+   },
+   "source": "§ 381-13 Schedule of Dimensional Regulations (Attachment 2); §§ 381-37, 381-38, 381-40, 381-55A",
+   "source_url": "https://ecode360.com/attachment/337859/LA0851-381b%20Schedule%20of%20Dimentional%20Regulations.pdf",
+   "notes": "Both side yards grow 1/2 ft per 100 sf of gross residential floor area over 5,000 sf, up to 17.5 ft more per side (§ 381-37D). Front/side-front yard may be reduced to the average of the nearest four houses on the block (Schedule note 5, § 381-33A). Height also limited by a 20 ft height-setback plane at the side/rear setback lines (§ 381-34C)."
+  },
+  "R-12.5": {
+   "name": "R-12.5 One-Family Residence",
+   "min_lot_sf": 12500,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 90,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 22.5,
+    "note": "Principal building only; accessory buildings may cover another 5%"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3400,
+      "pct": 55
+     },
+     {
+      "min": 3400,
+      "max": 3800,
+      "pct": 54
+     },
+     {
+      "min": 3800,
+      "max": 4200,
+      "pct": 53
+     },
+     {
+      "min": 4200,
+      "max": 4600,
+      "pct": 52
+     },
+     {
+      "min": 4600,
+      "max": 5000,
+      "pct": 51
+     },
+     {
+      "min": 5000,
+      "max": 5001,
+      "pct": 50
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "pct": 49
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "pct": 48
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "pct": 47
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "pct": 46
+     },
+     {
+      "min": 9001,
+      "max": 15001,
+      "pct": 45
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "pct": 44
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "pct": 43
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "pct": 42
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "pct": 41
+     },
+     {
+      "min": 19001,
+      "max": 30001,
+      "pct": 40
+     },
+     {
+      "min": 30001,
+      "max": 31001,
+      "pct": 39.5
+     },
+     {
+      "min": 31001,
+      "max": 32001,
+      "pct": 39.0
+     },
+     {
+      "min": 32001,
+      "max": 33001,
+      "pct": 38.5
+     },
+     {
+      "min": 33001,
+      "max": 34001,
+      "pct": 38.0
+     },
+     {
+      "min": 34001,
+      "max": 35001,
+      "pct": 37.5
+     },
+     {
+      "min": 35001,
+      "max": 36001,
+      "pct": 37.0
+     },
+     {
+      "min": 36001,
+      "max": 37001,
+      "pct": 36.5
+     },
+     {
+      "min": 37001,
+      "max": 38001,
+      "pct": 36.0
+     },
+     {
+      "min": 38001,
+      "max": 39001,
+      "pct": 35.5
+     },
+     {
+      "min": 39001,
+      "max": null,
+      "pct": 35
+     }
+    ],
+    "note": "§ 381-38 lot coverage: buildings, structures, driveways, walkways, patios, pools, courts and other paved/man-made surfaces. Bands apply the 'or part thereof' wording; the code's illustrative table gives 52.5% at 4,000 sf (linear formula) where the steps give 53%."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4001,
+      "far": 0.64
+     },
+     {
+      "min": 4001,
+      "max": 5001,
+      "far": 0.62
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "far": 0.6
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "far": 0.58
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "far": 0.56
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "far": 0.54
+     },
+     {
+      "min": 9001,
+      "max": 10001,
+      "far": 0.52
+     },
+     {
+      "min": 10001,
+      "max": 11001,
+      "far": 0.5
+     },
+     {
+      "min": 11001,
+      "max": 12001,
+      "far": 0.48
+     },
+     {
+      "min": 12001,
+      "max": 13001,
+      "far": 0.46
+     },
+     {
+      "min": 13001,
+      "max": 14001,
+      "far": 0.44
+     },
+     {
+      "min": 14001,
+      "max": 15001,
+      "far": 0.42
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "far": 0.41
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "far": 0.4
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "far": 0.39
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "far": 0.38
+     },
+     {
+      "min": 19001,
+      "max": 20001,
+      "far": 0.37
+     },
+     {
+      "min": 20001,
+      "max": 21001,
+      "far": 0.365
+     },
+     {
+      "min": 21001,
+      "max": 22001,
+      "far": 0.36
+     },
+     {
+      "min": 22001,
+      "max": 23001,
+      "far": 0.355
+     },
+     {
+      "min": 23001,
+      "max": 24001,
+      "far": 0.35
+     },
+     {
+      "min": 24001,
+      "max": 25001,
+      "far": 0.345
+     },
+     {
+      "min": 25001,
+      "max": 26001,
+      "far": 0.34
+     },
+     {
+      "min": 26001,
+      "max": 27001,
+      "far": 0.335
+     },
+     {
+      "min": 27001,
+      "max": 28001,
+      "far": 0.33
+     },
+     {
+      "min": 28001,
+      "max": 29001,
+      "far": 0.325
+     },
+     {
+      "min": 29001,
+      "max": 30001,
+      "far": 0.32
+     },
+     {
+      "min": 30001,
+      "max": null,
+      "far": 0.32
+     }
+    ],
+    "note": "§ 381-37B gross residential FAR for one-family dwellings: 0.64 up to 4,000 sf, -0.02 per 1,000 sf (or part) to 0.42 at 15,000, -0.01 per 1,000 to 0.37 at 20,000, -0.005 per 1,000 to 0.32 at 30,000+. Includes accessory buildings, basements, cellars and attics; excludes decks/patios, unenclosed porches, spaces under 5 ft headroom, and a 400/500/600 sf below-grade basement allowance (lots <=5,000 / <=7,500 / larger)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 13,
+    "max_stories": 1.5,
+    "max_coverage_pct": 5,
+    "notes": "Accessory buildings: 5 ft from side and rear lot lines, max 5% of the lot, 13 ft (10 ft flat roof), 1.5 stories; not in the front, side (except its rear portion) or side-front yard; 10 ft from the house (§ 381-40). Detached garages (special permit): 6 ft from side/rear lines and 30 ft from any street line (§ 381-55A)."
+   },
+   "source": "§ 381-13 Schedule of Dimensional Regulations (Attachment 2); §§ 381-37, 381-38, 381-40, 381-55A",
+   "source_url": "https://ecode360.com/attachment/337859/LA0851-381b%20Schedule%20of%20Dimentional%20Regulations.pdf",
+   "notes": "Both side yards grow 1/2 ft per 100 sf of gross residential floor area over 4,500 sf, up to 15 ft more per side (§ 381-37D). Front/side-front yard may be reduced to the average of the nearest four houses on the block (Schedule note 5, § 381-33A). Height also limited by a 20 ft height-setback plane at the side/rear setback lines (§ 381-34C)."
+  },
+  "R-10": {
+   "name": "R-10 One-Family Residence",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 80,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 25,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25,
+    "note": "Principal building only; accessory buildings may cover another 6%"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3400,
+      "pct": 55
+     },
+     {
+      "min": 3400,
+      "max": 3800,
+      "pct": 54
+     },
+     {
+      "min": 3800,
+      "max": 4200,
+      "pct": 53
+     },
+     {
+      "min": 4200,
+      "max": 4600,
+      "pct": 52
+     },
+     {
+      "min": 4600,
+      "max": 5000,
+      "pct": 51
+     },
+     {
+      "min": 5000,
+      "max": 5001,
+      "pct": 50
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "pct": 49
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "pct": 48
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "pct": 47
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "pct": 46
+     },
+     {
+      "min": 9001,
+      "max": 15001,
+      "pct": 45
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "pct": 44
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "pct": 43
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "pct": 42
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "pct": 41
+     },
+     {
+      "min": 19001,
+      "max": 30001,
+      "pct": 40
+     },
+     {
+      "min": 30001,
+      "max": 31001,
+      "pct": 39.5
+     },
+     {
+      "min": 31001,
+      "max": 32001,
+      "pct": 39.0
+     },
+     {
+      "min": 32001,
+      "max": 33001,
+      "pct": 38.5
+     },
+     {
+      "min": 33001,
+      "max": 34001,
+      "pct": 38.0
+     },
+     {
+      "min": 34001,
+      "max": 35001,
+      "pct": 37.5
+     },
+     {
+      "min": 35001,
+      "max": 36001,
+      "pct": 37.0
+     },
+     {
+      "min": 36001,
+      "max": 37001,
+      "pct": 36.5
+     },
+     {
+      "min": 37001,
+      "max": 38001,
+      "pct": 36.0
+     },
+     {
+      "min": 38001,
+      "max": 39001,
+      "pct": 35.5
+     },
+     {
+      "min": 39001,
+      "max": null,
+      "pct": 35
+     }
+    ],
+    "note": "§ 381-38 lot coverage: buildings, structures, driveways, walkways, patios, pools, courts and other paved/man-made surfaces. Bands apply the 'or part thereof' wording; the code's illustrative table gives 52.5% at 4,000 sf (linear formula) where the steps give 53%."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4001,
+      "far": 0.64
+     },
+     {
+      "min": 4001,
+      "max": 5001,
+      "far": 0.62
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "far": 0.6
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "far": 0.58
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "far": 0.56
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "far": 0.54
+     },
+     {
+      "min": 9001,
+      "max": 10001,
+      "far": 0.52
+     },
+     {
+      "min": 10001,
+      "max": 11001,
+      "far": 0.5
+     },
+     {
+      "min": 11001,
+      "max": 12001,
+      "far": 0.48
+     },
+     {
+      "min": 12001,
+      "max": 13001,
+      "far": 0.46
+     },
+     {
+      "min": 13001,
+      "max": 14001,
+      "far": 0.44
+     },
+     {
+      "min": 14001,
+      "max": 15001,
+      "far": 0.42
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "far": 0.41
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "far": 0.4
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "far": 0.39
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "far": 0.38
+     },
+     {
+      "min": 19001,
+      "max": 20001,
+      "far": 0.37
+     },
+     {
+      "min": 20001,
+      "max": 21001,
+      "far": 0.365
+     },
+     {
+      "min": 21001,
+      "max": 22001,
+      "far": 0.36
+     },
+     {
+      "min": 22001,
+      "max": 23001,
+      "far": 0.355
+     },
+     {
+      "min": 23001,
+      "max": 24001,
+      "far": 0.35
+     },
+     {
+      "min": 24001,
+      "max": 25001,
+      "far": 0.345
+     },
+     {
+      "min": 25001,
+      "max": 26001,
+      "far": 0.34
+     },
+     {
+      "min": 26001,
+      "max": 27001,
+      "far": 0.335
+     },
+     {
+      "min": 27001,
+      "max": 28001,
+      "far": 0.33
+     },
+     {
+      "min": 28001,
+      "max": 29001,
+      "far": 0.325
+     },
+     {
+      "min": 29001,
+      "max": 30001,
+      "far": 0.32
+     },
+     {
+      "min": 30001,
+      "max": null,
+      "far": 0.32
+     }
+    ],
+    "note": "§ 381-37B gross residential FAR for one-family dwellings: 0.64 up to 4,000 sf, -0.02 per 1,000 sf (or part) to 0.42 at 15,000, -0.01 per 1,000 to 0.37 at 20,000, -0.005 per 1,000 to 0.32 at 30,000+. Includes accessory buildings, basements, cellars and attics; excludes decks/patios, unenclosed porches, spaces under 5 ft headroom, and a 400/500/600 sf below-grade basement allowance (lots <=5,000 / <=7,500 / larger)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 13,
+    "max_stories": 1.5,
+    "max_coverage_pct": 6,
+    "notes": "Accessory buildings: 5 ft from side and rear lot lines, max 6% of the lot, 13 ft (10 ft flat roof), 1.5 stories; not in the front, side (except its rear portion) or side-front yard; 10 ft from the house (§ 381-40). Detached garages (special permit): 6 ft from side/rear lines and 30 ft from any street line (§ 381-55A)."
+   },
+   "source": "§ 381-13 Schedule of Dimensional Regulations (Attachment 2); §§ 381-37, 381-38, 381-40, 381-55A",
+   "source_url": "https://ecode360.com/attachment/337859/LA0851-381b%20Schedule%20of%20Dimentional%20Regulations.pdf",
+   "notes": "Both side yards grow 1/2 ft per 100 sf of gross residential floor area over 4,000 sf, up to 12.5 ft more per side (§ 381-37D). Front/side-front yard may be reduced to the average of the nearest four houses on the block (Schedule note 5, § 381-33A). Height also limited by a 20 ft height-setback plane at the side/rear setback lines (§ 381-34C)."
+  },
+  "R-7.5": {
+   "name": "R-7.5 One-Family Residence and Townhouse",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 65,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 22,
+   "rear_ft": 25,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25,
+    "note": "Principal building only; accessory buildings may cover another 6%"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3400,
+      "pct": 55
+     },
+     {
+      "min": 3400,
+      "max": 3800,
+      "pct": 54
+     },
+     {
+      "min": 3800,
+      "max": 4200,
+      "pct": 53
+     },
+     {
+      "min": 4200,
+      "max": 4600,
+      "pct": 52
+     },
+     {
+      "min": 4600,
+      "max": 5000,
+      "pct": 51
+     },
+     {
+      "min": 5000,
+      "max": 5001,
+      "pct": 50
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "pct": 49
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "pct": 48
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "pct": 47
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "pct": 46
+     },
+     {
+      "min": 9001,
+      "max": 15001,
+      "pct": 45
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "pct": 44
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "pct": 43
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "pct": 42
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "pct": 41
+     },
+     {
+      "min": 19001,
+      "max": 30001,
+      "pct": 40
+     },
+     {
+      "min": 30001,
+      "max": 31001,
+      "pct": 39.5
+     },
+     {
+      "min": 31001,
+      "max": 32001,
+      "pct": 39.0
+     },
+     {
+      "min": 32001,
+      "max": 33001,
+      "pct": 38.5
+     },
+     {
+      "min": 33001,
+      "max": 34001,
+      "pct": 38.0
+     },
+     {
+      "min": 34001,
+      "max": 35001,
+      "pct": 37.5
+     },
+     {
+      "min": 35001,
+      "max": 36001,
+      "pct": 37.0
+     },
+     {
+      "min": 36001,
+      "max": 37001,
+      "pct": 36.5
+     },
+     {
+      "min": 37001,
+      "max": 38001,
+      "pct": 36.0
+     },
+     {
+      "min": 38001,
+      "max": 39001,
+      "pct": 35.5
+     },
+     {
+      "min": 39001,
+      "max": null,
+      "pct": 35
+     }
+    ],
+    "note": "§ 381-38 lot coverage: buildings, structures, driveways, walkways, patios, pools, courts and other paved/man-made surfaces. Bands apply the 'or part thereof' wording; the code's illustrative table gives 52.5% at 4,000 sf (linear formula) where the steps give 53%."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4001,
+      "far": 0.64
+     },
+     {
+      "min": 4001,
+      "max": 5001,
+      "far": 0.62
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "far": 0.6
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "far": 0.58
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "far": 0.56
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "far": 0.54
+     },
+     {
+      "min": 9001,
+      "max": 10001,
+      "far": 0.52
+     },
+     {
+      "min": 10001,
+      "max": 11001,
+      "far": 0.5
+     },
+     {
+      "min": 11001,
+      "max": 12001,
+      "far": 0.48
+     },
+     {
+      "min": 12001,
+      "max": 13001,
+      "far": 0.46
+     },
+     {
+      "min": 13001,
+      "max": 14001,
+      "far": 0.44
+     },
+     {
+      "min": 14001,
+      "max": 15001,
+      "far": 0.42
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "far": 0.41
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "far": 0.4
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "far": 0.39
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "far": 0.38
+     },
+     {
+      "min": 19001,
+      "max": 20001,
+      "far": 0.37
+     },
+     {
+      "min": 20001,
+      "max": 21001,
+      "far": 0.365
+     },
+     {
+      "min": 21001,
+      "max": 22001,
+      "far": 0.36
+     },
+     {
+      "min": 22001,
+      "max": 23001,
+      "far": 0.355
+     },
+     {
+      "min": 23001,
+      "max": 24001,
+      "far": 0.35
+     },
+     {
+      "min": 24001,
+      "max": 25001,
+      "far": 0.345
+     },
+     {
+      "min": 25001,
+      "max": 26001,
+      "far": 0.34
+     },
+     {
+      "min": 26001,
+      "max": 27001,
+      "far": 0.335
+     },
+     {
+      "min": 27001,
+      "max": 28001,
+      "far": 0.33
+     },
+     {
+      "min": 28001,
+      "max": 29001,
+      "far": 0.325
+     },
+     {
+      "min": 29001,
+      "max": 30001,
+      "far": 0.32
+     },
+     {
+      "min": 30001,
+      "max": null,
+      "far": 0.32
+     }
+    ],
+    "note": "§ 381-37B gross residential FAR for one-family dwellings: 0.64 up to 4,000 sf, -0.02 per 1,000 sf (or part) to 0.42 at 15,000, -0.01 per 1,000 to 0.37 at 20,000, -0.005 per 1,000 to 0.32 at 30,000+. Includes accessory buildings, basements, cellars and attics; excludes decks/patios, unenclosed porches, spaces under 5 ft headroom, and a 400/500/600 sf below-grade basement allowance (lots <=5,000 / <=7,500 / larger)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 13,
+    "max_stories": 1.5,
+    "max_coverage_pct": 6,
+    "notes": "Accessory buildings: 5 ft from side and rear lot lines, max 6% of the lot, 13 ft (10 ft flat roof), 1.5 stories; not in the front, side (except its rear portion) or side-front yard; 10 ft from the house (§ 381-40). Detached garages (special permit): 6 ft from side/rear lines and 30 ft from any street line (§ 381-55A)."
+   },
+   "source": "§ 381-13 Schedule of Dimensional Regulations (Attachment 2); §§ 381-37, 381-38, 381-40, 381-55A",
+   "source_url": "https://ecode360.com/attachment/337859/LA0851-381b%20Schedule%20of%20Dimentional%20Regulations.pdf",
+   "notes": "Both side yards grow 1/2 ft per 100 sf of gross residential floor area over 3,500 sf, up to 10 ft more per side (§ 381-37D). Front/side-front yard may be reduced to the average of the nearest four houses on the block (Schedule note 5, § 381-33A). Height also limited by a 20 ft height-setback plane at the side/rear setback lines (§ 381-34C). Townhouse developments by special permit."
+  },
+  "R-5": {
+   "name": "R-5 One-Family Residence",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 6,
+   "side_total_ft": 16,
+   "rear_ft": 25,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "Principal building only; accessory buildings may cover another 8%"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3400,
+      "pct": 55
+     },
+     {
+      "min": 3400,
+      "max": 3800,
+      "pct": 54
+     },
+     {
+      "min": 3800,
+      "max": 4200,
+      "pct": 53
+     },
+     {
+      "min": 4200,
+      "max": 4600,
+      "pct": 52
+     },
+     {
+      "min": 4600,
+      "max": 5000,
+      "pct": 51
+     },
+     {
+      "min": 5000,
+      "max": 5001,
+      "pct": 50
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "pct": 49
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "pct": 48
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "pct": 47
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "pct": 46
+     },
+     {
+      "min": 9001,
+      "max": 15001,
+      "pct": 45
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "pct": 44
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "pct": 43
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "pct": 42
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "pct": 41
+     },
+     {
+      "min": 19001,
+      "max": 30001,
+      "pct": 40
+     },
+     {
+      "min": 30001,
+      "max": 31001,
+      "pct": 39.5
+     },
+     {
+      "min": 31001,
+      "max": 32001,
+      "pct": 39.0
+     },
+     {
+      "min": 32001,
+      "max": 33001,
+      "pct": 38.5
+     },
+     {
+      "min": 33001,
+      "max": 34001,
+      "pct": 38.0
+     },
+     {
+      "min": 34001,
+      "max": 35001,
+      "pct": 37.5
+     },
+     {
+      "min": 35001,
+      "max": 36001,
+      "pct": 37.0
+     },
+     {
+      "min": 36001,
+      "max": 37001,
+      "pct": 36.5
+     },
+     {
+      "min": 37001,
+      "max": 38001,
+      "pct": 36.0
+     },
+     {
+      "min": 38001,
+      "max": 39001,
+      "pct": 35.5
+     },
+     {
+      "min": 39001,
+      "max": null,
+      "pct": 35
+     }
+    ],
+    "note": "§ 381-38 lot coverage: buildings, structures, driveways, walkways, patios, pools, courts and other paved/man-made surfaces. Bands apply the 'or part thereof' wording; the code's illustrative table gives 52.5% at 4,000 sf (linear formula) where the steps give 53%."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4001,
+      "far": 0.64
+     },
+     {
+      "min": 4001,
+      "max": 5001,
+      "far": 0.62
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "far": 0.6
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "far": 0.58
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "far": 0.56
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "far": 0.54
+     },
+     {
+      "min": 9001,
+      "max": 10001,
+      "far": 0.52
+     },
+     {
+      "min": 10001,
+      "max": 11001,
+      "far": 0.5
+     },
+     {
+      "min": 11001,
+      "max": 12001,
+      "far": 0.48
+     },
+     {
+      "min": 12001,
+      "max": 13001,
+      "far": 0.46
+     },
+     {
+      "min": 13001,
+      "max": 14001,
+      "far": 0.44
+     },
+     {
+      "min": 14001,
+      "max": 15001,
+      "far": 0.42
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "far": 0.41
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "far": 0.4
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "far": 0.39
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "far": 0.38
+     },
+     {
+      "min": 19001,
+      "max": 20001,
+      "far": 0.37
+     },
+     {
+      "min": 20001,
+      "max": 21001,
+      "far": 0.365
+     },
+     {
+      "min": 21001,
+      "max": 22001,
+      "far": 0.36
+     },
+     {
+      "min": 22001,
+      "max": 23001,
+      "far": 0.355
+     },
+     {
+      "min": 23001,
+      "max": 24001,
+      "far": 0.35
+     },
+     {
+      "min": 24001,
+      "max": 25001,
+      "far": 0.345
+     },
+     {
+      "min": 25001,
+      "max": 26001,
+      "far": 0.34
+     },
+     {
+      "min": 26001,
+      "max": 27001,
+      "far": 0.335
+     },
+     {
+      "min": 27001,
+      "max": 28001,
+      "far": 0.33
+     },
+     {
+      "min": 28001,
+      "max": 29001,
+      "far": 0.325
+     },
+     {
+      "min": 29001,
+      "max": 30001,
+      "far": 0.32
+     },
+     {
+      "min": 30001,
+      "max": null,
+      "far": 0.32
+     }
+    ],
+    "note": "§ 381-37B gross residential FAR for one-family dwellings: 0.64 up to 4,000 sf, -0.02 per 1,000 sf (or part) to 0.42 at 15,000, -0.01 per 1,000 to 0.37 at 20,000, -0.005 per 1,000 to 0.32 at 30,000+. Includes accessory buildings, basements, cellars and attics; excludes decks/patios, unenclosed porches, spaces under 5 ft headroom, and a 400/500/600 sf below-grade basement allowance (lots <=5,000 / <=7,500 / larger)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 13,
+    "max_stories": 1.5,
+    "max_coverage_pct": 8,
+    "notes": "Accessory buildings: 5 ft from side and rear lot lines, max 8% of the lot, 13 ft (10 ft flat roof), 1.5 stories; not in the front, side (except its rear portion) or side-front yard; 10 ft from the house (§ 381-40). Detached garages (special permit): 6 ft from side/rear lines and 30 ft from any street line (§ 381-55A)."
+   },
+   "source": "§ 381-13 Schedule of Dimensional Regulations (Attachment 2); §§ 381-37, 381-38, 381-40, 381-55A",
+   "source_url": "https://ecode360.com/attachment/337859/LA0851-381b%20Schedule%20of%20Dimentional%20Regulations.pdf",
+   "notes": "Both side yards grow 1/2 ft per 100 sf of gross residential floor area over 2,500 sf, up to 7.5 ft more per side (§ 381-37D). Front/side-front yard may be reduced to the average of the nearest four houses on the block (Schedule note 5, § 381-33A). Height also limited by a 20 ft height-setback plane at the side/rear setback lines (§ 381-34C)."
+  },
+  "W": {
+   "name": "W Waterfront Coastal Zone",
+   "min_lot_sf": 50000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 120,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 12,
+   "side_total_ft": 30,
+   "rear_ft": 50,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 17.5,
+    "note": "Principal building only; accessory buildings may cover another 5%"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3400,
+      "pct": 55
+     },
+     {
+      "min": 3400,
+      "max": 3800,
+      "pct": 54
+     },
+     {
+      "min": 3800,
+      "max": 4200,
+      "pct": 53
+     },
+     {
+      "min": 4200,
+      "max": 4600,
+      "pct": 52
+     },
+     {
+      "min": 4600,
+      "max": 5000,
+      "pct": 51
+     },
+     {
+      "min": 5000,
+      "max": 5001,
+      "pct": 50
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "pct": 49
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "pct": 48
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "pct": 47
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "pct": 46
+     },
+     {
+      "min": 9001,
+      "max": 15001,
+      "pct": 45
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "pct": 44
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "pct": 43
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "pct": 42
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "pct": 41
+     },
+     {
+      "min": 19001,
+      "max": 30001,
+      "pct": 40
+     },
+     {
+      "min": 30001,
+      "max": 31001,
+      "pct": 39.5
+     },
+     {
+      "min": 31001,
+      "max": 32001,
+      "pct": 39.0
+     },
+     {
+      "min": 32001,
+      "max": 33001,
+      "pct": 38.5
+     },
+     {
+      "min": 33001,
+      "max": 34001,
+      "pct": 38.0
+     },
+     {
+      "min": 34001,
+      "max": 35001,
+      "pct": 37.5
+     },
+     {
+      "min": 35001,
+      "max": 36001,
+      "pct": 37.0
+     },
+     {
+      "min": 36001,
+      "max": 37001,
+      "pct": 36.5
+     },
+     {
+      "min": 37001,
+      "max": 38001,
+      "pct": 36.0
+     },
+     {
+      "min": 38001,
+      "max": 39001,
+      "pct": 35.5
+     },
+     {
+      "min": 39001,
+      "max": null,
+      "pct": 35
+     }
+    ],
+    "note": "§ 381-38 lot coverage: buildings, structures, driveways, walkways, patios, pools, courts and other paved/man-made surfaces. Bands apply the 'or part thereof' wording; the code's illustrative table gives 52.5% at 4,000 sf (linear formula) where the steps give 53%."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 4001,
+      "far": 0.64
+     },
+     {
+      "min": 4001,
+      "max": 5001,
+      "far": 0.62
+     },
+     {
+      "min": 5001,
+      "max": 6001,
+      "far": 0.6
+     },
+     {
+      "min": 6001,
+      "max": 7001,
+      "far": 0.58
+     },
+     {
+      "min": 7001,
+      "max": 8001,
+      "far": 0.56
+     },
+     {
+      "min": 8001,
+      "max": 9001,
+      "far": 0.54
+     },
+     {
+      "min": 9001,
+      "max": 10001,
+      "far": 0.52
+     },
+     {
+      "min": 10001,
+      "max": 11001,
+      "far": 0.5
+     },
+     {
+      "min": 11001,
+      "max": 12001,
+      "far": 0.48
+     },
+     {
+      "min": 12001,
+      "max": 13001,
+      "far": 0.46
+     },
+     {
+      "min": 13001,
+      "max": 14001,
+      "far": 0.44
+     },
+     {
+      "min": 14001,
+      "max": 15001,
+      "far": 0.42
+     },
+     {
+      "min": 15001,
+      "max": 16001,
+      "far": 0.41
+     },
+     {
+      "min": 16001,
+      "max": 17001,
+      "far": 0.4
+     },
+     {
+      "min": 17001,
+      "max": 18001,
+      "far": 0.39
+     },
+     {
+      "min": 18001,
+      "max": 19001,
+      "far": 0.38
+     },
+     {
+      "min": 19001,
+      "max": 20001,
+      "far": 0.37
+     },
+     {
+      "min": 20001,
+      "max": 21001,
+      "far": 0.365
+     },
+     {
+      "min": 21001,
+      "max": 22001,
+      "far": 0.36
+     },
+     {
+      "min": 22001,
+      "max": 23001,
+      "far": 0.355
+     },
+     {
+      "min": 23001,
+      "max": 24001,
+      "far": 0.35
+     },
+     {
+      "min": 24001,
+      "max": 25001,
+      "far": 0.345
+     },
+     {
+      "min": 25001,
+      "max": 26001,
+      "far": 0.34
+     },
+     {
+      "min": 26001,
+      "max": 27001,
+      "far": 0.335
+     },
+     {
+      "min": 27001,
+      "max": 28001,
+      "far": 0.33
+     },
+     {
+      "min": 28001,
+      "max": 29001,
+      "far": 0.325
+     },
+     {
+      "min": 29001,
+      "max": 30001,
+      "far": 0.32
+     },
+     {
+      "min": 30001,
+      "max": null,
+      "far": 0.32
+     }
+    ],
+    "note": "§ 381-37B gross residential FAR for one-family dwellings: 0.64 up to 4,000 sf, -0.02 per 1,000 sf (or part) to 0.42 at 15,000, -0.01 per 1,000 to 0.37 at 20,000, -0.005 per 1,000 to 0.32 at 30,000+. Includes accessory buildings, basements, cellars and attics; excludes decks/patios, unenclosed porches, spaces under 5 ft headroom, and a 400/500/600 sf below-grade basement allowance (lots <=5,000 / <=7,500 / larger)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 13,
+    "max_stories": 1.5,
+    "max_coverage_pct": 5,
+    "notes": "Accessory buildings: 5 ft from side and rear lot lines, max 5% of the lot, 13 ft (10 ft flat roof), 1.5 stories; not in the front, side (except its rear portion) or side-front yard; 10 ft from the house (§ 381-40). Detached garages (special permit): 6 ft from side/rear lines and 30 ft from any street line (§ 381-55A)."
+   },
+   "source": "§ 381-13 Schedule of Dimensional Regulations (Attachment 2); §§ 381-37, 381-38, 381-40, 381-55A",
+   "source_url": "https://ecode360.com/attachment/337859/LA0851-381b%20Schedule%20of%20Dimentional%20Regulations.pdf",
+   "notes": "Both side yards grow 1/4 ft per 100 sf of gross residential floor area over 7,000 sf, up to 20 ft more per side (§ 381-37D). Front/side-front yard may be reduced to the average of the nearest four houses on the block (Schedule note 5, § 381-33A). Height also limited by a 20 ft height-setback plane at the side/rear setback lines (§ 381-34C). One-family dwellings permitted (special permit on the Yacht Club, Shore Club and Manor Park parcels)."
+  },
+  "MF": {
+   "name": "MF Multifamily Residence (one-family dwelling)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 15,
+   "side_ft": 6,
+   "side_total_ft": 14,
+   "rear_ft": 35,
+   "corner_side_ft": 12,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 35,
+    "note": "Principal building; accessory buildings another 8%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 13,
+    "max_stories": 1.5,
+    "max_coverage_pct": 8,
+    "notes": "Accessory buildings: 5 ft from side and rear lot lines, max 8% of the lot, 13 ft (10 ft flat roof), 1.5 stories; not in the front, side (except its rear portion) or side-front yard; 10 ft from the house (§ 381-40). Detached garages (special permit): 6 ft from side/rear lines and 30 ft from any street line (§ 381-55A)."
+   },
+   "source": "Schedule of Dimensional Regulations note (1) (Attachment 2)",
+   "source_url": "https://ecode360.com/attachment/337859/LA0851-381b%20Schedule%20of%20Dimentional%20Regulations.pdf",
+   "notes": "Note (1) values for one-family dwellings in MF. Multifamily: 1,500 sf per family, width 20, front 20, side 15/30, side-front 15, rear 40, 35% principal + 16% accessory coverage. FAR (§ 381-37) and lot coverage (§ 381-38) limits apply only to one-family districts and W."
+  }
+ }
+}

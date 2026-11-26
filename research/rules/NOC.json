@@ -1,0 +1,1731 @@
+{
+ "mun": "NOC",
+ "name": "Town of North Castle",
+ "code_url": "https://ecode360.com/36929254",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "R-4A/R-2A/R-1.5A/R-1A schedule sets height in feet only (30 ft); no story limit",
+  "R-MF and R-MF-A have separate perimeter / attached-lot / detached-lot rows; only the district-level row is in the fields (others in notes)",
+  "RMF-SCH lot size, yards and coverage set by the Town Board per project; GCCFO lot size and yards set by the Planning Board",
+  "Accessory side/rear values are the note (g) half-distance for one-story accessory buildings under 800 sf; larger accessory buildings need full principal setbacks",
+  "GB (R-1/2A uses) and NB (R-2A uses) also allow one-family houses under those districts' rules; not added",
+  "Corner-lot side yard on the side street = required front yard (§ 355-15I) recorded for one-family districts and R-2F only",
+  "Split-zoned county codes (with '*') follow each part's rules"
+ ],
+ "general": {
+  "wetland_buffer_ft": 100,
+  "watercourse_buffer_ft": 100,
+  "wetlands": {
+   "summary": "Ch. 340: wetland buffer is 100 ft from the wetland edge or watercourse bank, widened up to 150 ft where slopes over 25% drain toward it; buffer is regulated like the wetland itself (permit for structures, grading, clearing, vegetation removal).",
+   "url": "https://ecode360.com/29141587"
+  },
+  "steep_slopes": {
+   "summary": "§ 355-18: no disturbance of steep slopes (25%+ over a 25 ft area), visible hilltops or ridgelines without a disturbance permit (Building Dept or Planning Board); SWPPP required. Steep slopes are deducted 50% from net lot area for new one-family lots.",
+   "threshold_pct": 25,
+   "url": "https://ecode360.com/29142297"
+  },
+  "trees": {
+   "summary": "Ch. 308 Art. II: permit to remove any tree (8 in.+ DBH) in the regulated setback zone (25/15/12/10/5 ft from lot lines in R-4A/R-2A/R-1.5A/R-1A/other), any significant tree (24 in.+ DBH), trees in wetlands, more than 10 trees a year, or clearing more than 5 trees per 1/4 acre.",
+   "url": "https://ecode360.com/29140908"
+  },
+  "stormwater": {
+   "summary": "Ch. 267: SWPPP required for land development activity (soil disturbance of 5,000 sf or more).",
+   "url": "https://ecode360.com/29156827"
+  },
+  "adu": {
+   "summary": "§ 355-40K: one accessory apartment per lot by Planning Board special permit in single-family districts; owner-occupied; min 300 sf; max 33% of house GFA up to 2,000 sf plus 25% of GFA over 2,000 sf; max 2 bedrooms; waiting periods after CO/purchase.",
+   "url": "https://ecode360.com/29142867"
+  },
+  "accessory_structures": "Accessory buildings max 1 story, 15 ft, 800 sf (2 stories/22 ft by special permit with principal setbacks, not in front yard); one-story accessory buildings under 800 sf may sit at half the principal side/rear setback but not nearer the street than the front setback (Schedule col. 3 item 5, note (g)).",
+  "pools": "Pools (plus surrounding decks, cabanas and equipment) need principal-building setbacks; not in the front yard unless set back 3x the required distance on a lot 3x the minimum area (§ 355-15L).",
+  "notes": "§ 355-26D caps exterior wall height (lowest grade to roof measuring point) at 38 ft in R-4A/R-2A, 36 ft in R-1.5A/R-1A, 34 ft elsewhere. Height is measured to the mean roof level; highest roof plane may be 5 ft above the limit. New lots use net lot area and need a minimum contiguous buildable area (§ 355-26F)."
+ },
+ "districts": {
+  "R-4A": {
+   "name": "One-Family Residence, 4 acres",
+   "min_lot_sf": 174240,
+   "min_frontage_ft": 250,
+   "min_lot_width_ft": 250,
+   "min_lot_depth_ft": 150,
+   "front_ft": 75,
+   "side_ft": 50,
+   "side_total_ft": null,
+   "rear_ft": 50,
+   "corner_side_ft": 75,
+   "max_height_ft": 30,
+   "max_stories": null,
+   "max_building_coverage": {
+    "pct": 6
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3750,
+      "sf": 1875
+     },
+     {
+      "min": 3750,
+      "max": 5000,
+      "far": 0.5
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 25,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 3750,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 4750,
+      "pct_over": 15,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 5768,
+      "pct_over": 10,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 6856,
+      "pct_over": 8,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 65340,
+      "base": 7727,
+      "pct_over": 6,
+      "over": 43560
+     },
+     {
+      "min": 65340,
+      "max": 87120,
+      "base": 9034,
+      "pct_over": 5,
+      "over": 65340
+     },
+     {
+      "min": 87120,
+      "max": 174240,
+      "base": 10122,
+      "pct_over": 4,
+      "over": 87120
+     },
+     {
+      "min": 174240,
+      "max": null,
+      "base": 13607,
+      "pct_over": 3,
+      "over": 174240
+     }
+    ],
+    "note": "§ 355-26B table, all one-/two-family dwellings irrespective of district. Under 5,000 sf the rule is '1,875 sf or 50% of lot area, whichever is greater' (split at 3,750 sf). Net lot area for lots created by new subdivision. Attics and qualifying basements with 7.5 ft+ ceilings count."
+   },
+   "accessory": {
+    "front_ft": 75,
+    "side_ft": 25.0,
+    "rear_ft": 25.0,
+    "max_height_ft": 15,
+    "notes": "Note (g): one-story accessory buildings under 800 sf may be half the principal side/rear distance, not nearer the street than the front setback; accessory buildings limited to 1 story/15 ft/800 sf (up to 2 stories/22 ft by Planning Board special permit, then principal setbacks and not in front yard)."
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-26B-C (GFA and gross land coverage tables); § 355-15I (corner lots)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Height 30 ft (no story limit); up to 35 ft by Building Engineer if 5 nearest homes average over 30 ft (§ 355-26E). Max exterior wall height 38 ft (§ 355-26D)."
+  },
+  "R-2A": {
+   "name": "One-Family Residence, 2 acres",
+   "min_lot_sf": 87120,
+   "min_frontage_ft": 150,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": 150,
+   "front_ft": 50,
+   "side_ft": 30,
+   "side_total_ft": null,
+   "rear_ft": 50,
+   "corner_side_ft": 50,
+   "max_height_ft": 30,
+   "max_stories": null,
+   "max_building_coverage": {
+    "pct": 8
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3750,
+      "sf": 1875
+     },
+     {
+      "min": 3750,
+      "max": 5000,
+      "far": 0.5
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 25,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 3750,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 4750,
+      "pct_over": 15,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 5768,
+      "pct_over": 10,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 6856,
+      "pct_over": 8,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 65340,
+      "base": 7727,
+      "pct_over": 6,
+      "over": 43560
+     },
+     {
+      "min": 65340,
+      "max": 87120,
+      "base": 9034,
+      "pct_over": 5,
+      "over": 65340
+     },
+     {
+      "min": 87120,
+      "max": 174240,
+      "base": 10122,
+      "pct_over": 4,
+      "over": 87120
+     },
+     {
+      "min": 174240,
+      "max": null,
+      "base": 13607,
+      "pct_over": 3,
+      "over": 174240
+     }
+    ],
+    "note": "§ 355-26B table, all one-/two-family dwellings irrespective of district. Under 5,000 sf the rule is '1,875 sf or 50% of lot area, whichever is greater' (split at 3,750 sf). Net lot area for lots created by new subdivision. Attics and qualifying basements with 7.5 ft+ ceilings count."
+   },
+   "accessory": {
+    "front_ft": 50,
+    "side_ft": 15.0,
+    "rear_ft": 25.0,
+    "max_height_ft": 15,
+    "notes": "Note (g): one-story accessory buildings under 800 sf may be half the principal side/rear distance, not nearer the street than the front setback; accessory buildings limited to 1 story/15 ft/800 sf (up to 2 stories/22 ft by Planning Board special permit, then principal setbacks and not in front yard)."
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-26B-C (GFA and gross land coverage tables); § 355-15I (corner lots)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Height 30 ft (no story limit); up to 35 ft under § 355-26E. Max exterior wall height 38 ft (§ 355-26D)."
+  },
+  "R-1.5A": {
+   "name": "One-Family Residence, 1.5 acres",
+   "min_lot_sf": 65340,
+   "min_frontage_ft": 150,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": 150,
+   "front_ft": 50,
+   "side_ft": 30,
+   "side_total_ft": null,
+   "rear_ft": 40,
+   "corner_side_ft": 50,
+   "max_height_ft": 30,
+   "max_stories": null,
+   "max_building_coverage": {
+    "pct": 10
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3750,
+      "sf": 1875
+     },
+     {
+      "min": 3750,
+      "max": 5000,
+      "far": 0.5
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 25,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 3750,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 4750,
+      "pct_over": 15,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 5768,
+      "pct_over": 10,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 6856,
+      "pct_over": 8,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 65340,
+      "base": 7727,
+      "pct_over": 6,
+      "over": 43560
+     },
+     {
+      "min": 65340,
+      "max": 87120,
+      "base": 9034,
+      "pct_over": 5,
+      "over": 65340
+     },
+     {
+      "min": 87120,
+      "max": 174240,
+      "base": 10122,
+      "pct_over": 4,
+      "over": 87120
+     },
+     {
+      "min": 174240,
+      "max": null,
+      "base": 13607,
+      "pct_over": 3,
+      "over": 174240
+     }
+    ],
+    "note": "§ 355-26B table, all one-/two-family dwellings irrespective of district. Under 5,000 sf the rule is '1,875 sf or 50% of lot area, whichever is greater' (split at 3,750 sf). Net lot area for lots created by new subdivision. Attics and qualifying basements with 7.5 ft+ ceilings count."
+   },
+   "accessory": {
+    "front_ft": 50,
+    "side_ft": 15.0,
+    "rear_ft": 20.0,
+    "max_height_ft": 15,
+    "notes": "Note (g): one-story accessory buildings under 800 sf may be half the principal side/rear distance, not nearer the street than the front setback; accessory buildings limited to 1 story/15 ft/800 sf (up to 2 stories/22 ft by Planning Board special permit, then principal setbacks and not in front yard)."
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-26B-C (GFA and gross land coverage tables); § 355-15I (corner lots)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Height 30 ft (no story limit); up to 35 ft under § 355-26E. Max exterior wall height 36 ft (§ 355-26D)."
+  },
+  "R-1A": {
+   "name": "One-Family Residence, 1 acre",
+   "min_lot_sf": 43560,
+   "min_frontage_ft": 125,
+   "min_lot_width_ft": 125,
+   "min_lot_depth_ft": 150,
+   "front_ft": 50,
+   "side_ft": 25,
+   "side_total_ft": null,
+   "rear_ft": 40,
+   "corner_side_ft": 50,
+   "max_height_ft": 30,
+   "max_stories": null,
+   "max_building_coverage": {
+    "pct": 12
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3750,
+      "sf": 1875
+     },
+     {
+      "min": 3750,
+      "max": 5000,
+      "far": 0.5
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 25,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 3750,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 4750,
+      "pct_over": 15,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 5768,
+      "pct_over": 10,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 6856,
+      "pct_over": 8,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 65340,
+      "base": 7727,
+      "pct_over": 6,
+      "over": 43560
+     },
+     {
+      "min": 65340,
+      "max": 87120,
+      "base": 9034,
+      "pct_over": 5,
+      "over": 65340
+     },
+     {
+      "min": 87120,
+      "max": 174240,
+      "base": 10122,
+      "pct_over": 4,
+      "over": 87120
+     },
+     {
+      "min": 174240,
+      "max": null,
+      "base": 13607,
+      "pct_over": 3,
+      "over": 174240
+     }
+    ],
+    "note": "§ 355-26B table, all one-/two-family dwellings irrespective of district. Under 5,000 sf the rule is '1,875 sf or 50% of lot area, whichever is greater' (split at 3,750 sf). Net lot area for lots created by new subdivision. Attics and qualifying basements with 7.5 ft+ ceilings count."
+   },
+   "accessory": {
+    "front_ft": 50,
+    "side_ft": 12.5,
+    "rear_ft": 20.0,
+    "max_height_ft": 15,
+    "notes": "Note (g): one-story accessory buildings under 800 sf may be half the principal side/rear distance, not nearer the street than the front setback; accessory buildings limited to 1 story/15 ft/800 sf (up to 2 stories/22 ft by Planning Board special permit, then principal setbacks and not in front yard)."
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-26B-C (GFA and gross land coverage tables); § 355-15I (corner lots)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Height 30 ft (no story limit); up to 35 ft under § 355-26E. Max exterior wall height 36 ft (§ 355-26D)."
+  },
+  "R-3/4A": {
+   "name": "One-Family Residence, 3/4 acre",
+   "min_lot_sf": 32670,
+   "min_frontage_ft": 125,
+   "min_lot_width_ft": 125,
+   "min_lot_depth_ft": 150,
+   "front_ft": 40,
+   "side_ft": 25,
+   "side_total_ft": null,
+   "rear_ft": 40,
+   "corner_side_ft": 40,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 15
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3750,
+      "sf": 1875
+     },
+     {
+      "min": 3750,
+      "max": 5000,
+      "far": 0.5
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 25,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 3750,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 4750,
+      "pct_over": 15,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 5768,
+      "pct_over": 10,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 6856,
+      "pct_over": 8,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 65340,
+      "base": 7727,
+      "pct_over": 6,
+      "over": 43560
+     },
+     {
+      "min": 65340,
+      "max": 87120,
+      "base": 9034,
+      "pct_over": 5,
+      "over": 65340
+     },
+     {
+      "min": 87120,
+      "max": 174240,
+      "base": 10122,
+      "pct_over": 4,
+      "over": 87120
+     },
+     {
+      "min": 174240,
+      "max": null,
+      "base": 13607,
+      "pct_over": 3,
+      "over": 174240
+     }
+    ],
+    "note": "§ 355-26B table, all one-/two-family dwellings irrespective of district. Under 5,000 sf the rule is '1,875 sf or 50% of lot area, whichever is greater' (split at 3,750 sf). Net lot area for lots created by new subdivision. Attics and qualifying basements with 7.5 ft+ ceilings count."
+   },
+   "accessory": {
+    "front_ft": 40,
+    "side_ft": 12.5,
+    "rear_ft": 20.0,
+    "max_height_ft": 15,
+    "notes": "Note (g): one-story accessory buildings under 800 sf may be half the principal side/rear distance, not nearer the street than the front setback; accessory buildings limited to 1 story/15 ft/800 sf (up to 2 stories/22 ft by Planning Board special permit, then principal setbacks and not in front yard)."
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-26B-C (GFA and gross land coverage tables); § 355-15I (corner lots)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Max exterior wall height 34 ft (§ 355-26D)."
+  },
+  "R-1/2A": {
+   "name": "One-Family Residence, 1/2 acre",
+   "min_lot_sf": 21780,
+   "min_frontage_ft": 125,
+   "min_lot_width_ft": 125,
+   "min_lot_depth_ft": 100,
+   "front_ft": 40,
+   "side_ft": 20,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 40,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 15
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3750,
+      "sf": 1875
+     },
+     {
+      "min": 3750,
+      "max": 5000,
+      "far": 0.5
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 25,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 3750,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 4750,
+      "pct_over": 15,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 5768,
+      "pct_over": 10,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 6856,
+      "pct_over": 8,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 65340,
+      "base": 7727,
+      "pct_over": 6,
+      "over": 43560
+     },
+     {
+      "min": 65340,
+      "max": 87120,
+      "base": 9034,
+      "pct_over": 5,
+      "over": 65340
+     },
+     {
+      "min": 87120,
+      "max": 174240,
+      "base": 10122,
+      "pct_over": 4,
+      "over": 87120
+     },
+     {
+      "min": 174240,
+      "max": null,
+      "base": 13607,
+      "pct_over": 3,
+      "over": 174240
+     }
+    ],
+    "note": "§ 355-26B table, all one-/two-family dwellings irrespective of district. Under 5,000 sf the rule is '1,875 sf or 50% of lot area, whichever is greater' (split at 3,750 sf). Net lot area for lots created by new subdivision. Attics and qualifying basements with 7.5 ft+ ceilings count."
+   },
+   "accessory": {
+    "front_ft": 40,
+    "side_ft": 10.0,
+    "rear_ft": 15.0,
+    "max_height_ft": 15,
+    "notes": "Note (g): one-story accessory buildings under 800 sf may be half the principal side/rear distance, not nearer the street than the front setback; accessory buildings limited to 1 story/15 ft/800 sf (up to 2 stories/22 ft by Planning Board special permit, then principal setbacks and not in front yard)."
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-26B-C (GFA and gross land coverage tables); § 355-15I (corner lots)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Max exterior wall height 34 ft (§ 355-26D)."
+  },
+  "R-10": {
+   "name": "One-Family Residence, 10,000 sf",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 15,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3750,
+      "sf": 1875
+     },
+     {
+      "min": 3750,
+      "max": 5000,
+      "far": 0.5
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 25,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 3750,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 4750,
+      "pct_over": 15,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 5768,
+      "pct_over": 10,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 6856,
+      "pct_over": 8,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 65340,
+      "base": 7727,
+      "pct_over": 6,
+      "over": 43560
+     },
+     {
+      "min": 65340,
+      "max": 87120,
+      "base": 9034,
+      "pct_over": 5,
+      "over": 65340
+     },
+     {
+      "min": 87120,
+      "max": 174240,
+      "base": 10122,
+      "pct_over": 4,
+      "over": 87120
+     },
+     {
+      "min": 174240,
+      "max": null,
+      "base": 13607,
+      "pct_over": 3,
+      "over": 174240
+     }
+    ],
+    "note": "§ 355-26B table, all one-/two-family dwellings irrespective of district. Under 5,000 sf the rule is '1,875 sf or 50% of lot area, whichever is greater' (split at 3,750 sf). Net lot area for lots created by new subdivision. Attics and qualifying basements with 7.5 ft+ ceilings count."
+   },
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 7.5,
+    "rear_ft": 15.0,
+    "max_height_ft": 15,
+    "notes": "Note (g): one-story accessory buildings under 800 sf may be half the principal side/rear distance, not nearer the street than the front setback; accessory buildings limited to 1 story/15 ft/800 sf (up to 2 stories/22 ft by Planning Board special permit, then principal setbacks and not in front yard)."
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-26B-C (GFA and gross land coverage tables); § 355-15I (corner lots)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Max exterior wall height 34 ft (§ 355-26D)."
+  },
+  "R-5": {
+   "name": "One-Family Residence, 5,000 sf",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 8,
+   "side_total_ft": 18,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3750,
+      "sf": 1875
+     },
+     {
+      "min": 3750,
+      "max": 5000,
+      "far": 0.5
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 25,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 3750,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 4750,
+      "pct_over": 15,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 5768,
+      "pct_over": 10,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 6856,
+      "pct_over": 8,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 65340,
+      "base": 7727,
+      "pct_over": 6,
+      "over": 43560
+     },
+     {
+      "min": 65340,
+      "max": 87120,
+      "base": 9034,
+      "pct_over": 5,
+      "over": 65340
+     },
+     {
+      "min": 87120,
+      "max": 174240,
+      "base": 10122,
+      "pct_over": 4,
+      "over": 87120
+     },
+     {
+      "min": 174240,
+      "max": null,
+      "base": 13607,
+      "pct_over": 3,
+      "over": 174240
+     }
+    ],
+    "note": "§ 355-26B table, all one-/two-family dwellings irrespective of district. Under 5,000 sf the rule is '1,875 sf or 50% of lot area, whichever is greater' (split at 3,750 sf). Net lot area for lots created by new subdivision. Attics and qualifying basements with 7.5 ft+ ceilings count."
+   },
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 4.0,
+    "rear_ft": 15.0,
+    "max_height_ft": 15,
+    "notes": "Note (g): one-story accessory buildings under 800 sf may be half the principal side/rear distance, not nearer the street than the front setback; accessory buildings limited to 1 story/15 ft/800 sf (up to 2 stories/22 ft by Planning Board special permit, then principal setbacks and not in front yard)."
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-26B-C (GFA and gross land coverage tables); § 355-15I (corner lots)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Side yards at least 8 ft, 18 ft total. Corner-lot street side-yard rule (§ 355-15I) does not apply in R-5. Max exterior wall height 34 ft."
+  },
+  "R-2F": {
+   "name": "Two-Family Residence",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 100,
+   "front_ft": 20,
+   "side_ft": 6,
+   "side_total_ft": null,
+   "rear_ft": 15,
+   "corner_side_ft": 20,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 3750,
+      "sf": 1875
+     },
+     {
+      "min": 3750,
+      "max": 5000,
+      "far": 0.5
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 25,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 3750,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 4750,
+      "pct_over": 15,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 5768,
+      "pct_over": 10,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 6856,
+      "pct_over": 8,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 65340,
+      "base": 7727,
+      "pct_over": 6,
+      "over": 43560
+     },
+     {
+      "min": 65340,
+      "max": 87120,
+      "base": 9034,
+      "pct_over": 5,
+      "over": 65340
+     },
+     {
+      "min": 87120,
+      "max": 174240,
+      "base": 10122,
+      "pct_over": 4,
+      "over": 87120
+     },
+     {
+      "min": 174240,
+      "max": null,
+      "base": 13607,
+      "pct_over": 3,
+      "over": 174240
+     }
+    ],
+    "note": "§ 355-26B table, all one-/two-family dwellings irrespective of district. Under 5,000 sf the rule is '1,875 sf or 50% of lot area, whichever is greater' (split at 3,750 sf). Net lot area for lots created by new subdivision. Attics and qualifying basements with 7.5 ft+ ceilings count."
+   },
+   "accessory": {
+    "front_ft": 20,
+    "side_ft": 3.0,
+    "rear_ft": 7.5,
+    "max_height_ft": 15,
+    "notes": "Note (g): one-story accessory buildings under 800 sf may be half the principal side/rear distance, not nearer the street than the front setback; accessory buildings limited to 1 story/15 ft/800 sf (up to 2 stories/22 ft by Planning Board special permit, then principal setbacks and not in front yard)."
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-26B-C (GFA and gross land coverage tables); § 355-15I (corner lots)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "One-family uses as in single-family districts plus one two-family dwelling per lot. Two-family dwellings get 1/3 more GFA and 25% more gross land coverage than the one-family bands shown."
+  },
+  "R-MF": {
+   "name": "Multifamily Residence",
+   "min_lot_sf": 435600,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": 250,
+   "min_lot_depth_ft": 250,
+   "front_ft": 75,
+   "side_ft": 50,
+   "side_total_ft": null,
+   "rear_ft": 50,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 12
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-24",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Main row shown (10-acre site). Perimeter 24 acres; attached-unit lots 5,000 sf (front 20, side 10 (0+10), rear 15, 35%); detached-unit lots 7,500 sf (front 20, side 10 (10+15), rear 15, 35%). Yards doubled next to a single-family district (note k). R-1A uses (incl. one-family houses) permitted as regulated in R-1A. Density 1 unit per 25,000 sf net lot area (§ 355-24B)."
+  },
+  "R-MF-A": {
+   "name": "Multifamily-A Residence",
+   "min_lot_sf": 217800,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": 250,
+   "min_lot_depth_ft": 250,
+   "front_ft": 10,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 6,
+    "rear_ft": null,
+    "max_height_ft": null,
+    "notes": "Perimeter side yard 6 ft for accessory structures"
+   },
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-25",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Perimeter (5-acre site) row shown. Attached-unit lots 2,500 sf (front 10, side 0, rear 10, 50%); detached-unit lots 7,000 sf, width 65, depth 60 (front 10, side 6 / 3 accessory, rear 10 / 6 accessory, 35%). Uses same as R-MF."
+  },
+  "R-MF-SS": {
+   "name": "Residential Multifamily - Single Structure",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": 150,
+   "front_ft": 10,
+   "side_ft": 15,
+   "side_total_ft": null,
+   "rear_ft": 5,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.9,
+    "note": "§ 355-28B, on net lot area, all in a single structure"
+   },
+   "accessory": null,
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-28",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Uses same as R-MF (incl. R-1A uses)."
+  },
+  "RMF-SCH": {
+   "name": "R-MF-SCH Multifamily - Senior Citizen Housing",
+   "min_lot_sf": null,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": null,
+   "side_ft": null,
+   "side_total_ft": null,
+   "rear_ft": null,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "text": "0.15 to 0.4 FAR on net lot area, set by the Town Board at zoning approval (§ 355-27)"
+   },
+   "accessory": null,
+   "source": "§ 355-21 Schedule of Residence District Regulations (Attachment 1); § 355-27",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355a%20Residence%20District%20Regs.pdf",
+   "notes": "Senior citizen housing only; lot size, yards and coverage 'to be determined by the Town Board at the time of zoning approval'."
+  },
+  "GCCFO": {
+   "name": "Golf Course Community Floating Overlay",
+   "min_lot_sf": null,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": null,
+   "side_ft": null,
+   "side_total_ft": null,
+   "rear_ft": null,
+   "corner_side_ft": null,
+   "max_height_ft": 39.5,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 3.5,
+    "note": "Applied to the whole GCCFO district area as one lot"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "§ 355-32D",
+   "source_url": "https://ecode360.com/30484722",
+   "notes": "Active-adult community tied to an 18-hole golf club on 150+ acres of R-2A land; lot size and yards set by the Planning Board at subdivision; 100 ft perimeter buffer kept as golf course; height measured to mean level of primary roof from finished grade at main entry; density 1 unit per 1.8 acres."
+  },
+  "RO": {
+   "name": "Residence Office",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 8,
+   "side_total_ft": 18,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 50
+     },
+     {
+      "min": 5000,
+      "max": 10000,
+      "base": 2500,
+      "pct_over": 30,
+      "over": 5000
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 24,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 21780,
+      "base": 5200,
+      "pct_over": 18,
+      "over": 15000
+     },
+     {
+      "min": 21780,
+      "max": 32670,
+      "base": 6420,
+      "pct_over": 15,
+      "over": 21780
+     },
+     {
+      "min": 32670,
+      "max": 43560,
+      "base": 8050,
+      "pct_over": 12,
+      "over": 32670
+     },
+     {
+      "min": 43560,
+      "max": 87120,
+      "base": 9350,
+      "pct_over": 9,
+      "over": 43560
+     },
+     {
+      "min": 87120,
+      "max": null,
+      "base": 13270,
+      "pct_over": 7.5,
+      "over": 87120
+     }
+    ],
+    "note": "Gross land coverage (§ 355-26C): all buildings, structures and paved, gravel and semipervious paver areas; +10 sf per foot of front setback beyond the minimum. Net lot area for newly subdivided lots."
+   },
+   "max_floor_area": {
+    "far": 0.25,
+    "note": "Schedule FAR for the district; one-family dwellings are also subject to the § 355-26B GFA table"
+   },
+   "accessory": null,
+   "source": "§ 355-23 Schedule of Office and Industrial District Regulations (Attachment 3)",
+   "source_url": "https://ecode360.com/attachment/340090/NO0492-355c%20Office%20and%20Indus%20Dist%20Regs%20Part%201.pdf",
+   "notes": "Permits any R-5 use 'as regulated therein', so one-family houses are allowed; offices also permitted. See § 355-30I."
+  }
+ }
+}

@@ -1,0 +1,1135 @@
+{
+ "mun": "ECH",
+ "name": "Town of Eastchester (unincorporated)",
+ "code_url": "https://www.eastchester.gov/departments/zoning_law.php",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "Eastchester's Zoning Law isn't on eCode360; used the Town's own PDFs: Zoning Law as amended 5-26-2026 and the Schedules of District Regulations dated 03-19-13 (page says they're current for the law as amended 03-05-21). No later schedule amendment found in the 2026 text.",
+  "County code 'M1' = M 1000; Zoning Law \u00a7 4.A lists 'M 1000 (M1)'.",
+  "Principal-building height 23 ft is measured to the eave of a sloped roof; ridge limit (33 ft) is stored as max_ridge_height_ft for R-20 to R5 only; R3/M districts have no ridge column.",
+  "GFA (\u00a7 9.Q) only lists R-20 to R-1.5C and R-3; none for M districts/RTD. GFA for lots below the district minimum isn't addressed (table value used).",
+  "Wetlands, steep-slope and tree rules: \u00a7 9.E refers to a Town 'Freshwater Wetlands Protection Law', but the Town Code chapters (wetlands, trees, steep slopes) weren't found online, so buffers are null.",
+  "min_lot_width/depth not set; schedule uses frontage plus an 'effective square' (noted)."
+ ],
+ "general": {
+  "wetland_buffer_ft": null,
+  "watercourse_buffer_ft": null,
+  "wetlands": {
+   "summary": "Zoning Law \u00a7 9.E cites a Town Freshwater Wetlands Protection Law; text not found online, buffer unknown. NYS DEC 100 ft adjacent area applies to state wetlands.",
+   "url": "https://www.eastchester.gov/Zoning%20Law%205-26-26.pdf"
+  },
+  "steep_slopes": {
+   "summary": "No steep-slope rule found in the Zoning Law; site plans need 1-ft contours.",
+   "threshold_pct": null,
+   "url": "https://www.eastchester.gov/Zoning%20Law%205-26-26.pdf"
+  },
+  "trees": {
+   "summary": "No tree-removal permit found in the Zoning Law; site plans must show trees over 4 in. caliper (\u00a7 11.F.3).",
+   "url": "https://www.eastchester.gov/Zoning%20Law%205-26-26.pdf"
+  },
+  "stormwater": {
+   "summary": "\u00a7 11.F.5(i) (L.L. 1-2026): zero increase in peak runoff through the 100-year storm; new houses or >50% impervious increase must compare against an unimproved lot.",
+   "url": "https://www.eastchester.gov/Zoning%20Law%205-26-26.pdf"
+  },
+  "adu": {
+   "summary": "No accessory-apartment provision in the Zoning Law; accessory buildings can't be used as dwellings (\u00a7 9.K); up to 2 boarders allowed in one-family homes.",
+   "url": "https://www.eastchester.gov/Zoning%20Law%205-26-26.pdf"
+  },
+  "accessory_structures": "Detached accessory buildings follow the schedule's distances from house, side and rear lines, are barred from any front yard, and are limited to 12 ft (15 ft to ridge). Sheds up to 8x10 need no permit; one shed per lot, max 10x12 (\u00a7 7.B.6).",
+  "pools": "Rear yard only, at least 10 ft from side and rear lot lines; 4 ft fence; surrounding decks/patios meet building yards (\u00a7 9.S).",
+  "notes": "Every new one- or two-family house, and front additions over 30% of the front elevation, get Planning Board site plan and ARB review (\u00a7 11.E.2). Projections: covered porches/eaves 4 ft into front yard; open decks 6 ft into rear and 4 ft into side yards (min 6 ft to line) (\u00a7 7.D)."
+ },
+ "districts": {
+  "R-20": {
+   "name": "One Family Residence R 20",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 120,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 18,
+   "side_total_ft": 38,
+   "rear_ft": 34,
+   "corner_side_ft": 20,
+   "max_height_ft": 23,
+   "max_stories": 2.5,
+   "max_ridge_height_ft": 33,
+   "max_building_coverage": {
+    "pct": 22,
+    "note": "Principal building; accessory buildings may cover another 4% (26% total). Coverage counts all roofed areas incl. covered porches"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 20000,
+      "sf": 5000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 5000,
+      "pct_over": 10,
+      "over": 20000
+     }
+    ],
+    "note": "\u00a7 9.Q: table value plus 10% of lot area above the district minimum; excludes non-story basements, half-story attics and up to 400 sf of a one-story garage; spaces 15 ft+ high count double; land under water excluded. Code gives no reduction for undersized lots."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 15,
+    "rear_ft": 15,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 18 ft from the house, 15 ft from side and 15 ft from rear lot lines; not in any front yard; 12 ft height (eave/flat roof), 15 ft to ridge; play structures 12 ft max. Attached accessory buildings follow principal-building rules (\u00a7 7.D.3)"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (one-family, cols. 2-21); \u00a7 9.P; \u00a7 9.Q",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Residential%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Effective square 120 ft per side required for new subdivision lots (\u00a7 9.O). Height 23 ft / 2.5 stories is the lesser limit, measured to the eave of a sloped roof or top of a flat roof; max ridge height 33 ft; min height 1.5 stories / 15 ft. First floor max 3 ft above front grade. 'First side' and 'second side' yards are set separately in the schedule."
+  },
+  "R-15": {
+   "name": "One Family Residence R 15",
+   "min_lot_sf": 15000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 14,
+   "side_total_ft": 30,
+   "rear_ft": 32,
+   "corner_side_ft": 16,
+   "max_height_ft": 23,
+   "max_stories": 2.5,
+   "max_ridge_height_ft": 33,
+   "max_building_coverage": {
+    "pct": 23,
+    "note": "Principal building; accessory buildings may cover another 5% (28% total). Coverage counts all roofed areas incl. covered porches"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 15000,
+      "sf": 4200
+     },
+     {
+      "min": 15000,
+      "max": null,
+      "base": 4200,
+      "pct_over": 10,
+      "over": 15000
+     }
+    ],
+    "note": "\u00a7 9.Q: table value plus 10% of lot area above the district minimum; excludes non-story basements, half-story attics and up to 400 sf of a one-story garage; spaces 15 ft+ high count double; land under water excluded. Code gives no reduction for undersized lots."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 12,
+    "rear_ft": 12,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 16 ft from the house, 12 ft from side and 12 ft from rear lot lines; not in any front yard; 12 ft height (eave/flat roof), 15 ft to ridge; play structures 12 ft max. Attached accessory buildings follow principal-building rules (\u00a7 7.D.3)"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (one-family, cols. 2-21); \u00a7 9.P; \u00a7 9.Q",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Residential%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Effective square 100 ft per side required for new subdivision lots (\u00a7 9.O). Height 23 ft / 2.5 stories is the lesser limit, measured to the eave of a sloped roof or top of a flat roof; max ridge height 33 ft; min height 1.5 stories / 15 ft. First floor max 3 ft above front grade. 'First side' and 'second side' yards are set separately in the schedule."
+  },
+  "R-10": {
+   "name": "One Family Residence R 10",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 14,
+   "side_total_ft": 30,
+   "rear_ft": 25,
+   "corner_side_ft": 16,
+   "max_height_ft": 23,
+   "max_stories": 2.5,
+   "max_ridge_height_ft": 33,
+   "max_building_coverage": {
+    "pct": 24,
+    "note": "Principal building; accessory buildings may cover another 6% (30% total). Coverage counts all roofed areas incl. covered porches"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 10000,
+      "sf": 3500
+     },
+     {
+      "min": 10000,
+      "max": null,
+      "base": 3500,
+      "pct_over": 10,
+      "over": 10000
+     }
+    ],
+    "note": "\u00a7 9.Q: table value plus 10% of lot area above the district minimum; excludes non-story basements, half-story attics and up to 400 sf of a one-story garage; spaces 15 ft+ high count double; land under water excluded. Code gives no reduction for undersized lots."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 8,
+    "rear_ft": 8,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 14 ft from the house, 8 ft from side and 8 ft from rear lot lines; not in any front yard; 12 ft height (eave/flat roof), 15 ft to ridge; play structures 12 ft max. Attached accessory buildings follow principal-building rules (\u00a7 7.D.3)"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (one-family, cols. 2-21); \u00a7 9.P; \u00a7 9.Q",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Residential%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Effective square 90 ft per side required for new subdivision lots (\u00a7 9.O). Height 23 ft / 2.5 stories is the lesser limit, measured to the eave of a sloped roof or top of a flat roof; max ridge height 33 ft; min height 1.5 stories / 15 ft. First floor max 3 ft above front grade. 'First side' and 'second side' yards are set separately in the schedule."
+  },
+  "R7.5": {
+   "name": "One Family Residence R 7.5",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": 75,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 12,
+   "side_total_ft": 24,
+   "rear_ft": 25,
+   "corner_side_ft": 14,
+   "max_height_ft": 23,
+   "max_stories": 2.5,
+   "max_ridge_height_ft": 33,
+   "max_building_coverage": {
+    "pct": 27,
+    "note": "Principal building; accessory buildings may cover another 6% (33% total). Coverage counts all roofed areas incl. covered porches"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 7500,
+      "sf": 3000
+     },
+     {
+      "min": 7500,
+      "max": null,
+      "base": 3000,
+      "pct_over": 10,
+      "over": 7500
+     }
+    ],
+    "note": "\u00a7 9.Q: table value plus 10% of lot area above the district minimum; excludes non-story basements, half-story attics and up to 400 sf of a one-story garage; spaces 15 ft+ high count double; land under water excluded. Code gives no reduction for undersized lots."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 6,
+    "rear_ft": 6,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 12 ft from the house, 6 ft from side and 6 ft from rear lot lines; not in any front yard; 12 ft height (eave/flat roof), 15 ft to ridge; play structures 12 ft max. Attached accessory buildings follow principal-building rules (\u00a7 7.D.3)"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (one-family, cols. 2-21); \u00a7 9.P; \u00a7 9.Q",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Residential%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Effective square 75 ft per side required for new subdivision lots (\u00a7 9.O). Height 23 ft / 2.5 stories is the lesser limit, measured to the eave of a sloped roof or top of a flat roof; max ridge height 33 ft; min height 1.5 stories / 15 ft. First floor max 3 ft above front grade. 'First side' and 'second side' yards are set separately in the schedule."
+  },
+  "R6": {
+   "name": "One Family Residence R6",
+   "min_lot_sf": 6000,
+   "min_frontage_ft": 60,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 20,
+   "rear_ft": 25,
+   "corner_side_ft": 14,
+   "max_height_ft": 23,
+   "max_stories": 2.5,
+   "max_ridge_height_ft": 33,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "Principal building; accessory buildings may cover another 7% (37% total). Coverage counts all roofed areas incl. covered porches"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "sf": 2500
+     },
+     {
+      "min": 6000,
+      "max": null,
+      "base": 2500,
+      "pct_over": 10,
+      "over": 6000
+     }
+    ],
+    "note": "\u00a7 9.Q: table value plus 10% of lot area above the district minimum; excludes non-story basements, half-story attics and up to 400 sf of a one-story garage; spaces 15 ft+ high count double; land under water excluded. Code gives no reduction for undersized lots."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 10 ft from the house, 5 ft from side and 5 ft from rear lot lines; not in any front yard; 12 ft height (eave/flat roof), 15 ft to ridge; play structures 12 ft max. Attached accessory buildings follow principal-building rules (\u00a7 7.D.3)"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (one-family, cols. 2-21); \u00a7 9.P; \u00a7 9.Q",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Residential%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Effective square 60 ft per side required for new subdivision lots (\u00a7 9.O). Height 23 ft / 2.5 stories is the lesser limit, measured to the eave of a sloped roof or top of a flat roof; max ridge height 33 ft; min height 1.5 stories / 15 ft. First floor max 3 ft above front grade. 'First side' and 'second side' yards are set separately in the schedule."
+  },
+  "R5": {
+   "name": "One Family Residence R5",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 8,
+   "side_total_ft": 17,
+   "rear_ft": 25,
+   "corner_side_ft": 14,
+   "max_height_ft": 23,
+   "max_stories": 2.5,
+   "max_ridge_height_ft": 33,
+   "max_building_coverage": {
+    "pct": 31.5,
+    "note": "Principal building; accessory buildings may cover another 8.5% (40.0% total). Coverage counts all roofed areas incl. covered porches"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "sf": 2300
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "base": 2300,
+      "pct_over": 10,
+      "over": 5000
+     }
+    ],
+    "note": "\u00a7 9.Q: table value plus 10% of lot area above the district minimum; excludes non-story basements, half-story attics and up to 400 sf of a one-story garage; spaces 15 ft+ high count double; land under water excluded. Code gives no reduction for undersized lots."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 10 ft from the house, 5 ft from side and 5 ft from rear lot lines; not in any front yard; 12 ft height (eave/flat roof), 15 ft to ridge; play structures 12 ft max. Attached accessory buildings follow principal-building rules (\u00a7 7.D.3)"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (one-family, cols. 2-21); \u00a7 9.P; \u00a7 9.Q",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Residential%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Effective square 50 ft per side required for new subdivision lots (\u00a7 9.O). Height 23 ft / 2.5 stories is the lesser limit, measured to the eave of a sloped roof or top of a flat roof; max ridge height 33 ft; min height 1.5 stories / 15 ft. First floor max 3 ft above front grade. 'First side' and 'second side' yards are set separately in the schedule."
+  },
+  "R1.5": {
+   "name": "One Family Cluster Residence R 1.5C",
+   "min_lot_sf": 1500,
+   "min_frontage_ft": 15,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 10,
+   "side_ft": null,
+   "side_total_ft": null,
+   "rear_ft": 10,
+   "corner_side_ft": 14,
+   "max_height_ft": 25,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 75,
+    "note": "Per lot, accessory buildings included; all buildings on the whole cluster site max 33%"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 1500,
+      "sf": 1575
+     },
+     {
+      "min": 1500,
+      "max": null,
+      "base": 1575,
+      "pct_over": 10,
+      "over": 1500
+     }
+    ],
+    "note": "\u00a7 9.Q: table value plus 10% of lot area above the district minimum; excludes non-story basements, half-story attics and up to 400 sf of a one-story garage; spaces 15 ft+ high count double; land under water excluded. Code gives no reduction for undersized lots. Use schedule caps livable floor area of any unit at 2,700 sf; garage can't be living space."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 10,
+    "max_height_ft": 12,
+    "notes": "Accessory structures 10 ft from rear lot line; 12 ft height, 15 ft to ridge; not in any front yard"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (R 1.5C row) and Schedule of Residential District Uses (R 1.5C notes A-G); \u00a7 9.P; \u00a7 9.Q",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Residential%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Attached one-family dwellings on fee-simple lots; no interior side yards in the schedule; lots may not exceed 3,000 sf; building clusters max 160 ft long; side yard on a street 14 ft. Existing decks may be enclosed regardless of setbacks/GFA (note 2)."
+  },
+  "R3": {
+   "name": "Two Family Residence R3",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 60,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 8,
+   "side_total_ft": 17,
+   "rear_ft": 25,
+   "corner_side_ft": 14,
+   "max_height_ft": 23,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 28
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "sf": 2000
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "base": 2000,
+      "pct_over": 10,
+      "over": 5000
+     }
+    ],
+    "note": "\u00a7 9.Q: table value plus 10% of lot area above the district minimum; excludes non-story basements, half-story attics and up to 400 sf of a one-story garage; spaces 15 ft+ high count double; land under water excluded. Code gives no reduction for undersized lots. Two-family: 1,175 sf per the \u00a7 9.Q table on 3,000 sf per unit."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 12,
+    "notes": "Detached accessory: 10 ft from house, 5 ft from side and rear lot lines; 12 ft height, 15 ft to ridge; not in any front yard"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (R3 row, multi-family sheet); \u00a7 9.P; \u00a7 9.Q",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Multi-Family%20District%20Regulations%2003-19-13.pdf",
+   "notes": "One-family lot 5,000 sf; two-family 3,000 sf per unit. Effective square 60 ft. Side yards 8 and 9 ft; 14 ft on a street side. Height measured to eave/flat roof; no ridge limit stated for R3."
+  },
+  "M1": {
+   "name": "Multi-Family Residence M 1000 (code abbreviation M1)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 22,
+   "side_total_ft": 44,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 35
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 12,
+    "rear_ft": 12,
+    "max_height_ft": 12,
+    "notes": "Detached accessory: 12 ft from principal building, 12 ft from side and 12 ft from rear lot lines; 12 ft height, 15 ft to ridge"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (multi-family sheet); \u00a7 9.P",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Multi-Family%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Lot area 1000 sf per dwelling unit for multifamily; 5,000 sf for a one-family and 6,000 sf for a two-family dwelling. One- and two-family dwellings are permitted uses. \u00a7 9.Q GFA table does not list this district."
+  },
+  "M1500": {
+   "name": "Multi-Family Residence M 1500",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 23,
+   "side_total_ft": 46,
+   "rear_ft": 50,
+   "corner_side_ft": null,
+   "max_height_ft": 25,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 14,
+    "rear_ft": 14,
+    "max_height_ft": 12,
+    "notes": "Detached accessory: 12 ft from principal building, 14 ft from side and 14 ft from rear lot lines; 12 ft height, 15 ft to ridge"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (multi-family sheet); \u00a7 9.P",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Multi-Family%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Lot area 1500 sf per dwelling unit for multifamily; 5,000 sf for a one-family and 6,000 sf for a two-family dwelling. One- and two-family dwellings are permitted uses. \u00a7 9.Q GFA table does not list this district."
+  },
+  "M700": {
+   "name": "Multi-Family Residence M 700",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 22,
+   "side_ft": 22,
+   "side_total_ft": 44,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 45,
+   "max_stories": 4,
+   "max_building_coverage": {
+    "pct": 35
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 12,
+    "notes": "Detached accessory: 12 ft from principal building, 10 ft from side and 10 ft from rear lot lines; 12 ft height, 15 ft to ridge"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (multi-family sheet); \u00a7 9.P",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Multi-Family%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Lot area 700 sf per dwelling unit for multifamily; 5,000 sf for a one-family and 6,000 sf for a two-family dwelling. One- and two-family dwellings are permitted uses. \u00a7 9.Q GFA table does not list this district. Schedule note 1: max impervious surface coverage 70% (for non 1-2 family lots)."
+  },
+  "M350": {
+   "name": "Multi-Family Residence M 350",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 20,
+   "side_total_ft": 40,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 65,
+   "max_stories": 6,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 12,
+    "notes": "Detached accessory: 12 ft from principal building, 10 ft from side and 10 ft from rear lot lines; 12 ft height, 15 ft to ridge"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (multi-family sheet); \u00a7 9.P",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Multi-Family%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Lot area 350 sf per dwelling unit for multifamily; 5,000 sf for a one-family and 6,000 sf for a two-family dwelling. One- and two-family dwellings are permitted uses. \u00a7 9.Q GFA table does not list this district."
+  },
+  "RTD": {
+   "name": "Residential Transition District RTD",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 20,
+   "side_total_ft": 40,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 45
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "pct": 50
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "base": 3000,
+      "pct_over": 25,
+      "over": 6000
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3375,
+      "pct_over": 25,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "base": 4000,
+      "pct_over": 20,
+      "over": 10000
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "base": 5500,
+      "pct_over": 20,
+      "over": 15000
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 6500,
+      "pct_over": 20,
+      "over": 20000
+     }
+    ],
+    "note": "Impervious surface coverage, \u00a7 9.P table; applies to every lot with a one- or two-family dwelling in any district"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 12,
+    "notes": "Detached accessory: 12 ft from principal building, 10 ft from side and 10 ft from rear lot lines; 12 ft height, 15 ft to ridge"
+   },
+   "source": "\u00a7 4.C.5 Schedule of Residential District Regulations (multi-family sheet); \u00a7 9.P",
+   "source_url": "https://www.eastchester.gov/Schedule%20of%20Multi-Family%20District%20Regulations%2003-19-13.pdf",
+   "notes": "Lot area 600 sf per dwelling unit for multifamily; 5,000 sf for a one-family and 6,000 sf for a two-family dwelling. One- and two-family dwellings are permitted uses. \u00a7 9.Q GFA table does not list this district. Offices allowed up to 50% of floor area (ground floor only)."
+  }
+ }
+}

@@ -1,0 +1,491 @@
+{
+ "mun": "ARD",
+ "name": "Village of Ardsley",
+ "code_url": "https://ecode360.com/5113364",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "Ardsley has no schedule table: bulk rules are separate sections per district (Ch. 200, Arts. III-VIA)",
+  "County lists R-2 / R-3 building coverage as 26% / 34%; current code says 25% / 28% (amended L.L. 4-2003)",
+  "R-4 sets only street setback (30 ft) and side/rear yards by what they abut (30 ft next to residential, 20 ft next to business); recorded the residential-adjacent figure",
+  "CCH-1/CCH-2 are cluster sites (8-12 acres) with R-3 building standards and a 75 ft perimeter buffer; no per-lot yards recorded",
+  "RO: one-family homes follow all R-3 standards (\u00a7 200-64.1C); multifamily follows B-1 standards with 40 ft / 4 stories / 40% coverage (not recorded)",
+  "No local pool setbacks found (Ch. 178 covers fencing only)"
+ ],
+ "general": {
+  "wetland_buffer_ft": 25,
+  "watercourse_buffer_ft": 25,
+  "wetlands": {
+   "summary": "\u00a7 200-93A(1): structures, grading, filling, vegetation removal etc. within wetlands, water bodies, watercourses and a 25 ft buffer need a Planning Board permit.",
+   "url": "https://ecode360.com/5114088"
+  },
+  "steep_slopes": {
+   "summary": "\u00a7 200-93A(2): Planning Board permit to disturb steep slopes (25%+ with at least 10 ft dimension and area >= 10% of the district minimum lot or actual lot, whichever is less).",
+   "threshold_pct": 25,
+   "url": "https://ecode360.com/5114088"
+  },
+  "trees": {
+   "summary": "Ch. 185 regulates street trees; in subdivisions, removal of trees over 6 in. diameter (at 4 ft) needs Planning Board approval.",
+   "url": "https://ecode360.com/5113138"
+  },
+  "stormwater": {
+   "summary": "Ch. 171: SWPPP for land development activity, which includes any new building, construction on vacant or demolished lots, or 1+ acre of disturbance.",
+   "url": "https://ecode360.com/5112485"
+  },
+  "adu": {
+   "summary": "Art. XIIB: one ADU per lot in R-1/R-2/R-3 with a one-family home, owner-occupied, 300 to the lesser of 800 sf or 30% of the house, max 2 bedrooms, no short-term rental; village cap of 50 ADUs.",
+   "url": "https://ecode360.com/42052850"
+  },
+  "accessory_structures": "Accessory buildings: per-district distances to front/side/rear boundaries (R-1 40/30/40, R-2 30/20/20, R-3 20/15/15 ft), max 20 ft and 2 stories. Unroofed terraces may come within 4 ft of a lot line (\u00a7 200-85A); porches count as building.",
+  "pools": "Ch. 178: pools must be fenced at least 4 ft high; no separate zoning setback found.",
+  "notes": "Front yard must equal the average of the adjacent lots' front yards, min 20 ft and max 40 ft (\u00a7 200-85E). Lots under 100 ft deep may reduce the rear yard by 1/4 of the shortfall, min 15 ft (\u00a7 200-85F)."
+ },
+ "districts": {
+  "R-1": {
+   "name": "R-1 One-Family Residential",
+   "min_lot_sf": 40000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": null,
+   "front_ft": 40,
+   "side_ft": 30,
+   "side_total_ft": null,
+   "rear_ft": 40,
+   "corner_side_ft": 40,
+   "max_height_ft": 30,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 12,
+    "note": "All buildings incl. porches and decks"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6250,
+      "sf": 2500
+     },
+     {
+      "min": 6250,
+      "max": 7500,
+      "pct": 40
+     },
+     {
+      "min": 7500,
+      "max": 40000,
+      "base": 3000,
+      "pct_over": 12,
+      "over": 7500
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 6900,
+      "pct_over": 12,
+      "over": 40000
+     }
+    ],
+    "note": "Gross land coverage: all buildings, structures and paved/gravel surfaces (\u00a7 200-83C); under 7,500 sf it is 2,500 sf or 40%, whichever is greater; +10 sf per foot of front setback beyond the minimum; special permit maximum 2,800/47%, 3,550+14%, 8,100+14%"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "sf": 2400
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "far": 0.4
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3000,
+      "pct_over": 24,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 40000,
+      "base": 3600,
+      "pct_over": 8,
+      "over": 10000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 6000,
+      "pct_over": 4,
+      "over": 40000
+     }
+    ],
+    "note": "Basic permitted floor area for the house plus accessory buildings, any district (\u00a7 200-83B); under 7,500 sf it is 2,400 sf or 40% of lot, whichever is greater. Planning Board special permit can raise it to 2,760/46%, 3,450+28%, 4,150+10%, 7,150+5%. Floor area includes roofed porches/decks, carports and garages"
+   },
+   "accessory": {
+    "front_ft": 40,
+    "side_ft": 30,
+    "rear_ft": 40,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings max 20 ft and 2 stories; no minimum distance to main building"
+   },
+   "source": "\u00a7\u00a7 200-7 to 200-12; \u00a7 200-83 house size and gross land coverage; \u00a7 200-89 corner lots",
+   "source_url": "https://ecode360.com/5113522",
+   "notes": "30 ft and 2 stories above grade plane (24 ft for low-slope roofs); highest roof point max 38 ft (pitched) / 32 ft (low-slope) above average grade along any wall. Corner lots: side-street side yard equals the front yard (\u00a7 200-89). Lot width is mean lot width."
+  },
+  "R-2": {
+   "name": "R-2 One-Family Residential",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 75,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 20,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 25,
+    "note": "All buildings incl. porches and decks"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6250,
+      "sf": 2500
+     },
+     {
+      "min": 6250,
+      "max": 7500,
+      "pct": 40
+     },
+     {
+      "min": 7500,
+      "max": 40000,
+      "base": 3000,
+      "pct_over": 12,
+      "over": 7500
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 6900,
+      "pct_over": 12,
+      "over": 40000
+     }
+    ],
+    "note": "Gross land coverage: all buildings, structures and paved/gravel surfaces (\u00a7 200-83C); under 7,500 sf it is 2,500 sf or 40%, whichever is greater; +10 sf per foot of front setback beyond the minimum; special permit maximum 2,800/47%, 3,550+14%, 8,100+14%"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "sf": 2400
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "far": 0.4
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3000,
+      "pct_over": 24,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 40000,
+      "base": 3600,
+      "pct_over": 8,
+      "over": 10000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 6000,
+      "pct_over": 4,
+      "over": 40000
+     }
+    ],
+    "note": "Basic permitted floor area for the house plus accessory buildings, any district (\u00a7 200-83B); under 7,500 sf it is 2,400 sf or 40% of lot, whichever is greater. Planning Board special permit can raise it to 2,760/46%, 3,450+28%, 4,150+10%, 7,150+5%. Floor area includes roofed porches/decks, carports and garages"
+   },
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 20,
+    "rear_ft": 20,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings max 20 ft and 2 stories; no minimum distance to main building"
+   },
+   "source": "\u00a7\u00a7 200-15 to 200-20; \u00a7 200-83 house size and gross land coverage; \u00a7 200-89 corner lots",
+   "source_url": "https://ecode360.com/5113549",
+   "notes": "30 ft and 2 stories above grade plane (24 ft for low-slope roofs); highest roof point max 38 ft (pitched) / 32 ft (low-slope) above average grade along any wall. Corner lots: side-street side yard equals the front yard (\u00a7 200-89)."
+  },
+  "R-3": {
+   "name": "R-3 One-Family Residential",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": 60,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 15,
+   "side_total_ft": null,
+   "rear_ft": 20,
+   "corner_side_ft": 20,
+   "max_height_ft": 30,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 28,
+    "note": "All buildings incl. porches and decks"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6250,
+      "sf": 2500
+     },
+     {
+      "min": 6250,
+      "max": 7500,
+      "pct": 40
+     },
+     {
+      "min": 7500,
+      "max": 40000,
+      "base": 3000,
+      "pct_over": 12,
+      "over": 7500
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 6900,
+      "pct_over": 12,
+      "over": 40000
+     }
+    ],
+    "note": "Gross land coverage: all buildings, structures and paved/gravel surfaces (\u00a7 200-83C); under 7,500 sf it is 2,500 sf or 40%, whichever is greater; +10 sf per foot of front setback beyond the minimum; special permit maximum 2,800/47%, 3,550+14%, 8,100+14%"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "sf": 2400
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "far": 0.4
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3000,
+      "pct_over": 24,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 40000,
+      "base": 3600,
+      "pct_over": 8,
+      "over": 10000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 6000,
+      "pct_over": 4,
+      "over": 40000
+     }
+    ],
+    "note": "Basic permitted floor area for the house plus accessory buildings, any district (\u00a7 200-83B); under 7,500 sf it is 2,400 sf or 40% of lot, whichever is greater. Planning Board special permit can raise it to 2,760/46%, 3,450+28%, 4,150+10%, 7,150+5%. Floor area includes roofed porches/decks, carports and garages"
+   },
+   "accessory": {
+    "front_ft": 20,
+    "side_ft": 15,
+    "rear_ft": 15,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings max 20 ft and 2 stories; no minimum distance to main building"
+   },
+   "source": "\u00a7\u00a7 200-23 to 200-28; \u00a7 200-83 house size and gross land coverage; \u00a7 200-89 corner lots",
+   "source_url": "https://ecode360.com/5113576",
+   "notes": "30 ft and 2 stories above grade plane (24 ft for low-slope roofs); highest roof point max 38 ft (pitched) / 32 ft (low-slope) above average grade along any wall. Corner lots: side-street side yard equals the front yard (\u00a7 200-89)."
+  },
+  "RO": {
+   "name": "RO Residence Office",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": 60,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 15,
+   "side_total_ft": null,
+   "rear_ft": 20,
+   "corner_side_ft": 20,
+   "max_height_ft": 30,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 28,
+    "note": "All buildings incl. porches and decks"
+   },
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6250,
+      "sf": 2500
+     },
+     {
+      "min": 6250,
+      "max": 7500,
+      "pct": 40
+     },
+     {
+      "min": 7500,
+      "max": 40000,
+      "base": 3000,
+      "pct_over": 12,
+      "over": 7500
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 6900,
+      "pct_over": 12,
+      "over": 40000
+     }
+    ],
+    "note": "Gross land coverage: all buildings, structures and paved/gravel surfaces (\u00a7 200-83C); under 7,500 sf it is 2,500 sf or 40%, whichever is greater; +10 sf per foot of front setback beyond the minimum; special permit maximum 2,800/47%, 3,550+14%, 8,100+14%"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "sf": 2400
+     },
+     {
+      "min": 6000,
+      "max": 7500,
+      "far": 0.4
+     },
+     {
+      "min": 7500,
+      "max": 10000,
+      "base": 3000,
+      "pct_over": 24,
+      "over": 7500
+     },
+     {
+      "min": 10000,
+      "max": 40000,
+      "base": 3600,
+      "pct_over": 8,
+      "over": 10000
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "base": 6000,
+      "pct_over": 4,
+      "over": 40000
+     }
+    ],
+    "note": "Basic permitted floor area for the house plus accessory buildings, any district (\u00a7 200-83B); under 7,500 sf it is 2,400 sf or 40% of lot, whichever is greater. Planning Board special permit can raise it to 2,760/46%, 3,450+28%, 4,150+10%, 7,150+5%. Floor area includes roofed porches/decks, carports and garages"
+   },
+   "accessory": {
+    "front_ft": 20,
+    "side_ft": 15,
+    "rear_ft": 15,
+    "max_height_ft": 20,
+    "notes": "Accessory buildings max 20 ft and 2 stories; no minimum distance to main building"
+   },
+   "source": "\u00a7 200-64.1C (one-family homes follow R-3 standards: \u00a7\u00a7 200-23 to 200-28, \u00a7 200-83)",
+   "source_url": "https://ecode360.com/5113717",
+   "notes": "One-family homes: all R-3 standards apply (\u00a7 200-64.1C). Multifamily buildings follow B-1 standards with max 40 ft / 4 stories and 40% coverage (\u00a7 200-64.1B). 30 ft and 2 stories above grade plane (24 ft for low-slope roofs); highest roof point max 38 ft (pitched) / 32 ft (low-slope) above average grade along any wall"
+  },
+  "R-4": {
+   "name": "R-4 Residential (multifamily)",
+   "min_lot_sf": 4000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 30,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 18
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "sf": 8000,
+    "note": "Max building size 8,000 sf gross floor area"
+   },
+   "accessory": null,
+   "source": "\u00a7 200-29.1B Standards and requirements",
+   "source_url": "https://ecode360.com/5113611",
+   "notes": "min_lot_sf = lot area per dwelling unit. Front = setback from street right-of-way; side/rear 30 ft next to a residential district, 20 ft next to business; 15 ft between buildings. R-3 uses (one-family homes) follow R-3 rules."
+  },
+  "CCH-1": {
+   "name": "CCH-1 Conservation or Clustered Housing",
+   "min_lot_sf": 348480,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": null,
+   "side_ft": null,
+   "side_total_ft": null,
+   "rear_ft": null,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 12,
+    "note": "All buildings, over the entire district"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "\u00a7\u00a7 200-31, 200-32, 200-34, 200-36, 200-38, 200-45, 200-49",
+   "source_url": "https://ecode360.com/5113628",
+   "notes": "Development site 8-12 contiguous acres (min recorded); density and building standards of R-3; R-3 yards apply to attached units and may be cut up to 50% for detached; 75 ft landscaped perimeter buffer; 30 ft between clusters"
+  },
+  "CCH-2": {
+   "name": "CCH-2 Conservation or Clustered Housing",
+   "min_lot_sf": 348480,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": null,
+   "side_ft": null,
+   "side_total_ft": null,
+   "rear_ft": null,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 12,
+    "note": "All buildings, over the entire district"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "\u00a7\u00a7 200-31, 200-32, 200-34, 200-36, 200-38, 200-45, 200-49",
+   "source_url": "https://ecode360.com/5113628",
+   "notes": "Development site 8-12 contiguous acres (min recorded); density and building standards of R-3; R-3 yards apply to attached units and may be cut up to 50% for detached; 75 ft landscaped perimeter buffer; 30 ft between clusters"
+  }
+ }
+}

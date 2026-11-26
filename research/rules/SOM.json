@@ -1,0 +1,235 @@
+{
+ "mun": "SOM",
+ "name": "Town of Somers",
+ "code_url": "https://ecode360.com/11114347",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "No floor-area (FAR/GFA) cap for one-family homes in the Zoning Schedule; only a minimum livable floor area",
+  "No distinct corner-lot street-side yard found (\u00a7 170-35 covers only sight triangles); corner_side_ft null",
+  "Lot depth not regulated; accessory front setback not numeric (accessory buildings simply may not be in the front yard)",
+  "DRD (Designed Residential Development, \u00a7 170-12) has no lot-by-lot yards: setbacks are from the development perimeter (50 ft) and roads (40 ft from Class A road right-of-way / 30 ft from Class B road center line); front_ft records the 40 ft figure, side/rear null",
+  "MFR-H site coverage is '--' in the schedule; MFR-BP is in the schedule but not in the county layer, so not included",
+  "eCode360 lists three uncodified 2025 zoning amendments (L.L. 1-2025, 4-2025, 6-2025) not yet in the text; not reviewed",
+  "Nonresidential districts not checked for one-family use"
+ ],
+ "general": {
+  "wetland_buffer_ft": 100,
+  "watercourse_buffer_ft": 100,
+  "wetlands": {
+   "summary": "Ch. 167: wetland buffer extends 100 ft horizontally from the wetland boundary or watercourse bank (more where designated) and is regulated like the wetland; regulated activities need a wetland permit.",
+   "url": "https://ecode360.com/11113985"
+  },
+  "steep_slopes": {
+   "summary": "Ch. 148: permit to disturb 100+ sf of steep slopes, defined as areas of 10,000+ sf at 15% or more (moderate 15-25%, very steep 25-35%, extremely steep 35%+).",
+   "threshold_pct": 15,
+   "url": "https://ecode360.com/11112788"
+  },
+  "trees": {
+   "summary": "Ch. 156: permit to remove trees (12 in.+ dbh combined) in wetland/regulated buffers, within 30 ft of a scenic road center line, on very/extremely steep slopes, in the B-HP district or conservation land, or more than 2/4/6/8 trees a year in R-10/R-40/R-80/R-120.",
+   "url": "https://ecode360.com/11113439"
+  },
+  "stormwater": {
+   "summary": "Ch. 93: stormwater/erosion control rules apply to construction disturbing 5,000 sf or more or moving 50 cubic yards or more of soil.",
+   "url": "https://ecode360.com/11111609"
+  },
+  "adu": {
+   "summary": "\u00a7 170-70: accessory apartments by ZBA special exception permit, owner-occupied, normally on lots of 40,000 sf+ (accessory buildings only on 40,000 sf+), in buildings permitted before 4-1-1992; 300-800 sf, one bedroom; permit renewed every 7 years.",
+   "url": "https://ecode360.com/11115390"
+  },
+  "accessory_structures": "Detached accessory buildings/structures (toolhouses, playhouses, pools, tennis courts, animal housing) may not be in the front yard and must meet the schedule's accessory side/rear distances: 15 ft in R-120/R-80/R-40, 5 ft in R-10; max 15 ft to roof midpoint (12 ft flat) (\u00a7 170-11).",
+  "pools": "Pools are accessory structures: not in the front yard; 15 ft from side/rear lot lines (5 ft in R-10) (\u00a7 170-11B(8)). Pools count toward site coverage but not building coverage.",
+  "notes": "New single-family lots must also meet the environmentally sensitive lands rules of \u00a7\u00a7 170-58.3A and 170-58.4A (Article XA). Fences and walls max 6 ft (\u00a7 170-49)."
+ },
+ "districts": {
+  "R-120": {
+   "name": "Residence R120",
+   "min_lot_sf": 120000,
+   "min_frontage_ft": 250,
+   "min_lot_width_ft": 250,
+   "min_lot_depth_ft": null,
+   "front_ft": 50,
+   "side_ft": 50,
+   "side_total_ft": 110,
+   "rear_ft": 50,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 5,
+    "note": "All buildings and impervious structures, excluding pools, carports and sheds; unenclosed porches count (\u00a7 170-55)"
+   },
+   "max_impervious_coverage": {
+    "pct": 12,
+    "note": "Site coverage: all buildings, structures and impervious surfaces incl. driveways, pools, carports, patios and walkways"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 15,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings and structures (incl. pools, tennis courts, sheds) may not be in the front yard and must be 15 ft from side and rear lot lines (cols. 13-14, \u00a7 170-11B(8)); max 1.5 stories, 15 ft to roof midpoint or 12 ft for flat roofs (barns excepted). Attached accessory buildings follow principal rules (\u00a7 170-53)."
+   },
+   "source": "\u00a7 170-9; Zoning Schedule Part 1 (170 Attachment 1, cols. 4-17); \u00a7 170-11",
+   "source_url": "https://ecode360.com/attachment/305520/SO0406-170a%20Zoning%20Sch.pdf",
+   "notes": "Height is measured to the midpoint of a pitched roof (30 ft); minimum 1 story / 13 ft. Minimum livable floor area 2,000 sf per dwelling. Width is at the front lot line; Planning Board may cut frontage to 1/3 of the width on a turnaround if full width is met at the setback line (note 1). Front yard may be reduced to the average of adjoining dwellings (\u00a7 170-48A). Buildings on a lot at least half the taller building's height apart, min 10 ft (note 2)."
+  },
+  "R-80": {
+   "name": "Residence R80",
+   "min_lot_sf": 80000,
+   "min_frontage_ft": 200,
+   "min_lot_width_ft": 200,
+   "min_lot_depth_ft": null,
+   "front_ft": 40,
+   "side_ft": 40,
+   "side_total_ft": 95,
+   "rear_ft": 50,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 7,
+    "note": "All buildings and impervious structures, excluding pools, carports and sheds; unenclosed porches count (\u00a7 170-55)"
+   },
+   "max_impervious_coverage": {
+    "pct": 15,
+    "note": "Site coverage: all buildings, structures and impervious surfaces incl. driveways, pools, carports, patios and walkways"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 15,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings and structures (incl. pools, tennis courts, sheds) may not be in the front yard and must be 15 ft from side and rear lot lines (cols. 13-14, \u00a7 170-11B(8)); max 1.5 stories, 15 ft to roof midpoint or 12 ft for flat roofs (barns excepted). Attached accessory buildings follow principal rules (\u00a7 170-53)."
+   },
+   "source": "\u00a7 170-9; Zoning Schedule Part 1 (170 Attachment 1, cols. 4-17); \u00a7 170-11",
+   "source_url": "https://ecode360.com/attachment/305520/SO0406-170a%20Zoning%20Sch.pdf",
+   "notes": "Height is measured to the midpoint of a pitched roof (30 ft); minimum 1 story / 13 ft. Minimum livable floor area 1,500 sf per dwelling. Width is at the front lot line; Planning Board may cut frontage to 1/3 of the width on a turnaround if full width is met at the setback line (note 1). Front yard may be reduced to the average of adjoining dwellings (\u00a7 170-48A). Buildings on a lot at least half the taller building's height apart, min 10 ft (note 2)."
+  },
+  "R-40": {
+   "name": "Residence R40",
+   "min_lot_sf": 40000,
+   "min_frontage_ft": 150,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": null,
+   "front_ft": 40,
+   "side_ft": 30,
+   "side_total_ft": 60,
+   "rear_ft": 50,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 8,
+    "note": "All buildings and impervious structures, excluding pools, carports and sheds; unenclosed porches count (\u00a7 170-55)"
+   },
+   "max_impervious_coverage": {
+    "pct": 20,
+    "note": "Site coverage: all buildings, structures and impervious surfaces incl. driveways, pools, carports, patios and walkways"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 15,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings and structures (incl. pools, tennis courts, sheds) may not be in the front yard and must be 15 ft from side and rear lot lines (cols. 13-14, \u00a7 170-11B(8)); max 1.5 stories, 15 ft to roof midpoint or 12 ft for flat roofs (barns excepted). Attached accessory buildings follow principal rules (\u00a7 170-53)."
+   },
+   "source": "\u00a7 170-9; Zoning Schedule Part 1 (170 Attachment 1, cols. 4-17); \u00a7 170-11",
+   "source_url": "https://ecode360.com/attachment/305520/SO0406-170a%20Zoning%20Sch.pdf",
+   "notes": "Height is measured to the midpoint of a pitched roof (30 ft); minimum 1 story / 13 ft. Minimum livable floor area 1,250 sf per dwelling. Width is at the front lot line; Planning Board may cut frontage to 1/3 of the width on a turnaround if full width is met at the setback line (note 1). Front yard may be reduced to the average of adjoining dwellings (\u00a7 170-48A). Buildings on a lot at least half the taller building's height apart, min 10 ft (note 2)."
+  },
+  "R-10": {
+   "name": "Residence R10",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 75,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 15,
+   "side_total_ft": 30,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20,
+    "note": "All buildings and impervious structures, excluding pools, carports and sheds; unenclosed porches count (\u00a7 170-55)"
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Site coverage: all buildings, structures and impervious surfaces incl. driveways, pools, carports, patios and walkways"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings and structures (incl. pools, tennis courts, sheds) may not be in the front yard and must be 5 ft from side and rear lot lines (cols. 13-14, \u00a7 170-11B(8)); max 1.5 stories, 15 ft to roof midpoint or 12 ft for flat roofs (barns excepted). Attached accessory buildings follow principal rules (\u00a7 170-53)."
+   },
+   "source": "\u00a7 170-9; Zoning Schedule Part 1 (170 Attachment 1, cols. 4-17); \u00a7 170-11",
+   "source_url": "https://ecode360.com/attachment/305520/SO0406-170a%20Zoning%20Sch.pdf",
+   "notes": "Height is measured to the midpoint of a pitched roof (30 ft); minimum 1 story / 13 ft. Minimum livable floor area 1,000 sf per dwelling. Width is at the front lot line; Planning Board may cut frontage to 1/3 of the width on a turnaround if full width is met at the setback line (note 1). Front yard may be reduced to the average of adjoining dwellings (\u00a7 170-48A). Buildings on a lot at least half the taller building's height apart, min 10 ft (note 2)."
+  },
+  "MFR-H": {
+   "name": "Multifamily Residence Hamlet MFR-H",
+   "min_lot_sf": 435600,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 75,
+   "side_ft": 50,
+   "side_total_ft": 100,
+   "rear_ft": 50,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 15,
+    "note": "Principal buildings"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 50,
+    "rear_ft": 50,
+    "max_height_ft": 15,
+    "notes": "Accessory use 50 ft from side and rear lot lines; max 1.5 stories / 15 ft"
+   },
+   "source": "\u00a7 170-9; Zoning Schedule Part 2 (170 Attachment 1); \u00a7 170-13",
+   "source_url": "https://ecode360.com/attachment/305520/SO0406-170a%20Zoning%20Sch.pdf",
+   "notes": "10 acres per development, no minimum per unit. All buildings at least 75 ft from any street line and 100 ft from a line shared with a single-family residence district (note 3). Density and other standards in \u00a7 170-13."
+  },
+  "DRD": {
+   "name": "Designed Residential Development",
+   "min_lot_sf": 21780000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 40,
+   "side_ft": null,
+   "side_total_ft": null,
+   "rear_ft": null,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 3,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 20,
+    "side_ft": null,
+    "rear_ft": null,
+    "max_height_ft": null,
+    "notes": "Accessory structures 30 ft from the development perimeter, 20 ft from Class A road right-of-way / 20 ft from Class B road center line"
+   },
+   "source": "\u00a7 170-9E; \u00a7 170-12 (building and setback standards)",
+   "source_url": "https://ecode360.com/11114458",
+   "notes": "500 contiguous acres per development (in R-120/R-80/R-40); at least 1/3 open space. Single-family detached homes: 50 ft from the development perimeter, 40 ft from a Class A road right-of-way, 30 ft from a Class B road center line; buildings at least half the taller building's height apart (min 10 ft); max 3 stories / 35 ft."
+  }
+ }
+}

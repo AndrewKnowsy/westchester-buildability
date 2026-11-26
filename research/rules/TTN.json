@@ -1,0 +1,1887 @@
+{
+ "mun": "TTN",
+ "name": "Village of Tarrytown",
+ "code_url": "https://ecode360.com/10676381",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "Schedule attachments are dated 12-15-2008; later amendments to Ch. 305 text were read for FAR, impervious coverage, yards, pools and ADUs, but schedule numbers were not cross-checked against newer local laws.",
+  "max_building_coverage records total coverage of all buildings; principal-building limits are in each spec's note.",
+  "Multifamily districts: no impervious limit (\u00a7 305-49 covers single-family districts only) and no Table 1 FAR cap; recorded as text.",
+  "M-1 uses the R-5 one-family limits per \u00a7 305-33A(1); Attachment 6 M-1 row differs (coverage 32.5%, no height).",
+  "M-3 one-family max stories printed as 22.5 in Attachment 6; recorded as 2.5.",
+  "R-80 undersized lots 76,231-79,999 sf: Table 2 lists no FAR.",
+  "45-degree light exposure plane (schedule note 1) and special setbacks (Route 9, Tarrytown Lakes, Old Croton Aqueduct, \u00a7 305-47C) are not modeled.",
+  "MU, WD/WGBD and other non-residential districts not checked for one-family rules beyond LB and NS."
+ ],
+ "general": {
+  "wetland_buffer_ft": 100,
+  "watercourse_buffer_ft": 100,
+  "wetlands": {
+   "summary": "Ch. 302: wetlands, watercourses and a regulated 100 ft upland adjacent area need a permit for regulated activities.",
+   "url": "https://ecode360.com/10676064"
+  },
+  "steep_slopes": {
+   "summary": "\u00a7 305-67: slopes of 25%+ (and wetlands) on sites under review are excluded from building areas, and 50% of them is excluded from lot-size and coverage calculations; high ground (300 ft+) and hilltops also protected.",
+   "threshold_pct": 25,
+   "url": "https://ecode360.com/10677667"
+  },
+  "trees": {
+   "summary": "Ch. 281: permit to cut down, top or destroy any tree over 4 in. diameter (at 4.5 ft) on private property.",
+   "url": "https://ecode360.com/10675438"
+  },
+  "stormwater": {
+   "summary": "Ch. 258: SWPPP for land disturbance of 5,000 sf or more, or 1,000 sf or more of new impervious cover.",
+   "url": "https://ecode360.com/14241582"
+  },
+  "adu": {
+   "summary": "\u00a7 305-14B(15) (L.L. 2-2023): one ADU per single-family lot in all R zones by Building Department permit, owner-occupied, 300-1,000 sf and max 50% of the main house, max 2 bedrooms (studio/1 BR in R-10, R-7.5, R-5); new detached ADU buildings only in R-80 to R-15.",
+   "url": "https://ecode360.com/10676448"
+  },
+  "accessory_structures": "Attached accessory buildings follow principal rules; detached ones follow the schedule's accessory distances, max 12 ft high (\u00a7 305-53). Sheds/playhouses up to 100 sf may sit 3 ft from side/rear lines outside the front yard (sheds max 9 ft) (\u00a7 305-47B(9)).",
+  "pools": "Accessory structure meeting district setbacks but never less than 15 ft from lot lines; 4 ft fence, screened landscaping (\u00a7 305-54).",
+  "notes": "Corner lots (except R-5): side-street yard equal to the front yard (\u00a7 305-47E). Fences max 6 ft (\u00a7 305-47B(7))."
+ },
+ "districts": {
+  "R-80": {
+   "name": "R-80 One-Family Residence",
+   "min_lot_sf": 80000,
+   "min_frontage_ft": 150,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": null,
+   "front_ft": 40,
+   "side_ft": 30,
+   "side_total_ft": 60,
+   "rear_ft": 50,
+   "corner_side_ft": 40,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 60000,
+      "max": 80000,
+      "pct": 12
+     },
+     {
+      "min": 80000,
+      "max": null,
+      "pct": 10
+     }
+    ],
+    "note": "All buildings (principal max 8%; 10% on lots 60,000-80,000 sf). Schedule notes 3 and 5."
+   },
+   "max_impervious_coverage": {
+    "pct": 16.75,
+    "note": "Impervious surface coverage, gross lot area (\u00a7 305-49)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 3000,
+      "max": 4000,
+      "far": 0.43
+     },
+     {
+      "min": 4000,
+      "max": 5000,
+      "far": 0.43
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "far": 0.43
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "far": 0.414
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "far": 0.398
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "far": 0.382
+     },
+     {
+      "min": 9000,
+      "max": 10000,
+      "far": 0.366
+     },
+     {
+      "min": 10000,
+      "max": 11000,
+      "far": 0.35
+     },
+     {
+      "min": 11000,
+      "max": 12000,
+      "far": 0.338
+     },
+     {
+      "min": 12000,
+      "max": 13000,
+      "far": 0.326
+     },
+     {
+      "min": 13000,
+      "max": 14000,
+      "far": 0.314
+     },
+     {
+      "min": 14000,
+      "max": 15000,
+      "far": 0.302
+     },
+     {
+      "min": 15000,
+      "max": 16000,
+      "far": 0.29
+     },
+     {
+      "min": 16000,
+      "max": 17000,
+      "far": 0.284
+     },
+     {
+      "min": 17000,
+      "max": 18000,
+      "far": 0.278
+     },
+     {
+      "min": 18000,
+      "max": 19000,
+      "far": 0.272
+     },
+     {
+      "min": 19000,
+      "max": 20000,
+      "far": 0.266
+     },
+     {
+      "min": 20000,
+      "max": 21000,
+      "far": 0.26
+     },
+     {
+      "min": 21000,
+      "max": 22000,
+      "far": 0.254
+     },
+     {
+      "min": 22000,
+      "max": 23000,
+      "far": 0.248
+     },
+     {
+      "min": 23000,
+      "max": 24000,
+      "far": 0.242
+     },
+     {
+      "min": 24000,
+      "max": 25000,
+      "far": 0.236
+     },
+     {
+      "min": 25000,
+      "max": 26000,
+      "far": 0.23
+     },
+     {
+      "min": 26000,
+      "max": 27000,
+      "far": 0.224
+     },
+     {
+      "min": 27000,
+      "max": 28000,
+      "far": 0.218
+     },
+     {
+      "min": 28000,
+      "max": 29000,
+      "far": 0.212
+     },
+     {
+      "min": 29000,
+      "max": 30000,
+      "far": 0.206
+     },
+     {
+      "min": 30000,
+      "max": 31000,
+      "far": 0.2
+     },
+     {
+      "min": 31000,
+      "max": 32000,
+      "far": 0.1955
+     },
+     {
+      "min": 32000,
+      "max": 33000,
+      "far": 0.191
+     },
+     {
+      "min": 33000,
+      "max": 34000,
+      "far": 0.1865
+     },
+     {
+      "min": 34000,
+      "max": 35000,
+      "far": 0.182
+     },
+     {
+      "min": 35000,
+      "max": 36000,
+      "far": 0.1775
+     },
+     {
+      "min": 36000,
+      "max": 37000,
+      "far": 0.1745
+     },
+     {
+      "min": 37000,
+      "max": 38000,
+      "far": 0.1715
+     },
+     {
+      "min": 38000,
+      "max": 39000,
+      "far": 0.1685
+     },
+     {
+      "min": 39000,
+      "max": 40000,
+      "far": 0.1655
+     },
+     {
+      "min": 40000,
+      "max": 41000,
+      "far": 0.1625
+     },
+     {
+      "min": 41000,
+      "max": 42000,
+      "far": 0.1605
+     },
+     {
+      "min": 42000,
+      "max": 43000,
+      "far": 0.1585
+     },
+     {
+      "min": 43000,
+      "max": 44000,
+      "far": 0.1565
+     },
+     {
+      "min": 44000,
+      "max": 45000,
+      "far": 0.1545
+     },
+     {
+      "min": 45000,
+      "max": 46000,
+      "far": 0.1525
+     },
+     {
+      "min": 46000,
+      "max": 47000,
+      "far": 0.151
+     },
+     {
+      "min": 47000,
+      "max": 48000,
+      "far": 0.1495
+     },
+     {
+      "min": 48000,
+      "max": 49000,
+      "far": 0.148
+     },
+     {
+      "min": 49000,
+      "max": 50000,
+      "far": 0.1465
+     },
+     {
+      "min": 50000,
+      "max": 51000,
+      "far": 0.145
+     },
+     {
+      "min": 51000,
+      "max": 52000,
+      "far": 0.145
+     },
+     {
+      "min": 52000,
+      "max": 53000,
+      "far": 0.145
+     },
+     {
+      "min": 53000,
+      "max": 54000,
+      "far": 0.145
+     },
+     {
+      "min": 54000,
+      "max": 55000,
+      "far": 0.145
+     },
+     {
+      "min": 55000,
+      "max": 56000,
+      "far": 0.145
+     },
+     {
+      "min": 56000,
+      "max": 57000,
+      "far": 0.145
+     },
+     {
+      "min": 57000,
+      "max": 58000,
+      "far": 0.145
+     },
+     {
+      "min": 58000,
+      "max": 59000,
+      "far": 0.145
+     },
+     {
+      "min": 59000,
+      "max": 60000,
+      "far": 0.145
+     },
+     {
+      "min": 60000,
+      "max": 61000,
+      "far": 0.145
+     },
+     {
+      "min": 61000,
+      "max": 62000,
+      "far": 0.145
+     },
+     {
+      "min": 62000,
+      "max": 63000,
+      "far": 0.145
+     },
+     {
+      "min": 63000,
+      "max": 64000,
+      "far": 0.145
+     },
+     {
+      "min": 64000,
+      "max": 65000,
+      "far": 0.145
+     },
+     {
+      "min": 65000,
+      "max": 66000,
+      "far": 0.145
+     },
+     {
+      "min": 66000,
+      "max": 67000,
+      "far": 0.145
+     },
+     {
+      "min": 67000,
+      "max": 68000,
+      "far": 0.145
+     },
+     {
+      "min": 68000,
+      "max": 69000,
+      "far": 0.145
+     },
+     {
+      "min": 69000,
+      "max": 70000,
+      "far": 0.145
+     },
+     {
+      "min": 70000,
+      "max": 71000,
+      "far": 0.145
+     },
+     {
+      "min": 71000,
+      "max": 72000,
+      "far": 0.145
+     },
+     {
+      "min": 72000,
+      "max": 73000,
+      "far": 0.145
+     },
+     {
+      "min": 73000,
+      "max": 74000,
+      "far": 0.145
+     },
+     {
+      "min": 74000,
+      "max": 75000,
+      "far": 0.145
+     },
+     {
+      "min": 75000,
+      "max": 76000,
+      "far": 0.145
+     },
+     {
+      "min": 76000,
+      "max": 76231,
+      "far": 0.145
+     },
+     {
+      "min": 80000,
+      "max": null,
+      "sf": 11600
+     }
+    ],
+    "note": "\u00a7 305-25: lots at or above the zone minimum get the Table 1 cap; undersized lots use Table 2 FAR (lot rounded down to the nearest 1,000 sf). Decks, patios and unenclosed porches excluded; basements count by exposed-foundation share (\u00a7 305-26)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 30,
+    "rear_ft": 30,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 30 ft from side and 30 ft from rear lot lines, 30 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Single-Family Residence Districts (Attachment 5); \u00a7 305-25 (FAR); \u00a7 305-49 (impervious)",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "Building walls may not cross a 45-degree light exposure plane from neighboring setback lines (schedule note 1). Max livable area 1.5 x principal building coverage. Planning Board may reduce lot size, frontage and yards (not below R-30 lot size) without adding lots (note 2). Table 2 FAR stops at 76,230 sf ('76,231+ None'), so undersized R-80 lots of 76,231-79,999 sf have no listed FAR."
+  },
+  "R-60": {
+   "name": "R-60 One-Family Residence",
+   "min_lot_sf": 60000,
+   "min_frontage_ft": 150,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": null,
+   "front_ft": 40,
+   "side_ft": 25,
+   "side_total_ft": 50,
+   "rear_ft": 45,
+   "corner_side_ft": 40,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 60000,
+      "pct": 14
+     },
+     {
+      "min": 60000,
+      "max": null,
+      "pct": 12
+     }
+    ],
+    "note": "All buildings (principal max 10%; 12% on lots under 60,000 sf). Schedule notes 4 and 6."
+   },
+   "max_impervious_coverage": {
+    "pct": 19.25,
+    "note": "Impervious surface coverage, gross lot area (\u00a7 305-49)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 3000,
+      "max": 4000,
+      "far": 0.43
+     },
+     {
+      "min": 4000,
+      "max": 5000,
+      "far": 0.43
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "far": 0.43
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "far": 0.414
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "far": 0.398
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "far": 0.382
+     },
+     {
+      "min": 9000,
+      "max": 10000,
+      "far": 0.366
+     },
+     {
+      "min": 10000,
+      "max": 11000,
+      "far": 0.35
+     },
+     {
+      "min": 11000,
+      "max": 12000,
+      "far": 0.338
+     },
+     {
+      "min": 12000,
+      "max": 13000,
+      "far": 0.326
+     },
+     {
+      "min": 13000,
+      "max": 14000,
+      "far": 0.314
+     },
+     {
+      "min": 14000,
+      "max": 15000,
+      "far": 0.302
+     },
+     {
+      "min": 15000,
+      "max": 16000,
+      "far": 0.29
+     },
+     {
+      "min": 16000,
+      "max": 17000,
+      "far": 0.284
+     },
+     {
+      "min": 17000,
+      "max": 18000,
+      "far": 0.278
+     },
+     {
+      "min": 18000,
+      "max": 19000,
+      "far": 0.272
+     },
+     {
+      "min": 19000,
+      "max": 20000,
+      "far": 0.266
+     },
+     {
+      "min": 20000,
+      "max": 21000,
+      "far": 0.26
+     },
+     {
+      "min": 21000,
+      "max": 22000,
+      "far": 0.254
+     },
+     {
+      "min": 22000,
+      "max": 23000,
+      "far": 0.248
+     },
+     {
+      "min": 23000,
+      "max": 24000,
+      "far": 0.242
+     },
+     {
+      "min": 24000,
+      "max": 25000,
+      "far": 0.236
+     },
+     {
+      "min": 25000,
+      "max": 26000,
+      "far": 0.23
+     },
+     {
+      "min": 26000,
+      "max": 27000,
+      "far": 0.224
+     },
+     {
+      "min": 27000,
+      "max": 28000,
+      "far": 0.218
+     },
+     {
+      "min": 28000,
+      "max": 29000,
+      "far": 0.212
+     },
+     {
+      "min": 29000,
+      "max": 30000,
+      "far": 0.206
+     },
+     {
+      "min": 30000,
+      "max": 31000,
+      "far": 0.2
+     },
+     {
+      "min": 31000,
+      "max": 32000,
+      "far": 0.1955
+     },
+     {
+      "min": 32000,
+      "max": 33000,
+      "far": 0.191
+     },
+     {
+      "min": 33000,
+      "max": 34000,
+      "far": 0.1865
+     },
+     {
+      "min": 34000,
+      "max": 35000,
+      "far": 0.182
+     },
+     {
+      "min": 35000,
+      "max": 36000,
+      "far": 0.1775
+     },
+     {
+      "min": 36000,
+      "max": 37000,
+      "far": 0.1745
+     },
+     {
+      "min": 37000,
+      "max": 38000,
+      "far": 0.1715
+     },
+     {
+      "min": 38000,
+      "max": 39000,
+      "far": 0.1685
+     },
+     {
+      "min": 39000,
+      "max": 40000,
+      "far": 0.1655
+     },
+     {
+      "min": 40000,
+      "max": 41000,
+      "far": 0.1625
+     },
+     {
+      "min": 41000,
+      "max": 42000,
+      "far": 0.1605
+     },
+     {
+      "min": 42000,
+      "max": 43000,
+      "far": 0.1585
+     },
+     {
+      "min": 43000,
+      "max": 44000,
+      "far": 0.1565
+     },
+     {
+      "min": 44000,
+      "max": 45000,
+      "far": 0.1545
+     },
+     {
+      "min": 45000,
+      "max": 46000,
+      "far": 0.1525
+     },
+     {
+      "min": 46000,
+      "max": 47000,
+      "far": 0.151
+     },
+     {
+      "min": 47000,
+      "max": 48000,
+      "far": 0.1495
+     },
+     {
+      "min": 48000,
+      "max": 49000,
+      "far": 0.148
+     },
+     {
+      "min": 49000,
+      "max": 50000,
+      "far": 0.1465
+     },
+     {
+      "min": 50000,
+      "max": 51000,
+      "far": 0.145
+     },
+     {
+      "min": 51000,
+      "max": 52000,
+      "far": 0.145
+     },
+     {
+      "min": 52000,
+      "max": 53000,
+      "far": 0.145
+     },
+     {
+      "min": 53000,
+      "max": 54000,
+      "far": 0.145
+     },
+     {
+      "min": 54000,
+      "max": 55000,
+      "far": 0.145
+     },
+     {
+      "min": 55000,
+      "max": 56000,
+      "far": 0.145
+     },
+     {
+      "min": 56000,
+      "max": 57000,
+      "far": 0.145
+     },
+     {
+      "min": 57000,
+      "max": 58000,
+      "far": 0.145
+     },
+     {
+      "min": 58000,
+      "max": 59000,
+      "far": 0.145
+     },
+     {
+      "min": 59000,
+      "max": 60000,
+      "far": 0.145
+     },
+     {
+      "min": 60000,
+      "max": null,
+      "sf": 8700
+     }
+    ],
+    "note": "\u00a7 305-25: lots at or above the zone minimum get the Table 1 cap; undersized lots use Table 2 FAR (lot rounded down to the nearest 1,000 sf). Decks, patios and unenclosed porches excluded; basements count by exposed-foundation share (\u00a7 305-26)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 25,
+    "rear_ft": 25,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 25 ft from side and 25 ft from rear lot lines, 25 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Single-Family Residence Districts (Attachment 5); \u00a7 305-25 (FAR); \u00a7 305-49 (impervious)",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "Building walls may not cross a 45-degree light exposure plane from neighboring setback lines (schedule note 1). Max livable area 1.5 x principal building coverage. Planning Board may reduce lot size, frontage and yards (note 2)."
+  },
+  "R-40": {
+   "name": "R-40 One-Family Residence",
+   "min_lot_sf": 40000,
+   "min_frontage_ft": 150,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": null,
+   "front_ft": 40,
+   "side_ft": 20,
+   "side_total_ft": 40,
+   "rear_ft": 36,
+   "corner_side_ft": 40,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 17.5,
+    "note": "All buildings; principal building max 14%, accessory buildings max 3.5%"
+   },
+   "max_impervious_coverage": {
+    "pct": 21.75,
+    "note": "Impervious surface coverage, gross lot area (\u00a7 305-49)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 3000,
+      "max": 4000,
+      "far": 0.43
+     },
+     {
+      "min": 4000,
+      "max": 5000,
+      "far": 0.43
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "far": 0.43
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "far": 0.414
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "far": 0.398
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "far": 0.382
+     },
+     {
+      "min": 9000,
+      "max": 10000,
+      "far": 0.366
+     },
+     {
+      "min": 10000,
+      "max": 11000,
+      "far": 0.35
+     },
+     {
+      "min": 11000,
+      "max": 12000,
+      "far": 0.338
+     },
+     {
+      "min": 12000,
+      "max": 13000,
+      "far": 0.326
+     },
+     {
+      "min": 13000,
+      "max": 14000,
+      "far": 0.314
+     },
+     {
+      "min": 14000,
+      "max": 15000,
+      "far": 0.302
+     },
+     {
+      "min": 15000,
+      "max": 16000,
+      "far": 0.29
+     },
+     {
+      "min": 16000,
+      "max": 17000,
+      "far": 0.284
+     },
+     {
+      "min": 17000,
+      "max": 18000,
+      "far": 0.278
+     },
+     {
+      "min": 18000,
+      "max": 19000,
+      "far": 0.272
+     },
+     {
+      "min": 19000,
+      "max": 20000,
+      "far": 0.266
+     },
+     {
+      "min": 20000,
+      "max": 21000,
+      "far": 0.26
+     },
+     {
+      "min": 21000,
+      "max": 22000,
+      "far": 0.254
+     },
+     {
+      "min": 22000,
+      "max": 23000,
+      "far": 0.248
+     },
+     {
+      "min": 23000,
+      "max": 24000,
+      "far": 0.242
+     },
+     {
+      "min": 24000,
+      "max": 25000,
+      "far": 0.236
+     },
+     {
+      "min": 25000,
+      "max": 26000,
+      "far": 0.23
+     },
+     {
+      "min": 26000,
+      "max": 27000,
+      "far": 0.224
+     },
+     {
+      "min": 27000,
+      "max": 28000,
+      "far": 0.218
+     },
+     {
+      "min": 28000,
+      "max": 29000,
+      "far": 0.212
+     },
+     {
+      "min": 29000,
+      "max": 30000,
+      "far": 0.206
+     },
+     {
+      "min": 30000,
+      "max": 31000,
+      "far": 0.2
+     },
+     {
+      "min": 31000,
+      "max": 32000,
+      "far": 0.1955
+     },
+     {
+      "min": 32000,
+      "max": 33000,
+      "far": 0.191
+     },
+     {
+      "min": 33000,
+      "max": 34000,
+      "far": 0.1865
+     },
+     {
+      "min": 34000,
+      "max": 35000,
+      "far": 0.182
+     },
+     {
+      "min": 35000,
+      "max": 36000,
+      "far": 0.1775
+     },
+     {
+      "min": 36000,
+      "max": 37000,
+      "far": 0.1745
+     },
+     {
+      "min": 37000,
+      "max": 38000,
+      "far": 0.1715
+     },
+     {
+      "min": 38000,
+      "max": 39000,
+      "far": 0.1685
+     },
+     {
+      "min": 39000,
+      "max": 40000,
+      "far": 0.1655
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "sf": 6500
+     }
+    ],
+    "note": "\u00a7 305-25: lots at or above the zone minimum get the Table 1 cap; undersized lots use Table 2 FAR (lot rounded down to the nearest 1,000 sf). Decks, patios and unenclosed porches excluded; basements count by exposed-foundation share (\u00a7 305-26)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 20,
+    "rear_ft": 20,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 20 ft from side and 20 ft from rear lot lines, 20 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Single-Family Residence Districts (Attachment 5); \u00a7 305-25 (FAR); \u00a7 305-49 (impervious)",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "Building walls may not cross a 45-degree light exposure plane from neighboring setback lines (schedule note 1)."
+  },
+  "R-30": {
+   "name": "R-30 One-Family Residence",
+   "min_lot_sf": 30000,
+   "min_frontage_ft": 135,
+   "min_lot_width_ft": 135,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 18,
+   "side_total_ft": 38,
+   "rear_ft": 34,
+   "corner_side_ft": 35,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20,
+    "note": "All buildings; principal building max 16%, accessory buildings max 4%"
+   },
+   "max_impervious_coverage": {
+    "pct": 25,
+    "note": "Impervious surface coverage, gross lot area (\u00a7 305-49)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 3000,
+      "max": 4000,
+      "far": 0.43
+     },
+     {
+      "min": 4000,
+      "max": 5000,
+      "far": 0.43
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "far": 0.43
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "far": 0.414
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "far": 0.398
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "far": 0.382
+     },
+     {
+      "min": 9000,
+      "max": 10000,
+      "far": 0.366
+     },
+     {
+      "min": 10000,
+      "max": 11000,
+      "far": 0.35
+     },
+     {
+      "min": 11000,
+      "max": 12000,
+      "far": 0.338
+     },
+     {
+      "min": 12000,
+      "max": 13000,
+      "far": 0.326
+     },
+     {
+      "min": 13000,
+      "max": 14000,
+      "far": 0.314
+     },
+     {
+      "min": 14000,
+      "max": 15000,
+      "far": 0.302
+     },
+     {
+      "min": 15000,
+      "max": 16000,
+      "far": 0.29
+     },
+     {
+      "min": 16000,
+      "max": 17000,
+      "far": 0.284
+     },
+     {
+      "min": 17000,
+      "max": 18000,
+      "far": 0.278
+     },
+     {
+      "min": 18000,
+      "max": 19000,
+      "far": 0.272
+     },
+     {
+      "min": 19000,
+      "max": 20000,
+      "far": 0.266
+     },
+     {
+      "min": 20000,
+      "max": 21000,
+      "far": 0.26
+     },
+     {
+      "min": 21000,
+      "max": 22000,
+      "far": 0.254
+     },
+     {
+      "min": 22000,
+      "max": 23000,
+      "far": 0.248
+     },
+     {
+      "min": 23000,
+      "max": 24000,
+      "far": 0.242
+     },
+     {
+      "min": 24000,
+      "max": 25000,
+      "far": 0.236
+     },
+     {
+      "min": 25000,
+      "max": 26000,
+      "far": 0.23
+     },
+     {
+      "min": 26000,
+      "max": 27000,
+      "far": 0.224
+     },
+     {
+      "min": 27000,
+      "max": 28000,
+      "far": 0.218
+     },
+     {
+      "min": 28000,
+      "max": 29000,
+      "far": 0.212
+     },
+     {
+      "min": 29000,
+      "max": 30000,
+      "far": 0.206
+     },
+     {
+      "min": 30000,
+      "max": null,
+      "sf": 6000
+     }
+    ],
+    "note": "\u00a7 305-25: lots at or above the zone minimum get the Table 1 cap; undersized lots use Table 2 FAR (lot rounded down to the nearest 1,000 sf). Decks, patios and unenclosed porches excluded; basements count by exposed-foundation share (\u00a7 305-26)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 18,
+    "rear_ft": 18,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 18 ft from side and 18 ft from rear lot lines, 18 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Single-Family Residence Districts (Attachment 5); \u00a7 305-25 (FAR); \u00a7 305-49 (impervious)",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "Building walls may not cross a 45-degree light exposure plane from neighboring setback lines (schedule note 1)."
+  },
+  "R-20": {
+   "name": "R-20 One-Family Residence",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 120,
+   "min_lot_width_ft": 120,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 16,
+   "side_total_ft": 34,
+   "rear_ft": 32,
+   "corner_side_ft": 30,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 22.5,
+    "note": "All buildings; principal building max 18%, accessory buildings max 4.5%"
+   },
+   "max_impervious_coverage": {
+    "pct": 29,
+    "note": "Impervious surface coverage, gross lot area (\u00a7 305-49)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 3000,
+      "max": 4000,
+      "far": 0.43
+     },
+     {
+      "min": 4000,
+      "max": 5000,
+      "far": 0.43
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "far": 0.43
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "far": 0.414
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "far": 0.398
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "far": 0.382
+     },
+     {
+      "min": 9000,
+      "max": 10000,
+      "far": 0.366
+     },
+     {
+      "min": 10000,
+      "max": 11000,
+      "far": 0.35
+     },
+     {
+      "min": 11000,
+      "max": 12000,
+      "far": 0.338
+     },
+     {
+      "min": 12000,
+      "max": 13000,
+      "far": 0.326
+     },
+     {
+      "min": 13000,
+      "max": 14000,
+      "far": 0.314
+     },
+     {
+      "min": 14000,
+      "max": 15000,
+      "far": 0.302
+     },
+     {
+      "min": 15000,
+      "max": 16000,
+      "far": 0.29
+     },
+     {
+      "min": 16000,
+      "max": 17000,
+      "far": 0.284
+     },
+     {
+      "min": 17000,
+      "max": 18000,
+      "far": 0.278
+     },
+     {
+      "min": 18000,
+      "max": 19000,
+      "far": 0.272
+     },
+     {
+      "min": 19000,
+      "max": 20000,
+      "far": 0.266
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "sf": 5200
+     }
+    ],
+    "note": "\u00a7 305-25: lots at or above the zone minimum get the Table 1 cap; undersized lots use Table 2 FAR (lot rounded down to the nearest 1,000 sf). Decks, patios and unenclosed porches excluded; basements count by exposed-foundation share (\u00a7 305-26)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 16,
+    "rear_ft": 16,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 16 ft from side and 16 ft from rear lot lines, 16 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Single-Family Residence Districts (Attachment 5); \u00a7 305-25 (FAR); \u00a7 305-49 (impervious)",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "Building walls may not cross a 45-degree light exposure plane from neighboring setback lines (schedule note 1)."
+  },
+  "R-15": {
+   "name": "R-15 One-Family Residence",
+   "min_lot_sf": 15000,
+   "min_frontage_ft": 115,
+   "min_lot_width_ft": 115,
+   "min_lot_depth_ft": null,
+   "front_ft": 27,
+   "side_ft": 14,
+   "side_total_ft": 30,
+   "rear_ft": 30,
+   "corner_side_ft": 27,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25,
+    "note": "All buildings; principal building max 20%, accessory buildings max 5%"
+   },
+   "max_impervious_coverage": {
+    "pct": 33.5,
+    "note": "Impervious surface coverage, gross lot area (\u00a7 305-49)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 3000,
+      "max": 4000,
+      "far": 0.43
+     },
+     {
+      "min": 4000,
+      "max": 5000,
+      "far": 0.43
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "far": 0.43
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "far": 0.414
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "far": 0.398
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "far": 0.382
+     },
+     {
+      "min": 9000,
+      "max": 10000,
+      "far": 0.366
+     },
+     {
+      "min": 10000,
+      "max": 11000,
+      "far": 0.35
+     },
+     {
+      "min": 11000,
+      "max": 12000,
+      "far": 0.338
+     },
+     {
+      "min": 12000,
+      "max": 13000,
+      "far": 0.326
+     },
+     {
+      "min": 13000,
+      "max": 14000,
+      "far": 0.314
+     },
+     {
+      "min": 14000,
+      "max": 15000,
+      "far": 0.302
+     },
+     {
+      "min": 15000,
+      "max": null,
+      "sf": 4350
+     }
+    ],
+    "note": "\u00a7 305-25: lots at or above the zone minimum get the Table 1 cap; undersized lots use Table 2 FAR (lot rounded down to the nearest 1,000 sf). Decks, patios and unenclosed porches excluded; basements count by exposed-foundation share (\u00a7 305-26)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 14,
+    "rear_ft": 14,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 14 ft from side and 14 ft from rear lot lines, 14 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Single-Family Residence Districts (Attachment 5); \u00a7 305-25 (FAR); \u00a7 305-49 (impervious)",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "Building walls may not cross a 45-degree light exposure plane from neighboring setback lines (schedule note 1)."
+  },
+  "R-10": {
+   "name": "R-10 One-Family Residence",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 12,
+   "side_total_ft": 26,
+   "rear_ft": 28,
+   "corner_side_ft": 25,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 27.5,
+    "note": "All buildings; principal building max 22%, accessory buildings max 5.5%"
+   },
+   "max_impervious_coverage": {
+    "pct": 37.25,
+    "note": "Impervious surface coverage, gross lot area (\u00a7 305-49)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 3000,
+      "max": 4000,
+      "far": 0.43
+     },
+     {
+      "min": 4000,
+      "max": 5000,
+      "far": 0.43
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "far": 0.43
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "far": 0.414
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "far": 0.398
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "far": 0.382
+     },
+     {
+      "min": 9000,
+      "max": 10000,
+      "far": 0.366
+     },
+     {
+      "min": 10000,
+      "max": null,
+      "sf": 3500
+     }
+    ],
+    "note": "\u00a7 305-25: lots at or above the zone minimum get the Table 1 cap; undersized lots use Table 2 FAR (lot rounded down to the nearest 1,000 sf). Decks, patios and unenclosed porches excluded; basements count by exposed-foundation share (\u00a7 305-26)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 12,
+    "rear_ft": 12,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 12 ft from side and 12 ft from rear lot lines, 12 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Single-Family Residence Districts (Attachment 5); \u00a7 305-25 (FAR); \u00a7 305-49 (impervious)",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "Building walls may not cross a 45-degree light exposure plane from neighboring setback lines (schedule note 1)."
+  },
+  "R-7.5": {
+   "name": "R-7.5 One-Family Residence",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": 75,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 10,
+   "side_total_ft": 22,
+   "rear_ft": 26,
+   "corner_side_ft": 20,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "All buildings; principal building max 24%, accessory buildings max 6%"
+   },
+   "max_impervious_coverage": {
+    "pct": 40.75,
+    "note": "Impervious surface coverage, gross lot area (\u00a7 305-49)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 3000,
+      "max": 4000,
+      "far": 0.43
+     },
+     {
+      "min": 4000,
+      "max": 5000,
+      "far": 0.43
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "far": 0.43
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "far": 0.414
+     },
+     {
+      "min": 7000,
+      "max": 7500,
+      "far": 0.398
+     },
+     {
+      "min": 7500,
+      "max": null,
+      "sf": 2925
+     }
+    ],
+    "note": "\u00a7 305-25: lots at or above the zone minimum get the Table 1 cap; undersized lots use Table 2 FAR (lot rounded down to the nearest 1,000 sf). Decks, patios and unenclosed porches excluded; basements count by exposed-foundation share (\u00a7 305-26)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 10 ft from side and 10 ft from rear lot lines, 10 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Single-Family Residence Districts (Attachment 5); \u00a7 305-25 (FAR); \u00a7 305-49 (impervious)",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "Building walls may not cross a 45-degree light exposure plane from neighboring setback lines (schedule note 1)."
+  },
+  "R-5": {
+   "name": "R-5 One-Family Residence",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 8,
+   "side_total_ft": 18,
+   "rear_ft": 26,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "All buildings; principal building max 30%, accessory buildings max 0%"
+   },
+   "max_impervious_coverage": {
+    "pct": 43.75,
+    "note": "Impervious surface coverage, gross lot area (\u00a7 305-49)"
+   },
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 3000,
+      "max": 4000,
+      "far": 0.43
+     },
+     {
+      "min": 4000,
+      "max": 5000,
+      "far": 0.43
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "sf": 2150
+     }
+    ],
+    "note": "\u00a7 305-25: lots at or above the zone minimum get the Table 1 cap; undersized lots use Table 2 FAR (lot rounded down to the nearest 1,000 sf). Decks, patios and unenclosed porches excluded; basements count by exposed-foundation share (\u00a7 305-26)."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 0,
+    "max_height_ft": 12,
+    "notes": "Schedule allows 0% accessory building coverage in R-5 (cols 15-16 N/A)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Single-Family Residence Districts (Attachment 5); \u00a7 305-25 (FAR); \u00a7 305-49 (impervious)",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "Building walls may not cross a 45-degree light exposure plane from neighboring setback lines (schedule note 1). Accessory building coverage 0% (no detached accessory buildings in the schedule). No corner-lot side-street yard rule in R-5 (\u00a7 305-47E)."
+  },
+  "M-4": {
+   "name": "M-4 Multi-Family Residence",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 120,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 16,
+   "side_total_ft": 34,
+   "rear_ft": 32,
+   "corner_side_ft": 30,
+   "max_height_ft": 25,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 22.5,
+    "note": "All buildings; principal building max 18%, accessory buildings max 4.5%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "text": "Art. V (\u00a7 305-23B) applies the FAR cap to single-family homes in multifamily districts too, but \u00a7 305-25 Table 1 lists caps only for R zones; Table 2 FAR by lot size (e.g. 0.35 at 10,000 sf, 0.26 at 20,000 sf) applies to lots below a zone's minimum."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 16,
+    "rear_ft": 16,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 16 ft from side and 16 ft from rear lot lines, 16 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Multifamily Residence Districts (Attachment 6), 1-family row",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305f%20Multifamily%20Residence%20Districts.pdf",
+   "notes": "Values are the schedule's 1-family dwelling row. 2-family 24,000 sf (45/45/90/45 yards); 3-family 28,000 sf; multifamily 20,000 sf + 4,000 sf per extra unit (70 ft yards, 3 stories / 35 ft)."
+  },
+  "M-3": {
+   "name": "M-3 Multi-Family Residence",
+   "min_lot_sf": 15000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 115,
+   "min_lot_depth_ft": null,
+   "front_ft": 27,
+   "side_ft": 14,
+   "side_total_ft": 30,
+   "rear_ft": 30,
+   "corner_side_ft": 27,
+   "max_height_ft": 25,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25,
+    "note": "All buildings; principal building max 20%, accessory buildings max 5%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "text": "Art. V (\u00a7 305-23B) applies the FAR cap to single-family homes in multifamily districts too, but \u00a7 305-25 Table 1 lists caps only for R zones; Table 2 FAR by lot size (e.g. 0.35 at 10,000 sf, 0.26 at 20,000 sf) applies to lots below a zone's minimum."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 14,
+    "rear_ft": 14,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 14 ft from side and 14 ft from rear lot lines, 14 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Multifamily Residence Districts (Attachment 6), 1-family row",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305f%20Multifamily%20Residence%20Districts.pdf",
+   "notes": "Values are the schedule's 1-family dwelling row. Stories printed as '22.5' for 1-family (read as 2.5). 2-family 18,000 sf; multifamily 15,000 sf + 3,000 sf per extra unit."
+  },
+  "M-2": {
+   "name": "M-2 Multi-Family Residence",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 12,
+   "side_total_ft": 26,
+   "rear_ft": 28,
+   "corner_side_ft": 25,
+   "max_height_ft": 25,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 27.5,
+    "note": "All buildings; principal building max 22%, accessory buildings max 5.5%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "text": "Art. V (\u00a7 305-23B) applies the FAR cap to single-family homes in multifamily districts too, but \u00a7 305-25 Table 1 lists caps only for R zones; Table 2 FAR by lot size (e.g. 0.35 at 10,000 sf, 0.26 at 20,000 sf) applies to lots below a zone's minimum."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 12,
+    "rear_ft": 12,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 12 ft from side and 12 ft from rear lot lines, 12 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Multifamily Residence Districts (Attachment 6), 1-family row",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305f%20Multifamily%20Residence%20Districts.pdf",
+   "notes": "Values are the schedule's 1-family dwelling row. 2-family 12,500 sf (20/8/18/26 yards); 3-family 15,000 sf; multifamily 10,000 sf + 2,500 sf per extra unit."
+  },
+  "M-1.5": {
+   "name": "M-1.5 Multi-Family Residence",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 10,
+   "side_total_ft": 22,
+   "rear_ft": 26,
+   "corner_side_ft": 20,
+   "max_height_ft": 25,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "All buildings; principal building max 24%, accessory buildings max 6%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "text": "Art. V (\u00a7 305-23B) applies the FAR cap to single-family homes in multifamily districts too, but \u00a7 305-25 Table 1 lists caps only for R zones; Table 2 FAR by lot size (e.g. 0.35 at 10,000 sf, 0.26 at 20,000 sf) applies to lots below a zone's minimum."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 10 ft from side and 10 ft from rear lot lines, 10 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, Multifamily Residence Districts (Attachment 6), 1-family row",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305f%20Multifamily%20Residence%20Districts.pdf",
+   "notes": "Values are the schedule's 1-family dwelling row. 2-family 9,500 sf; 3-family 11,500 sf; multifamily 7,500 sf + 1,500 sf per extra unit."
+  },
+  "M-1": {
+   "name": "M-1 Multi-Family Residence",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 8,
+   "side_total_ft": 18,
+   "rear_ft": 26,
+   "corner_side_ft": 20,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "All buildings; principal building max 30%, accessory buildings max 0%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "text": "Art. V (\u00a7 305-23B) applies the FAR cap to single-family homes in multifamily districts too, but \u00a7 305-25 Table 1 lists caps only for R zones; Table 2 FAR by lot size (e.g. 0.35 at 10,000 sf, 0.26 at 20,000 sf) applies to lots below a zone's minimum."
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 0,
+    "max_height_ft": 12,
+    "notes": "R-5 limits: 0% accessory building coverage; Attachment 6 M-1 row lists 0 ft accessory distances and 6.5% accessory coverage."
+   },
+   "source": "\u00a7 305-33A(1) (one-family dwellings use R-5 schedule limits); Attachment 5 R-5 row",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305e%20Single-Family%20Residence%20Districts.pdf",
+   "notes": "\u00a7 305-33A(1) applies the R-5 one-family limits (cols 6-20), used here. Attachment 6's M-1 1-family row shows 5,000 sf, width 50, coverage 26/6.5/32.5% and the same 20/8/18/26 yards with no height. 2-family 6,000 sf; multifamily 5,000 sf + 1,000 sf per extra unit."
+  },
+  "HC": {
+   "name": "Historic Commons",
+   "min_lot_sf": 217800,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 400,
+   "min_lot_depth_ft": null,
+   "front_ft": 60,
+   "side_ft": 60,
+   "side_total_ft": 120,
+   "rear_ft": 60,
+   "corner_side_ft": 60,
+   "max_height_ft": 35,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 20,
+    "note": "All buildings; principal building max 15%, accessory buildings max 5%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 50,
+    "rear_ft": 50,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 50 ft from side and 50 ft from rear lot lines, 20 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, LB, NS and HC Districts (Attachment 9); \u00a7 305-38",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305i%20LB%20NS%20and%20HC%20Districts.pdf",
+   "notes": "One row for all permitted uses; min floor area 1,500 sf per unit."
+  },
+  "LB": {
+   "name": "Limited Business",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 120,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 16,
+   "side_total_ft": 34,
+   "rear_ft": 32,
+   "corner_side_ft": 30,
+   "max_height_ft": 25,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 22.5,
+    "note": "All buildings; principal building max 18%, accessory buildings max 4.5%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 16,
+    "rear_ft": 16,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 16 ft from side and 16 ft from rear lot lines, 16 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, LB, NS and HC Districts (Attachment 9), 1-family row",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305i%20LB%20NS%20and%20HC%20Districts.pdf",
+   "notes": "Not a county RES district; 1-family dwellings are a scheduled use. Values are the 1-family row."
+  },
+  "NS": {
+   "name": "Neighborhood Shopping",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 120,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 16,
+   "side_total_ft": 34,
+   "rear_ft": 32,
+   "corner_side_ft": 30,
+   "max_height_ft": 25,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 22.5,
+    "note": "All buildings; principal building max 18%, accessory buildings max 4.5%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 16,
+    "rear_ft": 16,
+    "max_height_ft": 12,
+    "notes": "Detached accessory buildings: 16 ft from side and 16 ft from rear lot lines, 16 ft from the principal building (schedule cols 15-17); max 12 ft high (\u00a7 305-53B); off side-street lines by the front-yard depth (\u00a7 305-47E)."
+   },
+   "source": "\u00a7 305-11 Zoning Schedule, LB, NS and HC Districts (Attachment 9), 1-family row",
+   "source_url": "https://ecode360.com/attachment/336438/TA1273-305i%20LB%20NS%20and%20HC%20Districts.pdf",
+   "notes": "Not a county RES district; 1-family dwellings are a scheduled use. Values are the 1-family row."
+  }
+ }
+}

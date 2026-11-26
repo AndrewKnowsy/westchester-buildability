@@ -1,0 +1,170 @@
+{
+ "mun": "PDR",
+ "name": "Town of Pound Ridge",
+ "code_url": "https://ecode360.com/6834051",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "No fixed lot (impervious) coverage maximum: the schedule shows '-' with site-plan thresholds of 7,000/9,000/12,000 sf (R-1A/R-2A/R-3A); recorded as text",
+  "No floor-area limit for residences (FAR 'NA' in residential districts)",
+  "No side-yard total; no separate accessory height limit found",
+  "Building coverage over 2,600/3,600/4,500 sf (R-1A/R-2A/R-3A) needs Planning Board site plan approval and enlarged yards; the 10% cap still applies",
+  "PB-A/PB-B/PB-C business districts not checked for one-family use"
+ ],
+ "general": {
+  "wetland_buffer_ft": 150,
+  "watercourse_buffer_ft": 150,
+  "wetlands": {
+   "summary": "Ch. 63: 150 ft minimum activity setback (measured horizontally) around controlled areas (wetlands, water bodies, watercourses); activities in a controlled area or the setback need a Water Control Commission or administrative permit.",
+   "url": "https://ecode360.com/6833186"
+  },
+  "steep_slopes": {
+   "summary": "Ch. 89: steep slope permit to disturb slopes of 25%+ (min 25 ft horizontal, over 500 sf; areas within 25 ft combine); extra Planning Board findings for slopes over 35%. \u00a7 113-22 adds hilltop/ridgeline protection.",
+   "threshold_pct": 25,
+   "url": "https://ecode360.com/6833685"
+  },
+  "trees": {
+   "summary": "Ch. 93: permit to remove trees 6 in.+ dbh on slopes over 15%, within 25 ft of a property line or in wetland setbacks; specimen trees 24 in.+ or protected trees anywhere; 12 in.+ on subdividable acreage; any clear-cutting.",
+   "url": "https://ecode360.com/6833869"
+  },
+  "stormwater": {
+   "summary": "Ch. 91B: SWPPP/stormwater permit for land development activity disturbing 5,000 sf or more (smaller jobs may need one when under Planning Board or Water Control Commission review).",
+   "url": "https://ecode360.com/8164753"
+  },
+  "adu": {
+   "summary": "\u00a7 113-39: accessory apartments in R-2A and R-3A only, owner-occupied, one per lot, Planning Board site plan review; 300-1,200 sf and max 30% of the house's gross floor area, max 2 bedrooms, Health Dept septic/water approval.",
+   "url": "https://ecode360.com/6834318"
+  },
+  "accessory_structures": "Accessory buildings use the schedule's accessory side/rear yards (R-1A 20/25 ft; R-2A 50/50; R-3A 50/75) and the front yard; no residential use of accessory buildings except approved accessory apartments (\u00a7 113-38C).",
+  "pools": "All pools must be fenced (\u00a7 113-38A(6)); no pool-specific setbacks found, so the accessory/principal yards apply.",
+  "notes": "Each lot needs contiguous dry land equal to 75% of the minimum lot area (\u00a7 113-16); Article XIV discounts wetlands, floodplain and steep slopes in lot-area calculations for new lots. Paved terraces may not come closer than 25 ft to any lot line."
+ },
+ "districts": {
+  "R-1A": {
+   "name": "R-1A Residential (1 acre)",
+   "min_lot_sf": 43560,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": 200,
+   "front_ft": 50,
+   "side_ft": 35,
+   "side_total_ft": null,
+   "rear_ft": 50,
+   "corner_side_ft": 50,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 10,
+    "note": "Planning Board site plan approval needed above 2,600 sf of building coverage; yards and buffers then grow in 5 ft steps (note 4). Unroofed paved terraces excluded; roofed/enclosable porches count (\u00a7 113-38A(1))"
+   },
+   "max_impervious_coverage": {
+    "text": "No fixed maximum lot coverage; site plan approval needed above 7,000 sf of lot coverage (buildings, structures and paved areas), with yards and buffers increased in 5 ft steps (note 4)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 50,
+    "side_ft": 20,
+    "rear_ft": 25,
+    "max_height_ft": null,
+    "notes": "Accessory side/rear yards from the bulk schedule; no separate accessory front yard or height given"
+   },
+   "source": "\u00a7 113-37 Schedule of Bulk Regulations (113 Attachment 2); \u00a7\u00a7 113-15, 113-16, 113-38A(11)",
+   "source_url": "https://ecode360.com/attachment/323622/PO0893-113b%20Schedule%20of%20Bulk%20Regulations.pdf",
+   "notes": "1 acre(s) per dwelling; lot needs 0.75 acres of contiguous dry land at least 25 ft wide (\u00a7 113-16) and a 150 ft horizontal circle containing a house site outside wetland setbacks (note 2). 10 ft undisturbed buffer at all lot lines (inside the yards; no buildings, driveways, septic or utilities without Planning Board approval, note 3). 25 ft minimum street frontage (\u00a7 113-15). Corner lots: front-yard depth on each street (\u00a7 113-38A(11)). Planning Board may set larger supplementary setbacks on new lots (\u00a7 113-37B)."
+  },
+  "R-2A": {
+   "name": "R-2A Residential (2 acres)",
+   "min_lot_sf": 87120,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": 200,
+   "min_lot_depth_ft": 250,
+   "front_ft": 60,
+   "side_ft": 50,
+   "side_total_ft": null,
+   "rear_ft": 50,
+   "corner_side_ft": 60,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 10,
+    "note": "Planning Board site plan approval needed above 3,600 sf of building coverage; yards and buffers then grow in 5 ft steps (note 4). Unroofed paved terraces excluded; roofed/enclosable porches count (\u00a7 113-38A(1))"
+   },
+   "max_impervious_coverage": {
+    "text": "No fixed maximum lot coverage; site plan approval needed above 9,000 sf of lot coverage (buildings, structures and paved areas), with yards and buffers increased in 5 ft steps (note 4)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 60,
+    "side_ft": 50,
+    "rear_ft": 50,
+    "max_height_ft": null,
+    "notes": "Accessory side/rear yards from the bulk schedule; no separate accessory front yard or height given"
+   },
+   "source": "\u00a7 113-37 Schedule of Bulk Regulations (113 Attachment 2); \u00a7\u00a7 113-15, 113-16, 113-38A(11)",
+   "source_url": "https://ecode360.com/attachment/323622/PO0893-113b%20Schedule%20of%20Bulk%20Regulations.pdf",
+   "notes": "2 acre(s) per dwelling; lot needs 1.5 acres of contiguous dry land at least 25 ft wide (\u00a7 113-16) and a 200 ft horizontal circle containing a house site outside wetland setbacks (note 2). 15 ft undisturbed buffer at all lot lines (inside the yards; no buildings, driveways, septic or utilities without Planning Board approval, note 3). 25 ft minimum street frontage (\u00a7 113-15). Corner lots: front-yard depth on each street (\u00a7 113-38A(11)). Planning Board may set larger supplementary setbacks on new lots (\u00a7 113-37B)."
+  },
+  "R-3A": {
+   "name": "R-3A Residential (3 acres)",
+   "min_lot_sf": 130680,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": 250,
+   "min_lot_depth_ft": 300,
+   "front_ft": 60,
+   "side_ft": 50,
+   "side_total_ft": null,
+   "rear_ft": 75,
+   "corner_side_ft": 60,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 10,
+    "note": "Planning Board site plan approval needed above 4,500 sf of building coverage; yards and buffers then grow in 5 ft steps (note 4). Unroofed paved terraces excluded; roofed/enclosable porches count (\u00a7 113-38A(1))"
+   },
+   "max_impervious_coverage": {
+    "text": "No fixed maximum lot coverage; site plan approval needed above 12,000 sf of lot coverage (buildings, structures and paved areas), with yards and buffers increased in 5 ft steps (note 4)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 60,
+    "side_ft": 50,
+    "rear_ft": 75,
+    "max_height_ft": null,
+    "notes": "Accessory side/rear yards from the bulk schedule; no separate accessory front yard or height given"
+   },
+   "source": "\u00a7 113-37 Schedule of Bulk Regulations (113 Attachment 2); \u00a7\u00a7 113-15, 113-16, 113-38A(11)",
+   "source_url": "https://ecode360.com/attachment/323622/PO0893-113b%20Schedule%20of%20Bulk%20Regulations.pdf",
+   "notes": "3 acre(s) per dwelling; lot needs 2.25 acres of contiguous dry land at least 25 ft wide (\u00a7 113-16) and a 250 ft horizontal circle containing a house site outside wetland setbacks (note 2). 20 ft undisturbed buffer at all lot lines (inside the yards; no buildings, driveways, septic or utilities without Planning Board approval, note 3). 25 ft minimum street frontage (\u00a7 113-15). Corner lots: front-yard depth on each street (\u00a7 113-38A(11)). Planning Board may set larger supplementary setbacks on new lots (\u00a7 113-37B)."
+  },
+  "LNG": {
+   "name": "LNG Landscape Nursery and Garden Center (one-family dwellings)",
+   "min_lot_sf": 87120,
+   "min_frontage_ft": 25,
+   "min_lot_width_ft": 200,
+   "min_lot_depth_ft": 250,
+   "front_ft": 60,
+   "side_ft": 50,
+   "side_total_ft": null,
+   "rear_ft": 50,
+   "corner_side_ft": 60,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 10,
+    "note": "Site plan thresholds in note 4 are stated for R-1A/R-2A/R-3A only"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 60,
+    "side_ft": 50,
+    "rear_ft": 50,
+    "max_height_ft": null,
+    "notes": "Accessory side/rear yards from the bulk schedule; no separate accessory front yard or height given"
+   },
+   "source": "\u00a7 113-37 Schedule of Bulk Regulations (113 Attachment 2); \u00a7\u00a7 113-15, 113-16, 113-38A(11)",
+   "source_url": "https://ecode360.com/attachment/323622/PO0893-113b%20Schedule%20of%20Bulk%20Regulations.pdf",
+   "notes": "Schedule row for one-family dwellings in LNG: 2 acres per dwelling, 1.5 acres contiguous dry land, 200 ft circle, 250 ft depth, 15 ft buffer. Nursery/garden center use has its own row (20 acres, 100 ft yards, 500 ft frontage on a state or county highway)."
+  }
+ }
+}

@@ -1,0 +1,303 @@
+{
+ "ARD": {
+  "name": "Village of Ardsley",
+  "districts": 7,
+  "with_setbacks": 5,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "BED": {
+  "name": "Town of Bedford",
+  "districts": 9,
+  "with_setbacks": 9,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "BRM": {
+  "name": "Village of Briarcliff Manor",
+  "districts": 12,
+  "with_setbacks": 12,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "BUC": {
+  "name": "Village of Buchanan",
+  "districts": 8,
+  "with_setbacks": 8,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "BXV": {
+  "name": "Village of Bronxville",
+  "districts": 6,
+  "with_setbacks": 6,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "CRO": {
+  "name": "Village of Croton-on-Hudson",
+  "districts": 8,
+  "with_setbacks": 8,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "CTD": {
+  "name": "Town of Cortlandt",
+  "districts": 9,
+  "with_setbacks": 7,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "DBF": {
+  "name": "Village of Dobbs Ferry",
+  "districts": 14,
+  "with_setbacks": 13,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "ECH": {
+  "name": "Town of Eastchester (unincorporated)",
+  "districts": 13,
+  "with_setbacks": 12,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "ELM": {
+  "name": "Village of Elmsford",
+  "districts": 5,
+  "with_setbacks": 5,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "GRB": {
+  "name": "Town of Greenburgh (unincorporated)",
+  "districts": 14,
+  "with_setbacks": 13,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "HAR": {
+  "name": "Town/Village of Harrison",
+  "districts": 10,
+  "with_setbacks": 10,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "HAS": {
+  "name": "Village of Hastings-on-Hudson",
+  "districts": 10,
+  "with_setbacks": 9,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "IRV": {
+  "name": "Village of Irvington",
+  "districts": 8,
+  "with_setbacks": 8,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "LAR": {
+  "name": "Village of Larchmont",
+  "districts": 9,
+  "with_setbacks": 9,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "LEW": {
+  "name": "Town of Lewisboro",
+  "districts": 8,
+  "with_setbacks": 8,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "MMT": {
+  "name": "Town of Mamaroneck (unincorporated)",
+  "districts": 11,
+  "with_setbacks": 10,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "MMV": {
+  "name": "Village of Mamaroneck",
+  "districts": 15,
+  "with_setbacks": 14,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "MTK": {
+  "name": "Town/Village of Mount Kisco",
+  "districts": 9,
+  "with_setbacks": 9,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "MTP": {
+  "name": "Town of Mount Pleasant (unincorporated)",
+  "districts": 11,
+  "with_setbacks": 11,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "MTV": {
+  "name": "City of Mount Vernon",
+  "districts": 10,
+  "with_setbacks": 10,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "NOC": {
+  "name": "Town of North Castle",
+  "districts": 15,
+  "with_setbacks": 13,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "NRO": {
+  "name": "City of New Rochelle",
+  "districts": 16,
+  "with_setbacks": 13,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "NSM": {
+  "name": "Town of North Salem",
+  "districts": 8,
+  "with_setbacks": 8,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "NWC": {
+  "name": "Town of New Castle",
+  "districts": 7,
+  "with_setbacks": 4,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "OST": {
+  "name": "Town of Ossining",
+  "districts": 10,
+  "with_setbacks": 9,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "OSV": {
+  "name": "Village of Ossining",
+  "districts": 15,
+  "with_setbacks": 14,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "PCH": {
+  "name": "Village of Port Chester",
+  "districts": 8,
+  "with_setbacks": 4,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "PDR": {
+  "name": "Town of Pound Ridge",
+  "districts": 4,
+  "with_setbacks": 4,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "PEL": {
+  "name": "Village of Pelham",
+  "districts": 6,
+  "with_setbacks": 6,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "PKS": {
+  "name": "City of Peekskill",
+  "districts": 10,
+  "with_setbacks": 10,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "PLV": {
+  "name": "Village of Pleasantville",
+  "districts": 11,
+  "with_setbacks": 10,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "PMR": {
+  "name": "Village of Pelham Manor",
+  "districts": 5,
+  "with_setbacks": 5,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "RYB": {
+  "name": "Village of Rye Brook",
+  "districts": 10,
+  "with_setbacks": 10,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "RYC": {
+  "name": "City of Rye",
+  "districts": 13,
+  "with_setbacks": 12,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "SCD": {
+  "name": "Village/Town of Scarsdale",
+  "districts": 8,
+  "with_setbacks": 8,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "SLH": {
+  "name": "Village of Sleepy Hollow",
+  "districts": 8,
+  "with_setbacks": 8,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "SOM": {
+  "name": "Town of Somers",
+  "districts": 6,
+  "with_setbacks": 5,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "TTN": {
+  "name": "Village of Tarrytown",
+  "districts": 17,
+  "with_setbacks": 17,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "TUC": {
+  "name": "Village of Tuckahoe",
+  "districts": 4,
+  "with_setbacks": 4,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "WHP": {
+  "name": "City of White Plains",
+  "districts": 13,
+  "with_setbacks": 12,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "YON": {
+  "name": "City of Yonkers",
+  "districts": 12,
+  "with_setbacks": 11,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ },
+ "YTN": {
+  "name": "Town of Yorktown",
+  "districts": 11,
+  "with_setbacks": 9,
+  "confidence": "high",
+  "retrieved": "2026-11-25"
+ }
+}

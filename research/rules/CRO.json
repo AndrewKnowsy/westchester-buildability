@@ -1,0 +1,302 @@
+{
+ "mun": "CRO",
+ "name": "Village of Croton-on-Hudson",
+ "code_url": "https://ecode360.com/9145071",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "WDD (code: Waterfront Development WD District, § 230-22) is tract-based (10+ acres of dry land); per-lot setbacks are only 20 ft from streets and lot lines and 25 ft from mean high water",
+  "No minimum frontage set separately from lot width; no impervious-coverage limit for residence districts",
+  "Pool setbacks not found in Art. VII (pools count toward building coverage)",
+  "RB and RC districts each have separate rows for one-family and two-family/multiple dwellings; the district entry holds the one-family row and the other row is in notes",
+  "2026 local laws not yet codified (L.L. 9, 16, 17, 18 of 2026) were checked: they amend affordable housing, site plan review, property maintenance and cannabis provisions, not residential bulk"
+ ],
+ "general": {
+  "wetland_buffer_ft": 120,
+  "watercourse_buffer_ft": 120,
+  "wetlands": {
+   "summary": "Ch. 227: permit for regulated activities in wetlands, watercourses and the wetlands buffer, which extends 120 ft from the wetland boundary or top of a watercourse bank (§ 227-3).",
+   "url": "https://ecode360.com/9144890"
+  },
+  "steep_slopes": {
+   "summary": "Ch. 195: steep slope permit for regulated activities on slopes of 15%+ with a 10 ft minimum horizontal dimension (15-25% moderately, 25-35% very, 35%+ extremely steep).",
+   "threshold_pct": 15,
+   "url": "https://ecode360.com/9143513"
+  },
+  "trees": {
+   "summary": "Ch. 208 Art. II (2025): permit to remove more than 3 trees in 12 months; any tree 8 in.+ DBH on subdividable, vacant or site-plan parcels; 4 in.+ on slopes over 20% or in a wetland/watercourse buffer; landmark and protected-species trees.",
+   "url": "https://ecode360.com/50591547"
+  },
+  "stormwater": {
+   "summary": "Ch. 196 Art. I: SWPPP for land development activities; routine maintenance and landscaping disturbing under 5,000 sf are exempt.",
+   "url": "https://ecode360.com/9143578"
+  },
+  "adu": {
+   "summary": "§ 230-41: one accessory apartment (in a single-family house) or accessory cottage per lot with Planning Board approval; owner-occupied; 300 sf min and max the lesser of 800 sf or (for an apartment) 40% of the dwelling's habitable floor area; cottages 10 ft from all lot lines, max 15 ft high; village-wide cap of 50 permits.",
+   "url": "https://ecode360.com/9145707"
+  },
+  "accessory_structures": "Accessory buildings may sit in required side/rear yards if max 15 ft high and 5 ft from any lot line, together using max 30% of the required side and rear yards; none nearer the street than the principal building (§ 230-40A-B).",
+  "pools": "Pools count toward building coverage (§ 230-4); setback rules not found.",
+  "notes": "Indian Brook-Croton Gorge Watershed Protection Overlay (Art. IVB) and Gateway Overlay (Art. IVA) add rules in mapped areas. Height of one- and two-family houses measured from average finished grade, which may not be raised more than 4 ft above preconstruction grade (§ 230-4)."
+ },
+ "districts": {
+  "RA-60": {
+   "name": "One-Family Residence RA-60",
+   "min_lot_sf": 60000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 175,
+   "min_lot_depth_ft": 225,
+   "front_ft": 50,
+   "side_ft": 30,
+   "side_total_ft": 80,
+   "rear_ft": 45,
+   "corner_side_ft": 50,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 15,
+    "note": "Building coverage: all principal and accessory buildings, including decks and swimming pools (§ 230-4)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.15,
+    "note": "Residential FAR counts habitable floor area (excludes garages, cellars, utility rooms, unheated porches; includes habitable basements and attic space with 7.5 ft clear over 50%); FAR x actual lot area for over/undersized lots (§ 230-33B, § 230-4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings may sit in required side/rear yards: max 15 ft high, 5 ft from any lot line, together max 30% of the required side and rear yards; not nearer the street than the principal building (§ 230-40A-B)"
+   },
+   "source": "§ 230-33A; 230 Attachment C, Area and Bulk Schedule (Supp 141, Dec 2023)",
+   "source_url": "https://ecode360.com/attachment/340086/CR0035-230c%20Area%20and%20Bulk%20Schedule.pdf",
+   "notes": "Min habitable floor area 1,400 sf (880 sf main floor). Corner lots need front yards on both street frontages (§ 230-40C(2)); corner_side_ft = front yard."
+  },
+  "RA-40": {
+   "name": "One-Family Residence RA-40",
+   "min_lot_sf": 40000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": 200,
+   "front_ft": 50,
+   "side_ft": 30,
+   "side_total_ft": 80,
+   "rear_ft": 40,
+   "corner_side_ft": 50,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20,
+    "note": "Building coverage: all principal and accessory buildings, including decks and swimming pools (§ 230-4)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.15,
+    "note": "Residential FAR counts habitable floor area (excludes garages, cellars, utility rooms, unheated porches; includes habitable basements and attic space with 7.5 ft clear over 50%); FAR x actual lot area for over/undersized lots (§ 230-33B, § 230-4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings may sit in required side/rear yards: max 15 ft high, 5 ft from any lot line, together max 30% of the required side and rear yards; not nearer the street than the principal building (§ 230-40A-B)"
+   },
+   "source": "§ 230-33A; 230 Attachment C, Area and Bulk Schedule (Supp 141, Dec 2023)",
+   "source_url": "https://ecode360.com/attachment/340086/CR0035-230c%20Area%20and%20Bulk%20Schedule.pdf",
+   "notes": "Min habitable floor area 1,400 sf (880 sf main floor). Corner lots need front yards on both street frontages (§ 230-40C(2)); corner_side_ft = front yard."
+  },
+  "RA-25": {
+   "name": "One-Family Residence RA-25",
+   "min_lot_sf": 25000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 125,
+   "min_lot_depth_ft": 150,
+   "front_ft": 40,
+   "side_ft": 20,
+   "side_total_ft": 50,
+   "rear_ft": 30,
+   "corner_side_ft": 40,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25,
+    "note": "Building coverage: all principal and accessory buildings, including decks and swimming pools (§ 230-4)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.2,
+    "note": "Residential FAR counts habitable floor area (excludes garages, cellars, utility rooms, unheated porches; includes habitable basements and attic space with 7.5 ft clear over 50%); FAR x actual lot area for over/undersized lots (§ 230-33B, § 230-4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings may sit in required side/rear yards: max 15 ft high, 5 ft from any lot line, together max 30% of the required side and rear yards; not nearer the street than the principal building (§ 230-40A-B)"
+   },
+   "source": "§ 230-33A; 230 Attachment C, Area and Bulk Schedule (Supp 141, Dec 2023)",
+   "source_url": "https://ecode360.com/attachment/340086/CR0035-230c%20Area%20and%20Bulk%20Schedule.pdf",
+   "notes": "Min habitable floor area 1,200 sf (880 sf main floor). Corner lots need front yards on both street frontages (§ 230-40C(2)); corner_side_ft = front yard."
+  },
+  "RA-9": {
+   "name": "One-Family Residence RA-9",
+   "min_lot_sf": 9375,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": 125,
+   "front_ft": 25,
+   "side_ft": 12,
+   "side_total_ft": 30,
+   "rear_ft": 30,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 35,
+    "note": "Building coverage: all principal and accessory buildings, including decks and swimming pools (§ 230-4)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.4,
+    "note": "Residential FAR counts habitable floor area (excludes garages, cellars, utility rooms, unheated porches; includes habitable basements and attic space with 7.5 ft clear over 50%); FAR x actual lot area for over/undersized lots (§ 230-33B, § 230-4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings may sit in required side/rear yards: max 15 ft high, 5 ft from any lot line, together max 30% of the required side and rear yards; not nearer the street than the principal building (§ 230-40A-B)"
+   },
+   "source": "§ 230-33A; 230 Attachment C, Area and Bulk Schedule (Supp 141, Dec 2023)",
+   "source_url": "https://ecode360.com/attachment/340086/CR0035-230c%20Area%20and%20Bulk%20Schedule.pdf",
+   "notes": "Min habitable floor area 1,000 sf (880 sf main floor). Corner lots need front yards on both street frontages (§ 230-40C(2)); corner_side_ft = front yard."
+  },
+  "RA-5": {
+   "name": "One-Family Residence RA-5",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 100,
+   "front_ft": 15,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 25,
+   "corner_side_ft": 15,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40,
+    "note": "Building coverage: all principal and accessory buildings, including decks and swimming pools (§ 230-4)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.55,
+    "note": "Residential FAR counts habitable floor area (excludes garages, cellars, utility rooms, unheated porches; includes habitable basements and attic space with 7.5 ft clear over 50%); FAR x actual lot area for over/undersized lots (§ 230-33B, § 230-4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings may sit in required side/rear yards: max 15 ft high, 5 ft from any lot line, together max 30% of the required side and rear yards; not nearer the street than the principal building (§ 230-40A-B)"
+   },
+   "source": "§ 230-33A; 230 Attachment C, Area and Bulk Schedule (Supp 141, Dec 2023)",
+   "source_url": "https://ecode360.com/attachment/340086/CR0035-230c%20Area%20and%20Bulk%20Schedule.pdf",
+   "notes": "Min habitable floor area 880 sf. Corner lots need front yards on both street frontages (§ 230-40C(2)); corner_side_ft = front yard."
+  },
+  "RB": {
+   "name": "Two-Family Residence RB (one-family dwelling)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 100,
+   "front_ft": 20,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 25,
+   "corner_side_ft": 20,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40,
+    "note": "Building coverage: all principal and accessory buildings, including decks and swimming pools (§ 230-4)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.6,
+    "note": "Residential FAR counts habitable floor area (excludes garages, cellars, utility rooms, unheated porches; includes habitable basements and attic space with 7.5 ft clear over 50%); FAR x actual lot area for over/undersized lots (§ 230-33B, § 230-4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings may sit in required side/rear yards: max 15 ft high, 5 ft from any lot line, together max 30% of the required side and rear yards; not nearer the street than the principal building (§ 230-40A-B)"
+   },
+   "source": "§ 230-34; 230 Attachment C, Area and Bulk Schedule (Supp 141, Dec 2023)",
+   "source_url": "https://ecode360.com/attachment/340086/CR0035-230c%20Area%20and%20Bulk%20Schedule.pdf",
+   "notes": "Two-family dwelling: 2,500 sf per unit, width 75, depth 100, front 20, side 12/30, rear 30, 3 stories/35 ft, coverage 40%, FAR 0.60, 400 sf usable open space per unit. Corner lots need front yards on both street frontages (§ 230-40C(2)); corner_side_ft = front yard."
+  },
+  "RC": {
+   "name": "Multiple Residence RC (one-family dwelling)",
+   "min_lot_sf": 9375,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": 125,
+   "front_ft": 25,
+   "side_ft": 12,
+   "side_total_ft": 30,
+   "rear_ft": 30,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 35,
+    "note": "Building coverage: all principal and accessory buildings, including decks and swimming pools (§ 230-4)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.4,
+    "note": "Residential FAR counts habitable floor area (excludes garages, cellars, utility rooms, unheated porches; includes habitable basements and attic space with 7.5 ft clear over 50%); FAR x actual lot area for over/undersized lots (§ 230-33B, § 230-4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Accessory buildings may sit in required side/rear yards: max 15 ft high, 5 ft from any lot line, together max 30% of the required side and rear yards; not nearer the street than the principal building (§ 230-40A-B)"
+   },
+   "source": "§ 230-34; 230 Attachment C, Area and Bulk Schedule (Supp 141, Dec 2023)",
+   "source_url": "https://ecode360.com/attachment/340086/CR0035-230c%20Area%20and%20Bulk%20Schedule.pdf",
+   "notes": "Multiple residence: 4 acres total and 3,000 sf per unit, width/depth 200, front 40, side 25/50, rear 30, 2 stories/30 ft, coverage 30% (accessory garages may cover another 10%, § 230-42B), FAR 0.55. Corner lots need front yards on both street frontages (§ 230-40C(2)); corner_side_ft = front yard."
+  },
+  "WDD": {
+   "name": "Waterfront Development (WD) District",
+   "min_lot_sf": 435600,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 20,
+   "side_total_ft": null,
+   "rear_ft": 20,
+   "corner_side_ft": null,
+   "max_height_ft": 37,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "Building footprints, % of the tract's dry-land area"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.5,
+    "note": "Of the tract's dry-land area"
+   },
+   "accessory": null,
+   "source": "§ 230-22I Waterfront Development (WD) District bulk, height and parking requirements",
+   "source_url": "https://ecode360.com/9145547",
+   "notes": "Tract district: min 10 contiguous dry acres with 1,000 ft of Hudson shoreline (min_lot_sf = 10 acres). Single-family, two-family and multifamily dwellings permitted; 1 market-rate unit per 5,000 sf dry land; structures 20 ft from streets and lot lines unless the Planning Board allows less, 25 ft from mean high water; within 75 ft of mean high water max 2 stories/25 ft; buildings 40 ft apart; 20% open space; min 750 sf per unit."
+  }
+ }
+}

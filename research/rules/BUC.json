@@ -1,0 +1,284 @@
+{
+ "mun": "BUC",
+ "name": "Village of Buchanan",
+ "code_url": "https://ecode360.com/BU0230",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "Rear yard is 25% of lot depth capped at 50 ft (R-40) or 30 ft (other R districts); rear_ft holds the cap, rear_pct_of_depth the percentage",
+  "No separate building-coverage or floor-area limit for houses; the single 'maximum lot coverage' counts driveways, patios and decks, so it is recorded as max_impervious_coverage",
+  "No distinct corner-lot side yard in the table; Planning Board designates the front yard of corner/through lots (§ 211-18)",
+  "M-2 is an industrial district (county codes it residential); one-family dwellings are not a listed use there; bulk recorded for completeness",
+  "C-1/C-2 Overlay follows the underlying district as qualified by § 211-24.1C; not recorded separately",
+  "No local tree-removal chapter found; tree cutting (> 4 in.) on steep slopes needs a Ch. 165 permit"
+ ],
+ "general": {
+  "wetland_buffer_ft": 100,
+  "watercourse_buffer_ft": 100,
+  "wetlands": {
+   "summary": "Ch. 203: permit needed for draining, dredging, filling, building or other regulated activity in or within 100 ft of any wetland, water body or watercourse.",
+   "url": "https://ecode360.com/15764359"
+  },
+  "steep_slopes": {
+   "summary": "Ch. 165: permit to disturb (or cut trees > 4 in. diameter on) slopes of 15%+ covering at least 1,000 sf with a 20 ft dimension; 15-30% moderately steep, 30%+ excessively steep.",
+   "threshold_pct": 15,
+   "url": "https://ecode360.com/15780666"
+  },
+  "trees": {
+   "summary": "No local tree-removal law found in the Village Code; cutting trees > 4 in. diameter on steep slopes needs a Ch. 165 permit.",
+   "url": "https://ecode360.com/15780666"
+  },
+  "stormwater": {
+   "summary": "Ch. 211 Art. XIV: SWPPP approved by the Stormwater Management Officer for land development activity disturbing 1 acre or more (or part of a larger plan). Lot-coverage note 3: new coverage must be designed for the 100-year storm.",
+   "url": "https://ecode360.com/15766573"
+  },
+  "adu": {
+   "summary": "§ 211-22: one accessory apartment by Planning Board special permit in a single-family detached house (R districts, C-1, C-2): 300-600 sf and max 33% of the building's floor area, owner-occupied, max 2 occupants, not in an accessory building.",
+   "url": "https://ecode360.com/15765992"
+  },
+  "accessory_structures": "Accessory structures meet principal yards, except detached accessory structures to a dwelling (max 15 ft / 1.5 stories) may sit in the rear yard 3 ft from side lines, 4 ft from the rear line and 10 ft from the house (§ 211-19A(1)).",
+  "pools": "Pool and its deck/patio/equipment 10 ft from side and rear lines, not in a front yard, and max 8% of lot area (§ 211-19D).",
+  "notes": "Front yard may be reduced to the greater of the two adjoining lots' front yards (not below 10 ft) for an unimproved lot between two improved lots; projections and porches limits in § 211-17. No building permit without public water and sewer (§ 211-18D)."
+ },
+ "districts": {
+  "R-40": {
+   "name": "Residential R-40 (single-family)",
+   "min_lot_sf": 40000,
+   "min_frontage_ft": 125,
+   "min_lot_width_ft": 125,
+   "min_lot_depth_ft": 200,
+   "front_ft": 30,
+   "side_ft": 20,
+   "side_total_ft": 50,
+   "rear_ft": 50,
+   "rear_pct_of_depth": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "pct": 35,
+    "note": "Lot coverage: all buildings (incl. porches, garages, sheds) plus pools, walkways, patios, decks, driveways and parking, pervious or not (§ 211-5)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 3,
+    "rear_ft": 4,
+    "max_height_ft": 15,
+    "notes": "Detached accessory structures to a dwelling (max 15 ft / 1.5 stories) may sit in the rear yard 3 ft from side and 4 ft from rear lot lines and 10 ft from the house; elsewhere they must meet principal yards (§ 211-19A(1))"
+   },
+   "source": "§ 211-15, Table of Bulk Regulations (211 Attachment 2, Supp 18, May 2025); lot coverage definition § 211-5",
+   "source_url": "https://ecode360.com/attachment/333030/BU0230-211b%20Table%20of%20Bulk%20Regulations.pdf",
+   "notes": "Rear yard is 25% of lot depth, not to exceed 50 ft (rear_ft is that cap). Height 2.5 stories or 35 ft, whichever is less. One-family dwellings by right (§ 211-10)."
+  },
+  "R-20": {
+   "name": "Residential R-20 (single-family)",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": 150,
+   "front_ft": 30,
+   "side_ft": 15,
+   "side_total_ft": 40,
+   "rear_ft": 30,
+   "rear_pct_of_depth": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Lot coverage: all buildings (incl. porches, garages, sheds) plus pools, walkways, patios, decks, driveways and parking, pervious or not (§ 211-5)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 3,
+    "rear_ft": 4,
+    "max_height_ft": 15,
+    "notes": "Detached accessory structures to a dwelling (max 15 ft / 1.5 stories) may sit in the rear yard 3 ft from side and 4 ft from rear lot lines and 10 ft from the house; elsewhere they must meet principal yards (§ 211-19A(1))"
+   },
+   "source": "§ 211-15, Table of Bulk Regulations (211 Attachment 2, Supp 18, May 2025); lot coverage definition § 211-5",
+   "source_url": "https://ecode360.com/attachment/333030/BU0230-211b%20Table%20of%20Bulk%20Regulations.pdf",
+   "notes": "Rear yard is 25% of lot depth, not to exceed 30 ft (rear_ft is that cap). Height 2.5 stories or 35 ft, whichever is less. One-family dwellings by right (§ 211-10)."
+  },
+  "R-15": {
+   "name": "Residential R-15 (single-family)",
+   "min_lot_sf": 15000,
+   "min_frontage_ft": 80,
+   "min_lot_width_ft": 80,
+   "min_lot_depth_ft": 120,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "rear_pct_of_depth": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Lot coverage: all buildings (incl. porches, garages, sheds) plus pools, walkways, patios, decks, driveways and parking, pervious or not (§ 211-5)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 3,
+    "rear_ft": 4,
+    "max_height_ft": 15,
+    "notes": "Detached accessory structures to a dwelling (max 15 ft / 1.5 stories) may sit in the rear yard 3 ft from side and 4 ft from rear lot lines and 10 ft from the house; elsewhere they must meet principal yards (§ 211-19A(1))"
+   },
+   "source": "§ 211-15, Table of Bulk Regulations (211 Attachment 2, Supp 18, May 2025); lot coverage definition § 211-5",
+   "source_url": "https://ecode360.com/attachment/333030/BU0230-211b%20Table%20of%20Bulk%20Regulations.pdf",
+   "notes": "Rear yard is 25% of lot depth, not to exceed 30 ft (rear_ft is that cap). Height 2.5 stories or 35 ft, whichever is less. One-family dwellings by right (§ 211-10)."
+  },
+  "R-10": {
+   "name": "Residential R-10 (single-family)",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 75,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 20,
+   "rear_ft": 30,
+   "rear_pct_of_depth": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Lot coverage: all buildings (incl. porches, garages, sheds) plus pools, walkways, patios, decks, driveways and parking, pervious or not (§ 211-5)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 3,
+    "rear_ft": 4,
+    "max_height_ft": 15,
+    "notes": "Detached accessory structures to a dwelling (max 15 ft / 1.5 stories) may sit in the rear yard 3 ft from side and 4 ft from rear lot lines and 10 ft from the house; elsewhere they must meet principal yards (§ 211-19A(1))"
+   },
+   "source": "§ 211-15, Table of Bulk Regulations (211 Attachment 2, Supp 18, May 2025); lot coverage definition § 211-5",
+   "source_url": "https://ecode360.com/attachment/333030/BU0230-211b%20Table%20of%20Bulk%20Regulations.pdf",
+   "notes": "Rear yard is 25% of lot depth, not to exceed 30 ft (rear_ft is that cap). Height 2.5 stories or 35 ft, whichever is less. One-family dwellings by right (§ 211-10)."
+  },
+  "R-7.5": {
+   "name": "Residential R-7.5 (single-family)",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": 75,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 20,
+   "rear_ft": 30,
+   "rear_pct_of_depth": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Lot coverage: all buildings (incl. porches, garages, sheds) plus pools, walkways, patios, decks, driveways and parking, pervious or not (§ 211-5)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 3,
+    "rear_ft": 4,
+    "max_height_ft": 15,
+    "notes": "Detached accessory structures to a dwelling (max 15 ft / 1.5 stories) may sit in the rear yard 3 ft from side and 4 ft from rear lot lines and 10 ft from the house; elsewhere they must meet principal yards (§ 211-19A(1))"
+   },
+   "source": "§ 211-15, Table of Bulk Regulations (211 Attachment 2, Supp 18, May 2025); lot coverage definition § 211-5",
+   "source_url": "https://ecode360.com/attachment/333030/BU0230-211b%20Table%20of%20Bulk%20Regulations.pdf",
+   "notes": "Rear yard is 25% of lot depth, not to exceed 30 ft (rear_ft is that cap). Height 2.5 stories or 35 ft, whichever is less. One-family dwellings by right (§ 211-10)."
+  },
+  "C-1": {
+   "name": "Neighborhood Commercial",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 75,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 5,
+   "side_total_ft": 15,
+   "rear_ft": 10,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "pct": 75,
+    "note": "Lot coverage: all buildings (incl. porches, garages, sheds) plus pools, walkways, patios, decks, driveways and parking, pervious or not (§ 211-5)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 3,
+    "rear_ft": 4,
+    "max_height_ft": 15,
+    "notes": "Detached accessory structures to a dwelling (max 15 ft / 1.5 stories) may sit in the rear yard 3 ft from side and 4 ft from rear lot lines and 10 ft from the house; elsewhere they must meet principal yards (§ 211-19A(1))"
+   },
+   "source": "§ 211-15, Table of Bulk Regulations (211 Attachment 2, Supp 18, May 2025); lot coverage definition § 211-5",
+   "source_url": "https://ecode360.com/attachment/333030/BU0230-211b%20Table%20of%20Bulk%20Regulations.pdf",
+   "notes": "One-family dwellings permitted by right (same as R-40A). Side yards 5/15, 20 ft if abutting a residential district; rear 10 ft, or the residential rear yard where it abuts a residential district."
+  },
+  "C-2": {
+   "name": "General Commercial",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 5,
+   "side_total_ft": 15,
+   "rear_ft": 10,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "pct": 75,
+    "note": "Lot coverage: all buildings (incl. porches, garages, sheds) plus pools, walkways, patios, decks, driveways and parking, pervious or not (§ 211-5)"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 3,
+    "rear_ft": 4,
+    "max_height_ft": 15,
+    "notes": "Detached accessory structures to a dwelling (max 15 ft / 1.5 stories) may sit in the rear yard 3 ft from side and 4 ft from rear lot lines and 10 ft from the house; elsewhere they must meet principal yards (§ 211-19A(1))"
+   },
+   "source": "§ 211-15, Table of Bulk Regulations (211 Attachment 2, Supp 18, May 2025); lot coverage definition § 211-5",
+   "source_url": "https://ecode360.com/attachment/333030/BU0230-211b%20Table%20of%20Bulk%20Regulations.pdf",
+   "notes": "One-family dwellings permitted by right (same as C-1A). Side and rear yards same as C-1 (5/15, 20 ft side if abutting residential; rear 10 ft or residential rear yard)."
+  },
+  "M-2": {
+   "name": "Planned Industrial",
+   "min_lot_sf": 80000,
+   "min_frontage_ft": 250,
+   "min_lot_width_ft": 250,
+   "min_lot_depth_ft": 300,
+   "front_ft": 75,
+   "side_ft": 50,
+   "side_total_ft": 100,
+   "rear_ft": 100,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "pct": 75,
+    "note": "Lot coverage: all buildings (incl. porches, garages, sheds) plus pools, walkways, patios, decks, driveways and parking, pervious or not (§ 211-5)"
+   },
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "§ 211-15, Table of Bulk Regulations (211 Attachment 2, Supp 18, May 2025); lot coverage definition § 211-5",
+   "source_url": "https://ecode360.com/attachment/333030/BU0230-211b%20Table%20of%20Bulk%20Regulations.pdf",
+   "notes": "Industrial district; one-family dwellings are not a permitted use (uses same as M-1 plus gypsum board manufacturing, atomic energy). Rear yard 125 ft if abutting a residential district."
+  }
+ }
+}

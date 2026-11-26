@@ -1,0 +1,365 @@
+{
+ "mun": "MTP",
+ "name": "Town of Mount Pleasant (unincorporated)",
+ "code_url": "https://ecode360.com/9607959",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "The schedule sets no maximum floor area / FAR and no impervious or total coverage limit for residence districts; only building coverage and a minimum floor area per dwelling.",
+  "R-5A and R-3A entries hold the one-family (Same as R-10) standards; multifamily standards are in notes.",
+  "Lot width recorded is width at the front-yard setback line; mean width is in notes. No separate frontage requirement in the schedule.",
+  "R-40/R-20 shed setbacks: \u00a7 218-13D and \u00a7 218-20.3 say 10 ft from side/rear lines, but \u00a7 218-20.3 defers to the schedule when stricter (R-40 schedule = same as main building).",
+  "PRD-T-5 total side yard is printed as 50 ft (same as the one-side minimum) with a footnote; recorded as printed.",
+  "Hamlet districts (HH, HHC, TH, VH; \u00a7 218-68.1) and PRD-T-8 (not in the county layer) were not researched for one-family rules.",
+  "Supplement dates on attachments run 2006-2023; Mount Pleasant eCode360 may lag recent local laws."
+ ],
+ "general": {
+  "wetland_buffer_ft": 50,
+  "watercourse_buffer_ft": 50,
+  "wetlands": {
+   "summary": "Ch. 111: in mapped Wetlands Control Districts, no building, filling or removal of material within 50 ft of a wetland, water body or watercourse without Town Engineer or Planning Board approval.",
+   "url": "https://ecode360.com/9606136"
+  },
+  "steep_slopes": {
+   "summary": "Ch. 180: permit for new buildings, additions, clearing, grading or stormwater work on slopes of 15%+ (area >= 500 sf); Town Engineer for 15-25%, Planning Board with public hearing for 25%+. Hilltop/ridgeline work is a SEQRA Type I action.",
+   "threshold_pct": 15,
+   "url": "https://ecode360.com/9607253"
+  },
+  "trees": {
+   "summary": "Ch. 201: Town Arborist permit to remove or disturb trees on streets or Town property; on private land the tree-preservation standards (specimen trees 30 in. hardwood / 36 in. softwood / 12 in. small DBH) apply to development applications, including new one- and two-family houses.",
+   "url": "https://ecode360.com/9607641"
+  },
+  "stormwater": {
+   "summary": "Ch. 183: stormwater review and SWPPP for land development activity disturbing 1 acre or more (or part of a larger common plan).",
+   "url": "https://ecode360.com/9607325"
+  },
+  "adu": {
+   "summary": "\u00a7 218-36: one accessory apartment per one-family lot by Planning Board permit, owner-occupied, inside a principal dwelling at least 10 years old, max 25% of the dwelling or 600 sf (100 sf waiver possible).",
+   "url": "https://ecode360.com/9608178"
+  },
+  "accessory_structures": "\u00a7 218-13: attached accessory buildings follow main-building rules; detached ones too, except those <= 15 ft / 1 story may use the schedule's accessory columns (R-10: 5 ft side/rear; R-20: 10/25 ft; R-40: same as main) if behind the front setback line, and must be 25 ft from the main building unless the schedule says otherwise. Sheds: \u00a7 218-20.3.",
+  "pools": "Fenced private pools are permitted accessory uses; the schedule header requires accessory uses to meet principal-building rules (no separate pool setback found in Ch. 218).",
+  "notes": "Fences max 4 ft in front/side yards and 6 ft in rear yards (6 ft anywhere in R-40) (\u00a7 218-12F). Corner-lot sight triangle 30 ft (\u00a7 218-14)."
+ },
+ "districts": {
+  "R-40": {
+   "name": "R-40 One-Family Residential",
+   "min_lot_sf": 40000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": 175,
+   "front_ft": 60,
+   "side_ft": 25,
+   "side_total_ft": 50,
+   "rear_ft": 50,
+   "corner_side_ft": 60,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 10
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 60,
+    "side_ft": 25,
+    "rear_ft": 50,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings <= 15 ft / 1 story: same side and rear distances as main buildings, 20 ft from the main building, behind the front setback line (cols 13-15; \u00a7 218-13B). Sheds max 15 ft high, rear yard; \u00a7 218-13D and \u00a7 218-20.3 say 10 ft from side/rear lines but defer to the schedule where it is more restrictive."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts I (Attachment 1)",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218a%20Residence%20Districts%20I.pdf",
+   "notes": "Lot width = width at front-yard setback line (mean width 150 ft, mean depth 175 ft). On streets under 50 ft wide the front yard is measured from the street center line plus 25 ft; corner lots need a front yard on each street and a rear yard (col 23). Minimum floor area 1,000 sf on one floor or 1,200 sf on two floors."
+  },
+  "R-20": {
+   "name": "R-20 One-Family Residential",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 85,
+   "min_lot_depth_ft": 150,
+   "front_ft": 50,
+   "side_ft": 15,
+   "side_total_ft": 40,
+   "rear_ft": 50,
+   "corner_side_ft": 50,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 15
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 50,
+    "side_ft": 10,
+    "rear_ft": 25,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings <= 15 ft / 1 story: 10 ft from side and 25 ft from rear lot lines, 15 ft from the main building, behind the front setback line (cols 13-15; \u00a7 218-13B). Sheds max 12 ft high, rear yard, 25 ft from house (\u00a7 218-20.3)."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts I (Attachment 1)",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218a%20Residence%20Districts%20I.pdf",
+   "notes": "Lot width = width at front-yard setback line (mean width 100 ft, mean depth 150 ft). Front yard measured from center line plus 25 ft on streets under 50 ft wide; corner lots need a front yard on each street (col 23, same as R-40). Minimum floor area same as R-40."
+  },
+  "R-10": {
+   "name": "R-10 One-Family Residential",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 65,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings <= 15 ft / 1 story: 5 ft from side and rear lot lines, 12 ft from the main building, behind the front setback line (cols 13-15; \u00a7 218-13B). Taller ones follow principal rules. Sheds max 12 ft high, rear yard, 5 ft from lot lines (\u00a7 218-20.3)."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts III (Attachment 8)",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218h%20Residence%20Districts%20III.pdf",
+   "notes": "Lot width = width at front-yard setback line (mean width 75 ft, mean depth 100 ft). On streets under 50 ft wide the front yard is measured from the street center line plus 25 ft; corner lots need a front yard on each street (col 23, same as R-40). Minimum floor area 1,000 sf on one floor or 1,200 sf on two floors."
+  },
+  "R-5A": {
+   "name": "R-5A Multifamily Residential",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 65,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings <= 15 ft / 1 story: 5 ft from side and rear lot lines, 12 ft from the main building, behind the front setback line (cols 13-15; \u00a7 218-13B). Taller ones follow principal rules. Sheds max 12 ft high, rear yard, 5 ft from lot lines (\u00a7 218-20.3)."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts III (Attachment 8)",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218h%20Residence%20Districts%20III.pdf",
+   "notes": "Values shown are for one-family and other non-multifamily uses, which the schedule sets as 'Same as R-10'. Multifamily dwellings (1 unit per 5,000 sf, Planning Board site plan, \u00a7\u00a7 218-64, 218-65): 10-acre site, width 250 ft, mean width/depth 300 ft, front 75, sides 50 (total 100), rear 75, 2.5 stories / 40 ft, 15% coverage, buildings max 180 ft long."
+  },
+  "R-3A": {
+   "name": "R-3A Multifamily Residential",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 65,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings <= 15 ft / 1 story: 5 ft from side and rear lot lines, 12 ft from the main building, behind the front setback line (cols 13-15; \u00a7 218-13B). Taller ones follow principal rules. Sheds max 12 ft high, rear yard, 5 ft from lot lines (\u00a7 218-20.3)."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts III (Attachment 8)",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218h%20Residence%20Districts%20III.pdf",
+   "notes": "Values shown are for one-family and other non-multifamily uses ('Same as R-10' via R-5A). Multifamily dwellings (1 unit per 3,500 sf): 2-acre site, width/mean width/depth 200 ft, front 65, sides 40 (total 80), rear 40, 2.5 stories / 40 ft, 20% coverage."
+  },
+  "PRDT-1": {
+   "name": "PRD-T-1 Planned Residential Development, Transitional-1",
+   "min_lot_sf": 130680,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 200,
+   "min_lot_depth_ft": 200,
+   "front_ft": 70,
+   "side_ft": 50,
+   "side_total_ft": 100,
+   "rear_ft": 70,
+   "corner_side_ft": null,
+   "max_height_ft": 40,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 15
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 70,
+    "side_ft": 50,
+    "rear_ft": 70,
+    "max_height_ft": null,
+    "notes": "Detached accessory buildings: same side/rear distances as the principal building; no minimum distance from the main building (cols 13-15)."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts II (Attachment 2); \u00a7 218-76",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218b%20Residence%20Districts%20II.pdf",
+   "notes": "Site 3 to 5 acres (mean width 200 ft). Uses as in R-5A; Planning Board special permit and conceptual site plan required. Minimum floor area 450 sf per unit."
+  },
+  "PRDT-2": {
+   "name": "PRD-T-2 Planned Residential Development, Transitional-2",
+   "min_lot_sf": 174240,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 200,
+   "min_lot_depth_ft": 200,
+   "front_ft": 70,
+   "side_ft": 50,
+   "side_total_ft": 100,
+   "rear_ft": 70,
+   "corner_side_ft": null,
+   "max_height_ft": 40,
+   "max_stories": 2,
+   "max_building_coverage": {
+    "pct": 15
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 70,
+    "side_ft": 50,
+    "rear_ft": 70,
+    "max_height_ft": null,
+    "notes": "Detached accessory buildings: same side/rear distances as the principal building; no minimum distance from the main building (cols 13-15)."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts IIA (Attachment 3); \u00a7 218-76",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218c%20Residence%20Districts%20IIA.pdf",
+   "notes": "Site 4 to 6 acres; R-5A uses at no more than 1 unit per 8,300 sf of site. 2 stories, or 3 if the Planning Board approves (col 23)."
+  },
+  "PRDT-5": {
+   "name": "PRD-T-5 Planned Residential Development, Transitional-5",
+   "min_lot_sf": 130680,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 200,
+   "min_lot_depth_ft": 200,
+   "front_ft": 70,
+   "side_ft": 50,
+   "side_total_ft": 50,
+   "rear_ft": 50,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 70,
+    "side_ft": 50,
+    "rear_ft": 50,
+    "max_height_ft": null,
+    "notes": "Detached accessory buildings: same side/rear distances as principal; distance from main building as approved by Planning Board."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts IIC (Attachment 5); \u00a7 218-76",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218e%20Residence%20Districts%20IIC.pdf",
+   "notes": "Site 3 to 7 acres. Total-of-two side yards printed as 50 ft with footnote 1: 'Except where 1 side yard is bordered by a 90-foot perpetual buffer conservation area.'"
+  },
+  "PRDT-6": {
+   "name": "PRD-T-6 Planned Residential Development, Transitional-6 (Quarry/Kensington)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 5,
+   "side_total_ft": 17.5,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 5,
+    "rear_ft": 30,
+    "max_height_ft": null,
+    "notes": "Detached accessory buildings: same side/rear distances as principal; distance from main building as approved by Planning Board."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts IIC (Attachment 5); \u00a7 218-76",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218e%20Residence%20Districts%20IIC.pdf",
+   "notes": "5,000 sf per dwelling unit; single-ownership lots of 4,500 sf+ at adoption may hold one single-family house. Detached/attached single-family and 2-family homes. Mean width/depth per Planning Board site plan. Corner lots need only one designated front yard (30 ft). Planning Board may cut the rear yard up to 40%. Minimum floor area 750 sf; special permit required."
+  },
+  "PRDT-7": {
+   "name": "PRD-T-7 Planned Residential Development, Transitional-7 (Overlook Estates)",
+   "min_lot_sf": 104544,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 125,
+   "min_lot_depth_ft": 240,
+   "front_ft": 30,
+   "side_ft": 15,
+   "side_total_ft": 40,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 15,
+    "rear_ft": 30,
+    "max_height_ft": null,
+    "notes": "Detached accessory buildings: same side/rear distances as principal; no restriction on distance from main building."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts IID (Attachment 6)",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218f%20Residence%20Districts%20IID.pdf",
+   "notes": "2.4-acre site, max 27 units (35 with 5 affordable). Multifamily and 2-family dwellings. Mean width printed as 25 ft. Planning Board may reduce setbacks up to 60% and allow up to 3 stories / 40 ft."
+  },
+  "PRDH-T1": {
+   "name": "PRDH-T-1 Planned Residential - Historic Development, Transitional",
+   "min_lot_sf": 261360,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 600,
+   "min_lot_depth_ft": 500,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 40,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 15
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": 30,
+    "side_ft": 10,
+    "rear_ft": 30,
+    "max_height_ft": null,
+    "notes": "Detached accessory buildings: same as main building; no restriction on distance from main building."
+   },
+   "source": "\u00a7 218-10 Schedule of Regulations, Residence Districts IIB (Attachment 4); Residence Districts III (Attachment 8) for R-10 yards",
+   "source_url": "https://ecode360.com/attachment/336430/MO0299-218d%20Residence%20Districts%20IIB.pdf",
+   "notes": "6-acre site (Troop K barracks), width 600 ft, mean width 300 ft, mean depth 500 ft. Yards are 'Same as R-10' (values from the R-10 row). Planning Board may reduce yards up to 60% (not below facing building height). Density R-10 base, up to 1 unit per 5,000 sf (max 56 units) by special permit."
+  }
+ }
+}

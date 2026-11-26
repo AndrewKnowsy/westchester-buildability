@@ -1,0 +1,626 @@
+{
+ "mun": "MTK",
+ "name": "Town/Village of Mount Kisco",
+ "code_url": "https://ecode360.com/10863078",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "Front, rear and side yards vary with lot depth/width; fields hold the deepest/widest-lot values (front 30, rear 30, side 10) and the reductions are in notes",
+  "No floor-area (FAR/GFA) limit for one-family homes in Chapter 110",
+  "No accessory apartment provision in Chapter 110",
+  "Accessory structures have no fixed side/front setback; they cannot be closer to the street or side lot line than the house",
+  "Split-zoned county codes (with '*') follow each part's rules"
+ ],
+ "general": {
+  "wetland_buffer_ft": 100,
+  "watercourse_buffer_ft": 100,
+  "wetlands": {
+   "summary": "Ch. 107 Wetlands and Drainage Control: permit for any non-exempt activity (structures, grading, filling, clear-cutting, utilities) in a wetland or its buffer, 100 ft from the wetland edge (more if the permitting authority finds it necessary); watercourses include all adjacent land within 100 ft of each bank (§ 107-2, § 107-4). § 110-33.1B also deducts 50% of wetlands and 100% of water bodies from net lot area on parcels over 40,000 sf.",
+   "url": "https://ecode360.com/10862863"
+  },
+  "steep_slopes": {
+   "summary": "§ 110-33.1A: Steep Slopes Permit to disturb more than 100 sf, or cut a tree over 4 in. diameter, on steep slopes (15%+ over 500 sf), hilltops or ridgelines; very steep slopes only if no alternative. Parcels over 40,000 sf deduct 50% of slopes >25% and 25% of 20-25% slopes from net lot area.",
+   "threshold_pct": 15,
+   "url": "https://ecode360.com/10864599"
+  },
+  "trees": {
+   "summary": "Ch. 99 § 99-4: tree removal permit (Village Engineer with the Tree Preservation Board) to remove or injure any tree (4 in.+ diameter at 4 ft) in the Primary Tree Protection Zone (the required front/side/rear yards and buffers) or road right-of-way zone, or any specimen tree (36 in.+ circumference or 15 ft+ crown) elsewhere on the lot. Site plans and major subdivisions need a tree preservation plan (§ 99-8).",
+   "url": "https://ecode360.com/10862576"
+  },
+  "stormwater": {
+   "summary": "Ch. 92A and Ch. 110 Art. XIV: SWPPP for land development activity disturbing 5,000 sf or more (5,000 sf-1 acre exempt if no new impervious cover); post-construction quantity/quality controls when 1 acre+ is disturbed with new impervious cover.",
+   "url": "https://ecode360.com/10865141"
+  },
+  "adu": {
+   "summary": "No accessory apartment provision in Chapter 110; residential accessory uses may not include a separate residence (e.g. § 110-8B(3)(g)).",
+   "url": null
+  },
+  "accessory_structures": "Accessory structures not nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of the house footprint, 15 ft+ from the rear lot line (§ 110-31G).",
+  "pools": "Pools and equipment not in a front yard and at least 20 ft from every property line, screened by a 6.5 ft opaque fence/wall/hedge (§ 110-30B). Tennis/paddle courts 15 ft from property lines.",
+  "notes": "Corner and through lots have front yards on every street frontage (§ 110-31D). Height measured to mean roof level from average finished grade."
+ },
+ "districts": {
+  "RS-12": {
+   "name": "Low-Density One-Family Residence",
+   "min_lot_sf": 12500,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 15,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 25
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "base": 1250,
+      "pct_over": 24,
+      "over": 5000
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "base": 1490,
+      "pct_over": 23,
+      "over": 6000
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "base": 1720,
+      "pct_over": 22,
+      "over": 7000
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "base": 1940,
+      "pct_over": 21,
+      "over": 8000
+     },
+     {
+      "min": 9000,
+      "max": null,
+      "base": 2150,
+      "pct_over": 20,
+      "over": 9000
+     }
+    ],
+    "note": "Based on net lot area; all buildings and structures (footprint)"
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Development coverage: buildings, structures, paved/parking areas, patios, decks, gravel; excludes pools, ponds, fountains"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "§ 110-31G: accessory structures may not be nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of principal-building coverage, at least 15 ft from the rear lot line (rear figure applies to garages)."
+   },
+   "source": "Ch. 110 § 110-8C(1); § 110-31D (corner lots), § 110-31G (accessory)",
+   "source_url": "https://ecode360.com/10863199",
+   "notes": "Front 30 ft for lots 150 ft+ deep, 25 ft if shallower. Lot area is net lot area. Height is 2.5 stories or 35 ft, whichever is less."
+  },
+  "RS-9": {
+   "name": "Moderate-Density One-Family Residence",
+   "min_lot_sf": 9375,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 25
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "base": 1250,
+      "pct_over": 24,
+      "over": 5000
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "base": 1490,
+      "pct_over": 23,
+      "over": 6000
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "base": 1720,
+      "pct_over": 22,
+      "over": 7000
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "base": 1940,
+      "pct_over": 21,
+      "over": 8000
+     },
+     {
+      "min": 9000,
+      "max": null,
+      "base": 2150,
+      "pct_over": 20,
+      "over": 9000
+     }
+    ],
+    "note": "Based on net lot area; all buildings and structures (footprint)"
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Development coverage: buildings, structures, paved/parking areas, patios, decks, gravel; excludes pools, ponds, fountains"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "§ 110-31G: accessory structures may not be nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of principal-building coverage, at least 15 ft from the rear lot line (rear figure applies to garages)."
+   },
+   "source": "Ch. 110 § 110-9C(1); § 110-31D (corner lots), § 110-31G (accessory)",
+   "source_url": "https://ecode360.com/10863241",
+   "notes": "Front 30 ft for lots 150 ft+ deep, 25 ft if shallower. Rear 30 ft for lots 125 ft+ deep, else 30 ft minus 1 ft per 2.5 ft of depth under 125 ft (min 20 ft). Lot area is net lot area."
+  },
+  "RS-6": {
+   "name": "Medium-Density One-Family Residence",
+   "min_lot_sf": 6250,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 25
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "base": 1250,
+      "pct_over": 24,
+      "over": 5000
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "base": 1490,
+      "pct_over": 23,
+      "over": 6000
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "base": 1720,
+      "pct_over": 22,
+      "over": 7000
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "base": 1940,
+      "pct_over": 21,
+      "over": 8000
+     },
+     {
+      "min": 9000,
+      "max": null,
+      "base": 2150,
+      "pct_over": 20,
+      "over": 9000
+     }
+    ],
+    "note": "Based on net lot area; all buildings and structures (footprint)"
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Development coverage: buildings, structures, paved/parking areas, patios, decks, gravel; excludes pools, ponds, fountains"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "§ 110-31G: accessory structures may not be nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of principal-building coverage, at least 15 ft from the rear lot line (rear figure applies to garages)."
+   },
+   "source": "Ch. 110 § 110-10C(1); § 110-31D (corner lots), § 110-31G (accessory)",
+   "source_url": "https://ecode360.com/10863298",
+   "notes": "Front 30 ft for lots 150 ft+ deep, 25 ft if shallower. Rear 30 ft for lots 125 ft+ deep, else 30 ft minus 1 ft per 2.5 ft of depth under 125 ft (min 20 ft). Side 10 ft for lots 70 ft+ wide; 8 ft (18 total) for 60-70 ft wide; 6 ft (16 total) under 60 ft wide. Height is 2.5 stories or 35 ft, whichever is less. Lot area is net lot area."
+  },
+  "RT-6": {
+   "name": "One- and Two-Family Residence",
+   "min_lot_sf": 6250,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 25
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "base": 1250,
+      "pct_over": 24,
+      "over": 5000
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "base": 1490,
+      "pct_over": 23,
+      "over": 6000
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "base": 1720,
+      "pct_over": 22,
+      "over": 7000
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "base": 1940,
+      "pct_over": 21,
+      "over": 8000
+     },
+     {
+      "min": 9000,
+      "max": null,
+      "base": 2150,
+      "pct_over": 20,
+      "over": 9000
+     }
+    ],
+    "note": "Based on net lot area; all buildings and structures (footprint)"
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Development coverage: buildings, structures, paved/parking areas, patios, decks, gravel; excludes pools, ponds, fountains"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "§ 110-31G: accessory structures may not be nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of principal-building coverage, at least 15 ft from the rear lot line (rear figure applies to garages)."
+   },
+   "source": "Ch. 110 § 110-11C(1); § 110-31D (corner lots), § 110-31G (accessory)",
+   "source_url": "https://ecode360.com/10863342",
+   "notes": "Front 30 ft for lots 150 ft+ deep, 25 ft if shallower. Rear 30 ft for lots 125 ft+ deep, else 30 ft minus 1 ft per 2.5 ft of depth under 125 ft (min 20 ft). Side 10 ft for lots 70 ft+ wide; 8 ft (18 total) for 60-70 ft wide; 6 ft (16 total) under 60 ft wide. Height is 2.5 stories or 35 ft, whichever is less. Lot area is net lot area. Same standards for one- and two-family dwellings."
+  },
+  "RM-10": {
+   "name": "Moderate-Density Multifamily",
+   "min_lot_sf": 6250,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 100,
+   "front_ft": 25,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 25
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "base": 1250,
+      "pct_over": 24,
+      "over": 5000
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "base": 1490,
+      "pct_over": 23,
+      "over": 6000
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "base": 1720,
+      "pct_over": 22,
+      "over": 7000
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "base": 1940,
+      "pct_over": 21,
+      "over": 8000
+     },
+     {
+      "min": 9000,
+      "max": null,
+      "base": 2150,
+      "pct_over": 20,
+      "over": 9000
+     }
+    ],
+    "note": "Based on net lot area; all buildings and structures (footprint)"
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Development coverage: buildings, structures, paved/parking areas, patios, decks, gravel; excludes pools, ponds, fountains"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "§ 110-31G: accessory structures may not be nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of principal-building coverage, at least 15 ft from the rear lot line (rear figure applies to garages)."
+   },
+   "source": "Ch. 110 § 110-12C(1) (one-/two-family table); § 110-31D (corner lots), § 110-31G (accessory)",
+   "source_url": "https://ecode360.com/10863388",
+   "notes": "One-family values shown. Front 25 ft (no depth rule). Two-family: 10,000 sf net lot, 50% development coverage. Rear 30 ft for lots 125 ft+ deep, else reduced to min 20 ft; side 10 ft (70 ft+ wide), 8/18 ft (60-70), 6/16 ft (<60). Townhouses/multifamily (§ 110-12C(2)): 10,000 sf site, 1,500 sf per unit, 25% building / 65% development coverage, front 25, side 25, rear 30."
+  },
+  "RM-12": {
+   "name": "Medium-Density Multifamily",
+   "min_lot_sf": 6250,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 25
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "base": 1250,
+      "pct_over": 24,
+      "over": 5000
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "base": 1490,
+      "pct_over": 23,
+      "over": 6000
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "base": 1720,
+      "pct_over": 22,
+      "over": 7000
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "base": 1940,
+      "pct_over": 21,
+      "over": 8000
+     },
+     {
+      "min": 9000,
+      "max": null,
+      "base": 2150,
+      "pct_over": 20,
+      "over": 9000
+     }
+    ],
+    "note": "Based on net lot area; all buildings and structures (footprint)"
+   },
+   "max_impervious_coverage": {
+    "pct": 50,
+    "note": "Development coverage: buildings, structures, paved/parking areas, patios, decks, gravel; excludes pools, ponds, fountains"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "§ 110-31G: accessory structures may not be nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of principal-building coverage, at least 15 ft from the rear lot line (rear figure applies to garages)."
+   },
+   "source": "Ch. 110 § 110-13C(1); § 110-31D (corner lots), § 110-31G (accessory)",
+   "source_url": "https://ecode360.com/10863442",
+   "notes": "Front 30 ft for lots 150 ft+ deep, 25 ft if shallower. Rear 30 ft for lots 125 ft+ deep, else 30 ft minus 1 ft per 2.5 ft of depth under 125 ft (min 20 ft). Side 10 ft for lots 70 ft+ wide; 8 ft (18 total) for 60-70 ft wide; 6 ft (16 total) under 60 ft wide. Height is 2.5 stories or 35 ft, whichever is less. Lot area is net lot area. Applies to detached one- and two-family dwellings. Multifamily (§ 110-13C(3)): 4,500 sf per unit, 30% building / 60% development coverage, 30 ft yards (80 ft next to one-family lots)."
+  },
+  "RM-29": {
+   "name": "High-Density Multifamily Residence",
+   "min_lot_sf": 6250,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": 100,
+   "front_ft": 30,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "pct": 25
+     },
+     {
+      "min": 5000,
+      "max": 6000,
+      "base": 1250,
+      "pct_over": 24,
+      "over": 5000
+     },
+     {
+      "min": 6000,
+      "max": 7000,
+      "base": 1490,
+      "pct_over": 23,
+      "over": 6000
+     },
+     {
+      "min": 7000,
+      "max": 8000,
+      "base": 1720,
+      "pct_over": 22,
+      "over": 7000
+     },
+     {
+      "min": 8000,
+      "max": 9000,
+      "base": 1940,
+      "pct_over": 21,
+      "over": 8000
+     },
+     {
+      "min": 9000,
+      "max": null,
+      "base": 2150,
+      "pct_over": 20,
+      "over": 9000
+     }
+    ],
+    "note": "Net-lot-area table; § 110-14C(1)(c) also states 'Maximum building coverage: 30%'"
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Development coverage: buildings, structures, paved/parking areas, patios, decks, gravel; excludes pools, ponds, fountains"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "§ 110-31G: accessory structures may not be nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of principal-building coverage, at least 15 ft from the rear lot line (rear figure applies to garages)."
+   },
+   "source": "Ch. 110 § 110-14C(1); § 110-31D (corner lots), § 110-31G (accessory)",
+   "source_url": "https://ecode360.com/10863527",
+   "notes": "Front 30 ft for lots 150 ft+ deep, 25 ft if shallower. Rear 30 ft for lots 125 ft+ deep, else 30 ft minus 1 ft per 2.5 ft of depth under 125 ft (min 20 ft). Side 10 ft for lots 70 ft+ wide; 8 ft (18 total) for 60-70 ft wide; 6 ft (16 total) under 60 ft wide. Height is 2.5 stories or 35 ft, whichever is less. Lot area is net lot area. Applies to detached one- and two-family dwellings; § 110-14C(1) lists both the coverage table and a flat 30% building coverage. Multifamily (§ 110-14C(3)): 1,500 sf per unit, 30% building / 70% development coverage, 30 ft yards, 6 stories/70 ft."
+  },
+  "CD": {
+   "name": "Conservation Development",
+   "min_lot_sf": 15000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": null,
+   "front_ft": 30,
+   "side_ft": 20,
+   "side_total_ft": null,
+   "rear_ft": 50,
+   "corner_side_ft": 30,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20
+   },
+   "max_impervious_coverage": {
+    "pct": 35,
+    "note": "Development coverage: buildings, structures, paved/parking areas, patios, decks, gravel; excludes pools, ponds, fountains"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "§ 110-31G: accessory structures may not be nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of principal-building coverage, at least 15 ft from the rear lot line (rear figure applies to garages)."
+   },
+   "source": "Ch. 110 § 110-7C(1)(b) lot regulations for detached one-family dwellings; § 110-31D (corner lots), § 110-31G (accessory)",
+   "source_url": "https://ecode360.com/10863136",
+   "notes": "Lot values shown (15,000 sf net). Site needs 25 acres, max 1 dwelling per 1.25 acres net, 35% open space, buffers 200 ft from major streets, 100 ft from streets and property lines."
+  },
+  "PRD": {
+   "name": "Planned Residential Development",
+   "min_lot_sf": 22500,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 150,
+   "min_lot_depth_ft": 150,
+   "front_ft": 25,
+   "side_ft": 20,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25
+   },
+   "max_impervious_coverage": {
+    "pct": 40,
+    "note": "Development coverage: buildings, structures, paved/parking areas, patios, decks, gravel; excludes pools, ponds, fountains"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "§ 110-31G: accessory structures may not be nearer any street line or side lot line than the principal building; max 15 ft high; detached garage max 750 sf and 75% of principal-building coverage, at least 15 ft from the rear lot line (rear figure applies to garages)."
+   },
+   "source": "Ch. 110 § 110-27.3C(1); § 110-31D (corner lots), § 110-31G (accessory)",
+   "source_url": "https://ecode360.com/10864236",
+   "notes": "Detached one-/two-family values shown; side 20 ft from single-family, 10 ft from multifamily. Attached clustered one-family (§ 110-27.3C(2)): 2-acre site, 15,000 sf net per unit, 35% development coverage, 50% open space."
+  }
+ }
+}

@@ -1,0 +1,522 @@
+{
+ "mun": "WHP",
+ "name": "City of White Plains",
+ "code_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "White Plains publishes its Zoning Ordinance as a PDF on the city site (cover: amendments through August 3, 2026), not eCode360",
+  "No minimum lot width in the schedule (only frontage and depth); min_lot_width_ft null",
+  "No impervious/total coverage limit for residence districts in \u00a7 5.3; max_impervious_coverage null",
+  "RM districts: schedule FAR is marked N- (non-residential uses only), so no residential FAR recorded; RM-2 yards '--' (urban renewal site, fn. b-c)",
+  "Steep-slope, tree and stormwater thresholds live in the separate Municipal Code (Ch. 3-5 etc.), which I could not reach online; summaries below come from the zoning ordinance only",
+  "Not covered (county non-RES): RM-0.7, RM-0.4, RM-0.35, PSRDD and business districts"
+ ],
+ "general": {
+  "wetland_buffer_ft": 50,
+  "watercourse_buffer_ft": 25,
+  "wetlands": {
+   "summary": "Zoning \u00a7 4.4.25: actions on environmentally sensitive sites (wetlands, aquifer recharge areas, water resources, steep slopes, per Municipal Code Ch. 3-5) are Type I SEQRA actions needing a public hearing; preserve a 50 ft protective buffer around wetlands (extra 50 ft in R1-12.5/R1-20/R1-30 on sites over 3 acres).",
+   "url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025"
+  },
+  "steep_slopes": {
+   "summary": "Zoning \u00a7 4.4.25.5.5: development on steep slope/rock outcrop areas must avoid or minimize regrading, view and erosion impacts; the slope thresholds are set in Municipal Code Ch. 3-5 (not reached).",
+   "threshold_pct": null,
+   "url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025"
+  },
+  "trees": {
+   "summary": "Not in the zoning ordinance; the city has Tree Preservation Guidelines (referenced in \u00a7 4.4.23.6.4) and a municipal tree law not reviewed here.",
+   "url": null
+  },
+  "stormwater": {
+   "summary": "Not in the zoning ordinance; see City Municipal Code (not reviewed).",
+   "url": null
+  },
+  "adu": {
+   "summary": "No accessory-apartment use in the \u00a7 5.1 use schedule; accessory servants' quarters by special permit in some R1 districts, and one roomer per dwelling unit allowed as accessory.",
+   "url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025"
+  },
+  "accessory_structures": "No accessory building in a required yard except as \u00a7 5.3 allows (\u00a7 4.4.7); schedule cols 16-19 set max 15 ft height and minimum distances to side/rear lot lines (5-12 ft by district) and to other structures. Minor accessory buildings (< 750 cu ft) permitted as accessory.",
+  "pools": "Special permit use (\u00a7 6.7.3) unless meeting \u00a7 4.4.24; pool (from deck edge or rim) at least 15 ft from all lot lines; may be in required yards (\u00a7 4.4.7); above-ground max 60 in.; 6 ft fence.",
+  "notes": "Corner lots: owner may elect which street yard is the front (\u00a7 4.4.9). Lots narrower than 50 ft get reduced side yards (\u00a7 4.4.10)."
+ },
+ "districts": {
+  "R1-30": {
+   "name": "Residential One Family (R1-30)",
+   "min_lot_sf": 30000,
+   "min_frontage_ft": 150,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 150,
+   "front_ft": 75,
+   "side_ft": 25,
+   "side_total_ft": 50,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 40000,
+      "pct": 20
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "sf": 8000
+     }
+    ],
+    "note": "All buildings. Main building alone max 14% (5,000 sf on lots over 40,000 sf, fn. u); accessory buildings max 5%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 40000,
+      "far": 0.4
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "far": 0.3
+     }
+    ],
+    "note": "Residential FAR; gross floor area of all buildings, excluding parking and mechanical space, including basements/cellars used for the principal use (\u00a7 2.4); 0.30 over 40,000 sf (fn. u)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 20 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "Footnote (u): on lots over 40,000 sf all-building coverage max 8,000 sf, main-building coverage max 5,000 sf, FAR max 0.30"
+  },
+  "R1-20": {
+   "name": "Residential One Family (R1-20)",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 100,
+   "front_ft": 35,
+   "side_ft": 20,
+   "side_total_ft": 40,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 40000,
+      "pct": 20
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "sf": 8000
+     }
+    ],
+    "note": "All buildings. Main building alone max 16% (5,000 sf on lots over 40,000 sf, fn. u); accessory buildings max 5%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 40000,
+      "far": 0.4
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "far": 0.3
+     }
+    ],
+    "note": "Residential FAR; gross floor area of all buildings, excluding parking and mechanical space, including basements/cellars used for the principal use (\u00a7 2.4); 0.30 over 40,000 sf (fn. u)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 15,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 20 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "Footnote (u): on lots over 40,000 sf all-building coverage max 8,000 sf, main-building coverage max 5,000 sf, FAR max 0.30"
+  },
+  "R1-12.5": {
+   "name": "Residential One Family (R1-12.5)",
+   "min_lot_sf": 12500,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 100,
+   "front_ft": 25,
+   "side_ft": 20,
+   "side_total_ft": 40,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 40000,
+      "pct": 25
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "sf": 8000
+     }
+    ],
+    "note": "All buildings. Main building alone max 18% (5,000 sf on lots over 40,000 sf, fn. u); accessory buildings max 7%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 40000,
+      "far": 0.45
+     },
+     {
+      "min": 40000,
+      "max": null,
+      "far": 0.3
+     }
+    ],
+    "note": "Residential FAR; gross floor area of all buildings, excluding parking and mechanical space, including basements/cellars used for the principal use (\u00a7 2.4); 0.30 over 40,000 sf (fn. u)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 10,
+    "rear_ft": 10,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 20 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "Footnote (u): on lots over 40,000 sf all-building coverage max 8,000 sf, main-building coverage max 5,000 sf, FAR max 0.30"
+  },
+  "R1-7.5": {
+   "name": "Residential One Family (R1-7.5)",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": 75,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 75,
+   "front_ft": 25,
+   "side_ft": 12,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 25,
+    "note": "All buildings. Main building alone max 22%; accessory buildings max 7%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.55,
+    "note": "Residential FAR; gross floor area of all buildings, excluding parking and mechanical space, including basements/cellars used for the principal use (\u00a7 2.4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 10 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": ""
+  },
+  "R1-5": {
+   "name": "Residential One Family (R1-5)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 75,
+   "front_ft": 25,
+   "side_ft": 7,
+   "side_total_ft": 18,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "All buildings. Main building alone max 25%; accessory buildings max 10%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.55,
+    "note": "Residential FAR; gross floor area of all buildings, excluding parking and mechanical space, including basements/cellars used for the principal use (\u00a7 2.4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 10 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "Accessory rear distance: no minimum where the building is fire-proof and abuts an adjoining rear yard (fn. i)"
+  },
+  "R2-4": {
+   "name": "Residential One and Two Family (R2-4)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 75,
+   "front_ft": 25,
+   "side_ft": 7,
+   "side_total_ft": 18,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "All buildings. Main building alone max 25%; accessory buildings max 10%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.6,
+    "note": "Residential FAR; gross floor area of all buildings, excluding parking and mechanical space, including basements/cellars used for the principal use (\u00a7 2.4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 10 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "Values are the one-family row. Two-family: 5,000 sf lot (4,000 sf per unit), 75 ft frontage, 75 ft depth, front 25, side 12 / both 25, rear 25, building coverage 25% (main 22%), FAR 0.55"
+  },
+  "R2-2.5": {
+   "name": "Residential One and Two Family (R2-2.5)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 75,
+   "front_ft": 20,
+   "side_ft": 5,
+   "side_total_ft": 15,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 30,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "All buildings. Main building alone max 26%; accessory buildings max 10%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "far": 0.65,
+    "note": "Residential FAR; gross floor area of all buildings, excluding parking and mechanical space, including basements/cellars used for the principal use (\u00a7 2.4)"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 10 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "Lot area 5,000 sf, 2,500 sf per dwelling unit; lot area, FAR, stories and height subject to \u00a7 6.7.34 (multi-family dwellings by special permit) (fn. x)"
+  },
+  "RM-2.5": {
+   "name": "Residential Multi-Family (RM-2.5)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 75,
+   "front_ft": 20,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 30,
+    "note": "All buildings; accessory buildings max 10%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 12,
+    "rear_ft": 12,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 10 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "2,500 sf lot area per dwelling unit; frontage 75 ft for a multi-family dwelling (fn. d); schedule FAR N-0.50 applies to non-residential uses only"
+  },
+  "RM-2": {
+   "name": "Residential Multi-Family (RM-2)",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 100,
+   "front_ft": null,
+   "side_ft": null,
+   "side_total_ft": null,
+   "rear_ft": null,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 40,
+    "note": "All buildings; accessory buildings max 10%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": null,
+    "rear_ft": null,
+    "max_height_ft": 35,
+    "notes": "Schedule sets accessory max height 35 ft; distances '--'"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "Yards '--' (fn. c: street level of structures with garages entered from a street recessed 12 ft from the street line); dimensional requirements apply to the whole Urban Renewal site (fn. b); 2,000 sf lot area per unit; FAR N-0.60 non-residential only"
+  },
+  "RM-1.5": {
+   "name": "Residential Multi-Family (RM-1.5)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 75,
+   "front_ft": 25,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 35,
+    "note": "All buildings; accessory buildings max 10%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 12,
+    "rear_ft": 12,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 10 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "1,500 sf lot area per dwelling unit; frontage 75 ft for multi-family (fn. d); FAR N-0.80 non-residential only"
+  },
+  "RM1.5": {
+   "name": "Residential Multi-Family (RM-1.5)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 75,
+   "front_ft": 25,
+   "side_ft": 10,
+   "side_total_ft": 25,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 35,
+    "note": "All buildings; accessory buildings max 10%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 12,
+    "rear_ft": 12,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 10 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "County code RM1.5 = RM-1.5 in the ordinance. 1,500 sf lot area per dwelling unit; frontage 75 ft for multi-family (fn. d); FAR N-0.80 non-residential only"
+  },
+  "RM-1.5T": {
+   "name": "Residential Townhouse (RM-1.5T)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 100,
+   "front_ft": 20,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 3.5,
+   "max_building_coverage": {
+    "pct": 50,
+    "note": "All buildings; accessory buildings max 10%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 5,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 10 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "1,500 sf lot area per unit; side yards and frontage subject to \u00a7 5.4.5 townhouse regulations (fn. r); no FAR in schedule"
+  },
+  "RM-1": {
+   "name": "Residential Multi-Family (RM-1)",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": 75,
+   "front_ft": 20,
+   "side_ft": 8,
+   "side_total_ft": 20,
+   "rear_ft": 25,
+   "corner_side_ft": null,
+   "max_height_ft": 35,
+   "max_stories": 3,
+   "max_building_coverage": {
+    "pct": 50,
+    "note": "All buildings; accessory buildings max 5%"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 12,
+    "rear_ft": 12,
+    "max_height_ft": 15,
+    "notes": "Schedule cols 16-19: max height 15 ft; 10 ft from any other structure if not attached; side/rear distances are to lot lines (accessory buildings may sit in side/rear yards at these distances, \u00a7 4.4.7)"
+   },
+   "source": "Zoning Ordinance \u00a7 5.3 Schedule of Dimensional Regulations - Residential (p. 5-64)",
+   "source_url": "https://www.cityofwhiteplains.com/DocumentCenter/View/8865/Zoning-Ordinance-City-of-White-Plains-Amended-through-July-7-2025",
+   "notes": "1,000 sf lot area per unit (325 for aged housing, 500 with 20% affordable; fn. e, s); on lots over 15,000 sf height may go to 6 stories/65 ft by special permit (fn. t); FAR N-1.20 non-residential only"
+  }
+ }
+}

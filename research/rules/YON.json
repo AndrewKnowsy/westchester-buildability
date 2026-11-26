@@ -1,0 +1,561 @@
+{
+ "mun": "YON",
+ "name": "City of Yonkers",
+ "code_url": "https://ecode360.com/15113784",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "No total/impervious coverage limit in Table 43-3 (building coverage only)",
+  "Table 43-3 sets lot width, not frontage or depth",
+  "PDR (planned urban redevelopment) has no fixed setbacks/height/coverage; set per comprehensive development plan (§ 43-72C)",
+  "FAR band 'base' values computed as base FAR x minimum lot area from Table 43-3 and note 5",
+  "Downtown (D-MX, UR-*), L-MX and other mixed-use districts not covered (not county residential codes)",
+  "No local wetlands chapter found in the City Code; only NYS DEC rules apply"
+ ],
+ "general": {
+  "wetland_buffer_ft": null,
+  "watercourse_buffer_ft": null,
+  "wetlands": {
+   "summary": "No local wetlands law found in the Yonkers City Code; NYS DEC freshwater wetlands rules (100 ft adjacent area) apply to state wetlands.",
+   "url": "https://ecode360.com/YO0144"
+  },
+  "steep_slopes": {
+   "summary": "§ 43-105B: added site plan review standards when a site has > 5,000 sf of slopes over 15% (regraded slopes max 50%). One- and two-family houses are exempt from site plan review, but clear-cutting or excavation permits require an approved site plan (§ 43-94A).",
+   "threshold_pct": 15,
+   "url": "https://ecode360.com/15115790"
+  },
+  "trees": {
+   "summary": "Ch. 80 Shade Trees: permit from the City to cut, trim or plant trees in public places/streets. No private-lot tree permit; clear-cutting of vegetation/trees needs an approved site plan (§ 43-94A(2)).",
+   "url": "https://ecode360.com/15089640"
+  },
+  "stormwater": {
+   "summary": "Ch. 43 Art. XVII and Ch. 56 Art. XVI: SWPPP required for land development activity disturbing 1 acre or more (or part of a larger common plan).",
+   "url": "https://ecode360.com/15116322"
+  },
+  "adu": {
+   "summary": "No new accessory apartments; § 43-22 only lets pre-existing accessory apartments continue, inside a single-family house in single-family districts, owner-occupied, occupied by listed relatives.",
+   "url": "https://ecode360.com/15114404"
+  },
+  "accessory_structures": "§ 43-40D: not in front yard; at least 3 ft from side and 5 ft from rear lot lines; 1 story / 15 ft max; max 60% of rear yard or each side yard, 75% of rear+side yards combined. Unroofed decks/patios under 3 ft high may project into side/rear yards (§ 43-33P, § 43-41A).",
+  "pools": "§ 43-41P: rear or side yard only, not in the minimum required side yard; 6 ft solid screen along adjoining lot lines; 6-10 ft enclosure fence.",
+  "notes": "Corner lots: owner may choose which street yard is the front; the other is a side-front yard (§ 43-33I). Through lots need front yards on both streets and no rear yard (§ 43-33J). Single-family homes on pre-1968 undersized lots allowed if yards are met (§ 43-33F)."
+ },
+ "districts": {
+  "S-200": {
+   "name": "S-200 District: detached single-family dwellings on 200-foot lots",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 200,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 20,
+   "side_total_ft": 40,
+   "rear_ft": 25,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 20000,
+      "far": 0.56
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "base": 11200,
+      "pct_over": 38,
+      "over": 20000
+     }
+    ],
+    "note": "Single/two-family: base FAR 0.56 on lot area up to 20,000 sf; FAR 0.38 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 0.56 x 20,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "S-100": {
+   "name": "S-100 District: detached single-family dwellings on 100-foot lots",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 100,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 15,
+   "side_total_ft": 30,
+   "rear_ft": 25,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 30
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 10000,
+      "far": 0.56
+     },
+     {
+      "min": 10000,
+      "max": null,
+      "base": 5600,
+      "pct_over": 38,
+      "over": 10000
+     }
+    ],
+    "note": "Single/two-family: base FAR 0.56 on lot area up to 10,000 sf; FAR 0.38 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 0.56 x 10,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "S-75": {
+   "name": "S-75 District: detached single-family dwellings on 75-foot lots",
+   "min_lot_sf": 7500,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 75,
+   "min_lot_depth_ft": null,
+   "front_ft": 25,
+   "side_ft": 11,
+   "side_total_ft": 23,
+   "rear_ft": 25,
+   "corner_side_ft": 20,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 35
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 7500,
+      "far": 0.6
+     },
+     {
+      "min": 7500,
+      "max": null,
+      "base": 4500,
+      "pct_over": 40,
+      "over": 7500
+     }
+    ],
+    "note": "Single/two-family: base FAR 0.6 on lot area up to 7,500 sf; FAR 0.4 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 0.6 x 7,500 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "S-60": {
+   "name": "S-60 District: detached single-family dwellings on 60-foot lots",
+   "min_lot_sf": 6000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 60,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 8,
+   "side_total_ft": 17,
+   "rear_ft": 25,
+   "corner_side_ft": 12,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 6000,
+      "far": 0.68
+     },
+     {
+      "min": 6000,
+      "max": null,
+      "base": 4080,
+      "pct_over": 46,
+      "over": 6000
+     }
+    ],
+    "note": "Single/two-family: base FAR 0.68 on lot area up to 6,000 sf; FAR 0.46 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 0.68 x 6,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "S-50": {
+   "name": "S-50 District: detached single-family dwellings on 50-foot lots",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 6,
+   "side_total_ft": 15,
+   "rear_ft": 25,
+   "corner_side_ft": 10,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "far": 0.75
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "base": 3750,
+      "pct_over": 50,
+      "over": 5000
+     }
+    ],
+    "note": "Single/two-family: base FAR 0.75 on lot area up to 5,000 sf; FAR 0.5 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 0.75 x 5,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "T": {
+   "name": "T District: two-family dwellings on 50-foot lots",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 6,
+   "side_total_ft": 15,
+   "rear_ft": 25,
+   "corner_side_ft": 10,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "far": 1.0
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "base": 5000,
+      "pct_over": 67,
+      "over": 5000
+     }
+    ],
+    "note": "Single/two-family: base FAR 1.0 on lot area up to 5,000 sf; FAR 0.67 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 1.0 x 5,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Single- and two-family dwellings permitted; lot area per family 2,500 sf for two-family. Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "MG": {
+   "name": "MG District: apartment houses, low-density",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 6,
+   "side_total_ft": 15,
+   "rear_ft": 25,
+   "corner_side_ft": 10,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "far": 1.0
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "base": 5000,
+      "pct_over": 67,
+      "over": 5000
+     }
+    ],
+    "note": "Single/two-family: base FAR 1.0 on lot area up to 5,000 sf; FAR 0.67 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 1.0 x 5,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Values are for single-/two-family dwellings. Multifamily: 10,000 sf lot, 100 ft width, front 25, rear 25, sides 25/50, corner side 25, 40% coverage, 3 stories/35 ft, FAR 1.20, 1,000 sf lot area per unit. Planned Film and Education Developments: 60% coverage, 4 stories or 60 ft (note 9). Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "M": {
+   "name": "M District: apartment houses, medium-density",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 6,
+   "side_total_ft": 15,
+   "rear_ft": 25,
+   "corner_side_ft": 10,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "far": 1.0
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "base": 5000,
+      "pct_over": 67,
+      "over": 5000
+     }
+    ],
+    "note": "Single/two-family: base FAR 1.0 on lot area up to 5,000 sf; FAR 0.67 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 1.0 x 5,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Values are for single-/two-family dwellings. Multifamily: front 15, rear 25, sides 12/25, corner side 10, 40% coverage, height 65 ft, FAR 1.25, 800 sf lot area per unit. Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "A": {
+   "name": "A District: apartment houses, high-density",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 6,
+   "side_total_ft": 15,
+   "rear_ft": 25,
+   "corner_side_ft": 20,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "far": 1.0
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "base": 5000,
+      "pct_over": 67,
+      "over": 5000
+     }
+    ],
+    "note": "Single/two-family: base FAR 1.0 on lot area up to 5,000 sf; FAR 0.67 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 1.0 x 5,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Values are for single-/two-family dwellings. Multifamily: front 25, rear 25, sides 16/32, corner side 20, 40% coverage, height 1.5x street ROW width (note 3), FAR 3.00. Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "B": {
+   "name": "B District: neighborhood business and apartment houses, medium-density",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 6,
+   "side_total_ft": 15,
+   "rear_ft": 25,
+   "corner_side_ft": 10,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "far": 1.0
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "base": 5000,
+      "pct_over": 67,
+      "over": 5000
+     }
+    ],
+    "note": "Single/two-family: base FAR 1.0 on lot area up to 5,000 sf; FAR 0.67 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 1.0 x 5,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Values are for single-/two-family dwellings. Multifamily: front 10, rear 25, sides 16/32, corner side 10, 40% coverage, 35 ft, FAR 1.25. Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "BA": {
+   "name": "BA District: general business and apartment houses, high-density",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": 50,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 6,
+   "side_total_ft": 15,
+   "rear_ft": 25,
+   "corner_side_ft": 10,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 40
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 5000,
+      "far": 1.0
+     },
+     {
+      "min": 5000,
+      "max": null,
+      "base": 5000,
+      "pct_over": 67,
+      "over": 5000
+     }
+    ],
+    "note": "Single/two-family: base FAR 1.0 on lot area up to 5,000 sf; FAR 0.67 on the portion of the lot exceeding it (Table 43-3 note 5). Band base = 1.0 x 5,000 sf"
+   },
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 3,
+    "rear_ft": 5,
+    "max_height_ft": 15,
+    "notes": "§ 43-40D: accessory structures not allowed in front yard; min 3 ft from side and 5 ft from rear lot line; max 1 story or 15 ft; together may cover at most 60% of rear yard or of each side yard (75% of rear+side yards combined)"
+   },
+   "source": "§ 43-27; Table 43-3 Schedule of Dimensional Regulations for Residential Uses (43 Attachment 3), single- and two-family dwelling rows",
+   "source_url": "https://ecode360.com/attachment/339639/YO0144-043c%20Table%2043-3.pdf",
+   "notes": "Values are for single-/two-family dwellings. Multifamily: front 10, rear 20, sides 16/32, corner side 10, 40% coverage, height 1.5x street ROW width, FAR 3.00. Existing lots narrower than 50 ft / shallower than 100 ft may reduce side and rear yards (§ 43-33K-L). Front yard may need to match the average of the two nearest buildings, up to +15 ft (§ 43-33J(2))."
+  },
+  "PDR": {
+   "name": "Planned urban redevelopment (PUR), special use permit (§ 43-72C)",
+   "min_lot_sf": 87120,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": null,
+   "side_ft": null,
+   "side_total_ft": null,
+   "rear_ft": null,
+   "corner_side_ft": null,
+   "max_height_ft": null,
+   "max_stories": null,
+   "max_building_coverage": null,
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "§ 43-72C Planned urban redevelopments",
+   "source_url": "https://ecode360.com/15115226",
+   "notes": "PURs are allowed in designated urban renewal areas on tracts of 2+ acres; they need not meet district dimensional rules and are set by a comprehensive development plan approved by the Planning Board and City Council. Not a district listed in § 43-11."
+  }
+ }
+}

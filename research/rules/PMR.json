@@ -1,0 +1,273 @@
+{
+ "mun": "PMR",
+ "name": "Village of Pelham Manor",
+ "code_url": "https://ecode360.com/5121615",
+ "retrieved": "2026-11-25",
+ "confidence": "high",
+ "gaps": [
+  "No building-coverage limit for residential buildings (only development coverage by lot size, § 210-27.1); no FAR or gross floor area cap",
+  "Lot width and depth not set; minimum street frontage recorded",
+  "Side yards depend on lot size, not district (§ 210-27.2): 10 ft under 20,000 sf, 15 ft at 20,000 sf+",
+  "Front yard can exceed the minimum where an adjoining house is set back further (§§ 210-33A, 210-40A, 210-46A, 210-52A)",
+  "MF: no minimum lot area or height in feet; unclear whether § 210-27.1 development coverage applies to the Multifamily District",
+  "No wetlands, steep-slope, private tree-removal or ADU law found"
+ ],
+ "general": {
+  "wetland_buffer_ft": null,
+  "watercourse_buffer_ft": null,
+  "wetlands": {
+   "summary": "No local wetlands law found in the Village Code; NYS DEC rules apply to state wetlands.",
+   "url": null
+  },
+  "steep_slopes": {
+   "summary": "No steep-slope law; fill that changes grade by 2 ft or more needs a permit from the Village Manager with an engineer's runoff plan (§ 210-27.4).",
+   "threshold_pct": null,
+   "url": "https://ecode360.com/5122030"
+  },
+  "trees": {
+   "summary": "No private tree-removal permit; Ch. 197 licenses tree surgeons and requires removal of damaged/diseased trees, and Ch. 160 bars cutting trees without the owner's or Village's consent.",
+   "url": "https://ecode360.com/5121483"
+  },
+  "stormwater": {
+   "summary": "Ch. 210 Art. XIX: SWPPP for land development activity disturbing 1 acre or more (or part of a larger common plan).",
+   "url": "https://ecode360.com/5122408"
+  },
+  "adu": {
+   "summary": "No accessory apartment law; one-family districts allow living quarters only for full-time household employees (chauffeur, servant, nurse) and their families (§ 210-31C).",
+   "url": "https://ecode360.com/5122036"
+  },
+  "accessory_structures": "Detached accessory buildings max 1 story / 15 ft, at least 2 ft from side and rear lot lines, outside the front setback, 10 ft from other detached buildings (§§ 210-34C, 210-35 and equivalents). Only one garage and one greenhouse per lot.",
+  "pools": "§ 210-31F: special permit from the Board of Appeals; not nearer the street than the house; at least 10 ft from side/rear lines plus 2 ft per foot above grade; side setback 10 ft (lots < 20,000 sf) or 15 ft (20,000 sf+) per § 210-27.2; 4 ft fence; landscape screening.",
+  "notes": "Development coverage limit by lot size applies in all residential districts: 45% (< 10,000 sf), 40% (10,000-15,000), 35% (15,000-20,000), 30% (20,000+). Minimum house size 1,200 sf (§ 210-24)."
+ },
+ "districts": {
+  "R-AAA": {
+   "name": "Residence AAA District",
+   "min_lot_sf": 20000,
+   "min_frontage_ft": 125,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 40,
+   "side_ft": 15,
+   "side_total_ft": null,
+   "rear_ft": 25,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 10000,
+      "pct": 45
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "pct": 40
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "pct": 35
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "pct": 30
+     }
+    ],
+    "note": "Development coverage (§ 210-27.1): buildings, structures, paving, gravel, pools, ponds, patios, decks, gazebos"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 2,
+    "rear_ft": 2,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings (max 1 story / 15 ft by definition) may be 2 ft from side/rear lot lines; front-yard setback applies; 10 ft between detached buildings"
+   },
+   "source": "Ch. 210 Art. IX, §§ 210-32 to 210-36; § 210-27.1; § 210-27.2",
+   "source_url": "https://ecode360.com/5122035",
+   "notes": "Side yard 15 ft (lots of 20,000 sf+; 10 ft on smaller pre-existing lots, § 210-27.2). Corner lot: one side yard 15 ft, the other 25 ft (§ 210-34B). Front yard is at least the stated minimum or the setback of the nearest building on an adjoining lot, whichever is greater. A new house on a vacant lot, a rebuild of 50%+, or an addition of 500 sf+ needs a Board of Appeals special permit; if the lot sits 7+ ft above a neighbor, add 5 ft to each side yard per story above the first (§ 210-27.3)."
+  },
+  "R-AA": {
+   "name": "Residence AA District",
+   "min_lot_sf": 15000,
+   "min_frontage_ft": 100,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 25,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 10000,
+      "pct": 45
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "pct": 40
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "pct": 35
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "pct": 30
+     }
+    ],
+    "note": "Development coverage (§ 210-27.1): buildings, structures, paving, gravel, pools, ponds, patios, decks, gazebos"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 2,
+    "rear_ft": 2,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings (max 1 story / 15 ft by definition) may be 2 ft from side/rear lot lines; front-yard setback applies; 10 ft between detached buildings"
+   },
+   "source": "Ch. 210 Art. XI, §§ 210-39 to 210-43; § 210-27.1; § 210-27.2",
+   "source_url": "https://ecode360.com/5122090",
+   "notes": "Side yard 10 ft on lots under 20,000 sf, 15 ft on lots of 20,000 sf or more (§ 210-27.2). Corner lot: one side yard 10 ft, the other 25 ft (§ 210-41B). Front yard is at least the stated minimum or the setback of the nearest building on an adjoining lot, whichever is greater. A new house on a vacant lot, a rebuild of 50%+, or an addition of 500 sf+ needs a Board of Appeals special permit; if the lot sits 7+ ft above a neighbor, add 5 ft to each side yard per story above the first (§ 210-27.3)."
+  },
+  "R-A": {
+   "name": "Residence A District",
+   "min_lot_sf": 10000,
+   "min_frontage_ft": 75,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 25,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 10000,
+      "pct": 45
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "pct": 40
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "pct": 35
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "pct": 30
+     }
+    ],
+    "note": "Development coverage (§ 210-27.1): buildings, structures, paving, gravel, pools, ponds, patios, decks, gazebos"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 2,
+    "rear_ft": 2,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings (max 1 story / 15 ft by definition) may be 2 ft from side/rear lot lines; front-yard setback applies; 10 ft between detached buildings"
+   },
+   "source": "Ch. 210 Art. XII, §§ 210-45 to 210-49; § 210-27.1; § 210-27.2",
+   "source_url": "https://ecode360.com/5122110",
+   "notes": "Side yard 10 ft on lots under 20,000 sf, 15 ft on lots of 20,000 sf or more (§ 210-27.2). Corner lot: one side yard 10 ft, the other 25 ft (§ 210-47B). Front yard is at least the stated minimum or the setback of the nearest building on an adjoining lot, whichever is greater. A new house on a vacant lot, a rebuild of 50%+, or an addition of 500 sf+ needs a Board of Appeals special permit; if the lot sits 7+ ft above a neighbor, add 5 ft to each side yard per story above the first (§ 210-27.3)."
+  },
+  "R-B": {
+   "name": "Residence B District",
+   "min_lot_sf": 5000,
+   "min_frontage_ft": 50,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 20,
+   "side_ft": 10,
+   "side_total_ft": null,
+   "rear_ft": 25,
+   "corner_side_ft": 25,
+   "max_height_ft": 35,
+   "max_stories": 2.5,
+   "max_building_coverage": null,
+   "max_impervious_coverage": {
+    "bands": [
+     {
+      "min": 0,
+      "max": 10000,
+      "pct": 45
+     },
+     {
+      "min": 10000,
+      "max": 15000,
+      "pct": 40
+     },
+     {
+      "min": 15000,
+      "max": 20000,
+      "pct": 35
+     },
+     {
+      "min": 20000,
+      "max": null,
+      "pct": 30
+     }
+    ],
+    "note": "Development coverage (§ 210-27.1): buildings, structures, paving, gravel, pools, ponds, patios, decks, gazebos"
+   },
+   "max_floor_area": null,
+   "accessory": {
+    "front_ft": null,
+    "side_ft": 2,
+    "rear_ft": 2,
+    "max_height_ft": 15,
+    "notes": "Detached accessory buildings (max 1 story / 15 ft by definition) may be 2 ft from side/rear lot lines; front-yard setback applies; 10 ft between detached buildings"
+   },
+   "source": "Ch. 210 Art. XIII, §§ 210-51 to 210-55; § 210-27.1; § 210-27.2",
+   "source_url": "https://ecode360.com/5122132",
+   "notes": "Side yard 10 ft on lots under 20,000 sf, 15 ft on lots of 20,000 sf or more (§ 210-27.2). Corner lot: one side yard 10 ft, the other 25 ft (§ 210-53B). Front yard is at least the stated minimum or the setback of the nearest building on an adjoining lot, whichever is greater. A new house on a vacant lot, a rebuild of 50%+, or an addition of 500 sf+ needs a Board of Appeals special permit; if the lot sits 7+ ft above a neighbor, add 5 ft to each side yard per story above the first (§ 210-27.3)."
+  },
+  "MF": {
+   "name": "Multifamily District",
+   "min_lot_sf": null,
+   "min_frontage_ft": null,
+   "min_lot_width_ft": null,
+   "min_lot_depth_ft": null,
+   "front_ft": 35,
+   "side_ft": 30,
+   "side_total_ft": null,
+   "rear_ft": 30,
+   "corner_side_ft": null,
+   "max_height_ft": null,
+   "max_stories": 2.5,
+   "max_building_coverage": {
+    "pct": 20,
+    "note": "Multifamily houses (§ 210-57A)"
+   },
+   "max_impervious_coverage": null,
+   "max_floor_area": null,
+   "accessory": null,
+   "source": "Ch. 210 Art. XIV, §§ 210-56 to 210-60",
+   "source_url": "https://ecode360.com/5122154",
+   "notes": "Residence B uses (incl. one-family) and multifamily houses permitted. Front 35 ft (50 ft on Boston Post Road); 30 ft from any non-street lot line (20 ft for internal lines more than 30 ft inside the district); 2.5 stories; multifamily max 20% coverage and 1 unit per 3,000 sf; development plan approval by the Planning Board for buildings with more than two families."
+  }
+ }
+}

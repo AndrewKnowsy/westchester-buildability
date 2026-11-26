@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Westchester Buildability</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<div class="wrap" id="app">
+  <section class="sheet">
+    <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+      <div class="eyebrow">Westchester buildability · <span id="h-muni">any address in the county</span></div>
+      <h1 id="h-addr">Westchester Buildability</h1>
+      <form class="searchbar" id="search" autocomplete="off" role="search">
+        <input id="address" type="text" placeholder="Type a Westchester address, e.g. 400 Jay St, Katonah" aria-label="Address" aria-autocomplete="list" aria-controls="suggestions" aria-expanded="false">
+        <button type="submit">Look up</button>
+        <ul class="suggest" id="suggestions" role="listbox" hidden></ul>
+      </form>
+      <p class="status" id="status" role="status"></p>
+    </div>
+    <div class="titleblock" aria-label="Parcel identifiers">
+      <div><span>Tax map</span><b id="tb-pk">–</b></div>
+      <div><span>Zone</span><b id="tb-zone">–</b></div>
+      <div><span>Lot area</span><b id="tb-area">–</b></div>
+    </div>
+  </section>
+
+  <section class="verdict" id="verdict" aria-label="Summary">
+    <div class="lead" id="v-lead">Look up an address to see what the zoning and the land allow.</div>
+    <div><div class="k num" id="v-fa">–</div><div class="l" id="v-fa-l">sq ft of floor area left under the cap</div></div>
+    <div><div class="k num" id="v-bc">–</div><div class="l" id="v-bc-l">sq ft of building footprint left</div></div>
+    <div><div class="k num" id="v-env">–</div><div class="l">sq ft inside the setbacks</div></div>
+    <div><div class="k num" id="v-clear">–</div><div class="l">sq ft of that also clear of water buffers, flood zones and steep slopes</div></div>
+  </section>
+
+  <section class="work">
+    <div class="plan-col">
+      <div class="planbox" id="planbox">
+        <svg id="plan" class="plan" role="img" aria-label="Site plan with setbacks, constraints and a test project"></svg>
+        <div class="readout" id="readout" hidden></div>
+        <div class="zoom">
+          <button type="button" id="zin" aria-label="Zoom in">+</button>
+          <button type="button" id="zout" aria-label="Zoom out">−</button>
+          <button type="button" id="zfit" aria-label="Fit whole lot" style="font-size:12px">fit</button>
+        </div>
+      </div>
+      <div class="legend" id="legend"></div>
+      <p class="hint">Drag the coloured shape to move the test project, or click the plan to drop it there. Click a FRONT / SIDE / REAR label to change how that lot line is treated. Aerial: Westchester County 2025.</p>
+    </div>
+
+    <div class="panel">
+      <div id="notices" style="display:flex;flex-direction:column;gap:8px"></div>
+      <article class="card" id="tester">
+        <header><h2>Test a project</h2><span class="eyebrow">Example placed · move it</span></header>
+        <div class="types" id="types" role="group" aria-label="Project type"></div>
+        <div class="fields">
+          <label class="field" for="f-w">Width ft<input id="f-w" type="number" min="4" max="300" step="1"></label>
+          <label class="field" for="f-d">Depth ft<input id="f-d" type="number" min="4" max="300" step="1"></label>
+          <label class="field" for="f-r">Rotate °<input id="f-r" type="number" min="-360" max="360" step="5"></label>
+          <label class="field" for="f-s">Stories<select id="f-s"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+          <label class="field" for="f-h">Height ft<input id="f-h" type="number" min="0" max="80" step="1"></label>
+          <label class="field" for="f-b">New bedrooms<input id="f-b" type="number" min="0" max="8" step="1"></label>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px 18px">
+          <label class="checkline" for="f-bsmt"><input id="f-bsmt" type="checkbox"> Full basement under it</label>
+          <label class="checkline" for="f-repl" id="repl-wrap"><input id="f-repl" type="checkbox"> Replaces the existing house</label>
+        </div>
+        <p class="summary-line" id="p-summary"></p>
+        <ul class="checks" id="checks"></ul>
+        <div>
+          <h3 style="margin-bottom:8px">Approvals this would need</h3>
+          <ol class="approvals" id="approvals"></ol>
+        </div>
+      </article>
+
+      <article class="card">
+        <header><h2>Setbacks</h2><span class="eyebrow" id="yards-src"></span></header>
+        <table class="yards" id="yards"></table>
+        <p class="small muted" id="yards-note"></p>
+      </article>
+
+      <article class="card">
+        <header><h2>Capacity</h2><span class="eyebrow" id="cap-src"></span></header>
+        <div id="meters" style="display:grid;gap:14px"></div>
+        <details class="existing">
+          <summary>Adjust what's already on the lot</summary>
+          <div class="fields">
+            <label class="field" for="e-area">Lot area sf<input id="e-area" type="number" min="1000" step="1"></label>
+            <label class="field" for="e-fa">Floor area sf<input id="e-fa" type="number" min="0" step="1"></label>
+            <label class="field" for="e-bc">Bldg cover sf<input id="e-bc" type="number" min="0" step="1"></label>
+            <label class="field" for="e-dc">Total cover sf<input id="e-dc" type="number" min="0" step="1"></label>
+          </div>
+          <p class="small muted" style="margin-top:8px">Defaults: lot area from the county parcel outline; floor area is the assessor's living area (add garages, basements or attics if your town counts them); building coverage is the county's mapped building outlines; total coverage adds mapped driveways and parking. Walks, patios, pools and decks aren't mapped, so add them.</p>
+          <button type="button" id="e-reset" class="chip" style="align-self:flex-start;margin-top:8px">Reset to county figures</button>
+        </details>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-head">
+    <div class="eyebrow">The rule book for this lot</div>
+    <h2 id="book-h">What applies here</h2>
+  </section>
+  <section class="book" id="book"></section>
+
+  <section class="caveats">
+    <h3 style="color:var(--ink)">Sources and limits</h3>
+    <ul id="sources"></ul>
+    <p>This is a planning screen, not a survey, a zoning determination or legal advice. Rules were read from each municipality's code in November 2026 and codes change; confirm with the local building department and a licensed surveyor or architect before you design or buy.</p>
+  </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jsts@2.11.3/dist/jsts.min.js"></script>
+<script src="app.js?v=8"></script>
+</body>
+</html>
