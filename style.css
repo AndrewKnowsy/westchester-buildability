@@ -243,3 +243,8 @@ details.existing[open] summary { margin-bottom: 10px; }
 .notice.info { border-color: var(--info); background: var(--info-soft); }
 .p-ll { cursor: pointer; }
 .empty-plan { display: grid; place-items: center; aspect-ratio: 16 / 10; color: var(--muted); font-size: .95rem; padding: 20px; text-align: center; }
+
+/* Lines are screen pixels at any lot size or zoom (patterns in <defs> scale with the lot instead) */
+.plan > g path, .plan > g polygon, .plan > g line, .plan > g rect { vector-effect: non-scaling-stroke; }
+.plan .p-contour { stroke-width: .7; }
+.plan .p-contour.ix { stroke-width: 1.1; }

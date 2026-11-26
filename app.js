@@ -214,10 +214,31 @@ async function findParcel(pt) {
   const P = jpoint(pt.x, pt.y);
   const scored = feats.map(f => ({ f, g: jread(f.geometry) })).filter(o => o.g).map(o => ({ ...o, d: o.g.distance(P) })).sort((a, b) => a.d - b.d);
   const best = scored[0];
-  // multipart parcel: keep the part holding (or nearest) the point, but report the full area
-  let g = best.g;
-  if (g.getNumGeometries() > 1) g = parts(g).sort((a, b) => a.distance(P) - b.distance(P) || b.getArea() - a.getArea())[0];
-  return { attrs: best.f.properties, geom: g, fullArea: best.g.getArea(), multipart: best.g.getNumGeometries() > 1 };
+  // A property is often several tax parcels sharing one address (a house lot plus side lots).
+  // Gather every touching parcel with the same address in the same tax district and treat them as one lot.
+  const group = [{ f: best.f, g: best.g }];
+  const addr = (best.f.properties.PARCEL_ADDR || '').trim(), swis = best.f.properties.SWIS;
+  if (addr && swis) {
+    const sib = await queryLayer('parcels', { where: `PARCEL_ADDR='${addr.replace(/'/g, "''")}' AND SWIS='${String(swis).replace(/'/g, "''")}'`, outFields: PARCEL_FIELDS }).catch(() => []);
+    const cands = sib.map(f => ({ f, g: jread(f.geometry) })).filter(o => o.g && o.f.properties.PRINT_KEY !== best.f.properties.PRINT_KEY);
+    for (let grown = true; grown;) {
+      grown = false;
+      const U = junion(group.map(o => o.g));
+      for (let i = cands.length - 1; i >= 0; i--) if (cands[i].g.distance(U) < 3) { group.push(cands[i]); cands.splice(i, 1); grown = true; }
+    }
+  }
+  // close hairline gaps between the pieces
+  let g = group.length > 1 ? safeOp(() => junion(group.map(o => o.g)).buffer(2, 8).buffer(-2, 8), best.g) : best.g;
+  const multipart = g.getNumGeometries() > 1;
+  if (multipart) g = parts(g).sort((a, b) => a.distance(P) - b.distance(P) || b.getArea() - a.getArea())[0];
+  // assessor fields from the parcel that carries the house
+  const isRes = o => /^2/.test(String(o.f.properties.PROP_CLASS || ''));
+  const primary = group.slice().sort((a, b) => (isRes(b) - isRes(a)) || ((b.f.properties.SQFT_LIVING || 0) - (a.f.properties.SQFT_LIVING || 0)) || (b.g.getArea() - a.g.getArea()))[0];
+  return {
+    attrs: primary.f.properties, geom: g, multipart,
+    fullArea: group.reduce((s, o) => s + o.g.getArea(), 0),
+    group: group.map(o => ({ key: `${o.f.properties.SWIS}|${o.f.properties.PRINT_KEY}`, printKey: o.f.properties.PRINT_KEY, acres: o.f.properties.ACRES, cls: o.f.properties.PROP_CLASS })),
+  };
 }
 
 async function lookup(text, magicKey) {
@@ -248,7 +269,7 @@ async function lookup(text, magicKey) {
     queryEnv('streams', bbox, { outFields: 'NAME' }),
     queryEnv('lakes', bbox, { outFields: 'NAME' }),
     queryEnv('streets', bbox, { outFields: 'NAME' }),
-    queryEnv('parcels', bbox, { outFields: 'PRINT_KEY,PARCEL_ADDR,ACRES' }),
+    queryEnv('parcels', bbox, { outFields: 'SWIS,PRINT_KEY,PARCEL_ADDR,ACRES' }),
     queryEnv('sewer', [x0 - 200, y0 - 200, x1 + 200, y1 + 200], { outFields: 'OBJECTID' }),
     big ? Promise.resolve([]) : queryEnv('contours', bbox, { outFields: 'ELEV', maxAllowableOffset: 1 }),
   ]);
@@ -280,8 +301,11 @@ function buildSite(loc, parcel, bbox, L, failed) {
   const driveG = junion(readAll(L.drive).concat(readAll(L.parking)).map(o => o.g));
   const driveIn = safeOp(() => driveG.intersection(pg), null);
   // neighbours
-  const self = parcel.attrs.PRINT_KEY;
-  const nbrs = readAll(L.parcels).filter(o => !(o.p.PRINT_KEY === self && o.g.distance(P) < 1)).map(o => ({ ...o, huge: o.g.getArea() > 50 * 43560 }));
+  const selfKeys = new Set(parcel.group.map(x => x.key));
+  // "huge" = a road right-of-way artifact: an outline far bigger than the parcel's assessed acreage
+  // (a genuine 100-acre estate next door stays a neighbour)
+  const rowLike = o => { const a = o.g.getArea(), ac = +o.p.ACRES || 0; return ac > 0 ? a > 20 * 43560 && a > 5 * ac * 43560 : a > 50 * 43560; };
+  const nbrs = readAll(L.parcels).filter(o => !selfKeys.has(`${o.p.SWIS}|${o.p.PRINT_KEY}`)).map(o => ({ ...o, huge: rowLike(o) }));
   // streets
   const streets = readAll(L.streets);
   const streetsG = junion(streets.map(o => o.g));
@@ -299,7 +323,7 @@ function buildSite(loc, parcel, bbox, L, failed) {
 
   const site = {
     loc, bbox, W, H, xy, toPolys, toLines, failed,
-    attrs: parcel.attrs, multipart: parcel.multipart,
+    attrs: parcel.attrs, multipart: parcel.multipart, group: parcel.group,
     pg, area: pg.getArea(), fullArea: parcel.fullArea,
     ring: toPolys(pg)[0][0],
     zones,
@@ -315,7 +339,7 @@ function buildSite(loc, parcel, bbox, L, failed) {
     sheds, sewerD,
     walls: [],
     contours: L.contours.map(f => ({ elev: f.properties.ELEV, g: jread(f.geometry) })).filter(o => o.g).map(o => ({ elev: o.elev, lines: toLines(o.g) })),
-    neighborsDraw: nbrs.filter(o => !o.huge).map(o => ({ rings: toPolys(clip(o.g)).map(p => p[0]), label: (() => { const c = safeOp(() => clip(o.g).getInteriorPoint(), null); return c && !c.isEmpty() ? xy(c.getX(), c.getY()) : null; })(), address: title(o.p.PARCEL_ADDR || '') })),
+    neighborsDraw: nbrs.filter(o => !o.huge).map(o => ({ rings: toPolys(clip(o.g)).map(p => p[0]), area: o.g.getArea(), label: (() => { const c = safeOp(() => clip(o.g).getInteriorPoint(), null); return c && !c.isEmpty() ? xy(c.getX(), c.getY()) : null; })(), address: title(o.p.PARCEL_ADDR || '') })),
     aerial: `${AERIAL}?` + new URLSearchParams({ bbox: bbox.join(','), bboxSR: 2260, imageSR: 2260, size: `${Math.round(Math.min(1800, W * Math.min(2, 1800 / W)))},${Math.round(Math.min(1800, W * Math.min(2, 1800 / W)) * H / W)}`, format: 'jpg', transparent: false, f: 'image' }),
   };
   site.lotlines = classifyLotLines(site);
@@ -334,7 +358,9 @@ function classifyLotLines(site) {
     const mid = jpoint((a[0] + b[0]) / 2, (a[1] + b[1]) / 2);
     const st = nearestStreet(mid);
     const nb = site.nbrs.find(o => !o.huge && o.g.distance(mid) < 3);
-    const front = st.d <= 45 && !nb;
+    // an edge no neighbouring parcel touches is street right-of-way; up to 90 ft from a named street
+    // reaches round cul-de-sac bulbs (unnamed centrelines are often private drives, so keep those at 45 ft)
+    const front = !nb && (st.d <= 45 || (st.d <= 90 && !!st.name));
     edges.push({ a, b, front, key: front ? 'F' : nb ? 'N:' + nb.p.PRINT_KEY : 'X', street: st.name, abut: front ? (st.name ? title(st.name) : 'street') : nb ? (title(nb.p.PARCEL_ADDR) || nb.p.PRINT_KEY) : 'no mapped parcel', dStreet: st.d });
   }
   // rotate so we start at a boundary between groups
@@ -437,20 +463,24 @@ function drawPlan() {
   svg = $('#plan'); svg.innerHTML = '';
   layers = {};
   const defs = el('defs', {}, svg);
-  const h1 = el('pattern', { id: 'hatch1525', width: 7, height: 7, patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(45)' }, defs);
-  el('rect', { width: 7, height: 7, fill: 'rgba(242,177,52,.10)' }, h1); el('line', { x1: 0, y1: 0, x2: 0, y2: 7, stroke: '#f2b134', 'stroke-width': 1.6 }, h1);
-  const h2 = el('pattern', { id: 'hatch25', width: 5, height: 5, patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(-45)' }, defs);
-  el('rect', { width: 5, height: 5, fill: 'rgba(255,106,61,.16)' }, h2); el('line', { x1: 0, y1: 0, x2: 0, y2: 5, stroke: '#ff6a3d', 'stroke-width': 1.7 }, h2);
-  const h3 = el('pattern', { id: 'hatchflood', width: 6, height: 6, patternUnits: 'userSpaceOnUse' }, defs);
-  el('rect', { width: 6, height: 6, fill: 'rgba(61,123,217,.18)' }, h3); el('line', { x1: 0, y1: 3, x2: 6, y2: 3, stroke: '#3d7bd9', 'stroke-width': 1.4 }, h3);
+  // Size text and hatching to the screen, not to the lot, so a small lot reads like a big one
+  // (~12 px labels at "fit"). Line widths are screen pixels via vector-effect in the CSS.
+  const px = $('#planbox').clientWidth || 900;
+  const k = Math.max(0.15, Math.min(4, W / px * 1.1));
+  S.k = k;
+  const hatch = (id, size, rot, fill, stroke, sw, horizontal) => {
+    const s = size * k, p = el('pattern', { id, width: s, height: s, patternUnits: 'userSpaceOnUse', patternTransform: rot ? `rotate(${rot})` : '' }, defs);
+    el('rect', { width: s, height: s, fill }, p);
+    el('line', horizontal ? { x1: 0, y1: s / 2, x2: s, y2: s / 2, stroke, 'stroke-width': sw * k } : { x1: 0, y1: 0, x2: 0, y2: s, stroke, 'stroke-width': sw * k }, p);
+  };
+  hatch('hatch1525', 7, 45, 'rgba(242,177,52,.10)', '#f2b134', 1.6);
+  hatch('hatch25', 5, -45, 'rgba(255,106,61,.16)', '#ff6a3d', 1.7);
+  hatch('hatchflood', 6, 0, 'rgba(61,123,217,.18)', '#3d7bd9', 1.4, true);
   const g = id => (layers[id] = el('g', { 'data-layer': id }, svg));
-  // scale text to the frame so labels stay readable on big and small lots
-  const k = Math.max(0.6, Math.min(3, W / 900));
-  svg.style.setProperty('--k', k);
 
   g('aerial'); el('image', { href: S.aerial, x: 0, y: 0, width: W, height: H, preserveAspectRatio: 'none' }, layers.aerial);
   g('contours');
-  for (const c of S.contours) el('path', { d: linesPath(c.lines), class: 'p-contour' + (Math.round(c.elev) % 10 === 0 ? ' ix' : ''), 'stroke-width': .6 * k }, layers.contours);
+  for (const c of S.contours) el('path', { d: linesPath(c.lines), class: 'p-contour' + (Math.round(c.elev) % 10 === 0 ? ' ix' : '') }, layers.contours);
   const placed = [];
   for (const c of S.contours) {
     if (Math.round(c.elev) % 10 !== 0) continue;
@@ -465,8 +495,11 @@ function drawPlan() {
   g('context');
   for (const n of S.neighborsDraw) el('path', { d: n.rings.map(ringPath).join(''), class: 'p-nbr' }, layers.context);
   for (const p of S.others) el('path', { d: polysPath([p]), class: 'p-bldg' }, layers.context);
-  for (const n of S.neighborsDraw) {
-    if (!n.address || !n.label) continue;
+  // one label per address (a neighbour can own several tax parcels), on its largest piece
+  const labelled = new Set();
+  for (const n of S.neighborsDraw.slice().sort((a, b) => b.area - a.area)) {
+    if (!n.address || !n.label || labelled.has(n.address)) continue;
+    labelled.add(n.address);
     const [x, y] = n.label;
     if (x < 30 * k || y < 16 * k || x > W - 30 * k || y > H - 10 * k || inRing(n.label, S.ring)) continue;
     el('text', { x, y, class: 'p-nlab', 'text-anchor': 'middle', 'font-size': 11 * k }, layers.context).textContent = n.address;
@@ -716,7 +749,7 @@ const provTag = p => `<span class="prov ${p}">${({ code: 'code', county: 'county
 // ---------------------------------------------------------------------------
 function renderProject(Rz) {
   projG.innerHTML = '';
-  const p = state.proj, k = Math.max(0.6, Math.min(3, SITE.W / 900));
+  const p = state.proj, k = SITE.k || 1;
   const poly = el('polygon', { points: Rz.rect.map(q => q.join(',')).join(' '), class: 'p-proj ' + Rz.worst, tabindex: 0, 'aria-label': 'Test project, drag to move' }, projG);
   poly.addEventListener('pointerdown', startDrag);
   el('text', { x: p.cx, y: p.cy + 4, class: 'p-plab', 'text-anchor': 'middle', 'font-size': 11 * k }, projG).textContent = `${p.w}×${p.d}`;
@@ -772,7 +805,8 @@ function renderYards() {
   const hd = ENV.houseDist;
   $('#yards').innerHTML = `<thead><tr><th>Yard</th><th class="num">Required</th><th class="num">House today</th><th></th></tr></thead><tbody>` + rows.map(([k, l]) => {
     const req = R[k], d = hd ? hd[k] : null;
-    const status = req == null || d == null || !isFinite(d) ? '' : `<span class="pill ${d >= req ? 'ok' : 'bad'}">${d >= req ? 'Meets' : 'Short'}</span>`;
+    // county lines are good to a few feet, so within 2 ft of the rule is too close to call
+    const status = req == null || d == null || !isFinite(d) ? '' : Math.abs(d - req) < 2 ? '<span class="pill permit">Close</span>' : `<span class="pill ${d >= req ? 'ok' : 'bad'}">${d >= req ? 'Meets' : 'Short'}</span>`;
     return `<tr><td>${l} ${provTag(R.prov[k])}</td><td class="num"><input type="number" min="0" step="1" data-yard="${k}" value="${req ?? ''}" aria-label="${l} setback in feet"> ft</td><td class="num mono">${d != null && isFinite(d) ? fmt(d) + ' ft' : '–'}</td><td>${status}</td></tr>`;
   }).join('') + `</tbody>`;
   const extra = [];
@@ -793,6 +827,8 @@ function renderYards() {
 function renderNotices() {
   const out = [];
   const S = SITE;
+  if (S.group && S.group.length > 1) out.push(['info', `This property is ${S.group.length} tax parcels with the same address (${S.group.map(x => esc(x.printKey)).join(', ')}), analysed together as one ${(S.area / 43560).toFixed(2)}-acre lot. If they're legally separate lots, the setbacks apply to each one.`]);
+  if (/^2/.test(String(S.attrs.PROP_CLASS || '')) && !num(S.attrs.SQFT_LIVING)) out.push(['', 'The tax roll has no living-area figure for this house, so existing floor area starts at 0 and the room left is overstated. Enter it under Capacity → Adjust what\'s already on the lot.']);
   const roll = (S.attrs.MUNI_NAME || '').replace(/,\s*(village|town|city)$/i, '');
   if (R.file && roll && !norm(R.file.name).includes(norm(roll))) out.push(['', `The tax roll puts this parcel in ${esc(title(roll))}, but the county zoning map shows ${esc(R.file.name)}'s ${esc(R.zoning)} district. Check which municipality's zoning applies before relying on these numbers.`]);
   if (S.zones.length > 1 && S.zones[1].share > .05) out.push(['info', `This lot is split between zoning districts: ${S.zones.map(z => `${esc(z.zoning)} (${Math.round(z.share * 100)}%)`).join(', ')}. The plan uses ${esc(S.zones[0].zoning)}.`]);
@@ -863,7 +899,7 @@ function renderHeader() {
   const S = SITE, a = S.attrs;
   $('#h-addr').textContent = title(a.PARCEL_ADDR) || S.loc.label;
   $('#h-muni').textContent = `${(R.file && R.file.name) || title(a.MUNI_NAME)} · ${S.loc.label}`;
-  $('#tb-pk').textContent = a.PRINT_KEY || '–';
+  $('#tb-pk').textContent = (a.PRINT_KEY || '–') + (S.group && S.group.length > 1 ? ` +${S.group.length - 1}` : '');
   $('#tb-zone').textContent = R.zoning || '–';
   $('#tb-area').textContent = (state.existing.area / 43560).toFixed(2) + ' ac';
   $('#v-env').textContent = ENV.envArea != null ? fmt(ENV.envArea) : '–';
@@ -990,10 +1026,11 @@ function hover(pt) {
 function nudgeIntoClear() {
   const p = state.proj, S = SITE;
   // try the constraint-free area first, then the whole setback envelope
-  for (const target of [ENV.clear, ENV.envelope]) if (target.length && placeIn(target)) return;
-  const c = centroid(S.ring); p.cx = c[0]; p.cy = c[1];
+  // accessory setbacks first; if the lot can't meet them, place it anyway and let the checks say so
+  for (const useAcc of [true, false]) for (const target of [ENV.clear, ENV.envelope]) if (target.length && placeIn(target, useAcc)) return;
+  const ip = S.pg.getInteriorPoint(), c = S.xy(ip.getX(), ip.getY()); p.cx = c[0]; p.cy = c[1];
 }
-function placeIn(target) {
+function placeIn(target, useAcc) {
   const p = state.proj, S = SITE;
   const hc = S.house && S.house.ring.length ? centroid(S.house.ring) : centroid(S.ring);
   const step = Math.max(5, Math.max(S.W, S.H) / 140);
@@ -1002,6 +1039,9 @@ function placeIn(target) {
   const frontLines = S.lotlines.filter(l => l.kind === 'front').flatMap(l => l.lines);
   const houseFront = ENV.houseDist && isFinite(ENV.houseDist.front) ? ENV.houseDist.front : null;
   const wantBehind = T.kind !== 'principal' && houseFront != null && frontLines.length;
+  // accessory structures can have their own (often larger front, smaller side/rear) setbacks
+  const acc = useAcc && T.kind !== 'principal' && R.accessory ? R.accessory : null;
+  const accNeed = acc ? ['front', 'side', 'rear'].map(kind => [S.lotlines.filter(l => l.kind === kind).flatMap(l => l.lines), acc[kind + '_ft']]).filter(([ls, v]) => ls.length && v != null && v > 0) : [];
   let best = null, bestAny = null;
   for (let x = 0; x < S.W; x += step) for (let y = 0; y < S.H; y += step) {
     const cand = { ...p, cx: x, cy: y };
@@ -1010,6 +1050,7 @@ function placeIn(target) {
     if (S.house && (rc.some(q => inRing(q, S.house.ring)) || S.house.ring.some(q => inRing(q, rc.concat([rc[0]]))))) continue;
     const d = Math.hypot(x - hc[0], y - hc[1]);
     if (S.house && d < Math.max(p.w, p.d) / 2 + 25) continue;
+    if (accNeed.some(([ls, v]) => distRectToLines(rc, ls) < v)) continue;
     if (!bestAny || d < bestAny.d) bestAny = { d, x, y };
     if (wantBehind && distRectToLines(rc, frontLines) < houseFront) continue;
     if (!best || d < best.d) best = { d, x, y };
